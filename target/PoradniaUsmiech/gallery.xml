@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<simpleviewergallery 
+
+	useFlickr="false"
+	resizeOnImport="true"
+	cropToFit="false"
+	title="Poradnia Psychologiczna &quot;Uśmiech&quot;"
+	textColor="000000"
+	backgroundColor="FFFFFF"
+	thumbColumns="3"
+	thumbRows="5"
+	galleryHeight="100%"
+
+>
+  <image imageURL="images/IMG_1136.JPG"
+	thumbURL="thumbs/IMG_1136.JPG"
+	linkURL="images/IMG_1136.JPG"
+	linkTarget="_blank">
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_1144.JPG"
+	thumbURL="thumbs/IMG_1144.JPG"
+	linkURL="images/IMG_1144.JPG"
+	linkTarget="_blank">
+    <caption><![CDATA[Recepcja]]></caption>
+  </image>
+  <image imageURL="images/IMG_1135.JPG"
+	thumbURL="thumbs/IMG_1135.JPG"
+	linkURL="images/IMG_1135.JPG"
+	linkTarget="_blank">
+    <caption><![CDATA[Recepcja]]></caption>
+  </image>
+  <image imageURL="images/IMG_1145.JPG"
+	thumbURL="thumbs/IMG_1145.JPG"
+	linkURL="images/IMG_1145.JPG"
+	linkTarget="_blank">
+    <caption><![CDATA[Recepcja]]></caption>
+  </image>
+  <image imageURL="images/IMG_1134.JPG"
+	thumbURL="thumbs/IMG_1134.JPG"
+	linkURL="images/IMG_1134.JPG"
+	linkTarget="_blank">
+    <caption><![CDATA[Recepcja]]></caption>
+  </image>
+  <image imageURL="images/IMG_1143.JPG"
+	thumbURL="thumbs/IMG_1143.JPG"
+	linkURL="images/IMG_1143.JPG"
+	linkTarget="_blank">
+    <caption><![CDATA[Caption]]></caption>
+  </image>
+  <image imageURL="images/IMG_1137.JPG"
+	thumbURL="thumbs/IMG_1137.JPG"
+	linkURL="images/IMG_1137.JPG"
+	linkTarget="_blank">
+    <caption><![CDATA[Integracja sensoryczna]]></caption>
+  </image>
+  <image imageURL="images/IMG_1138.JPG"
+	thumbURL="thumbs/IMG_1138.JPG"
+	linkURL="images/IMG_1138.JPG"
+	linkTarget="_blank">
+    <caption><![CDATA[Integracja sensoryczna]]></caption>
+  </image>
+  <image imageURL="images/IMG_1139.JPG"
+	thumbURL="thumbs/IMG_1139.JPG"
+	linkURL="images/IMG_1139.JPG"
+	linkTarget="_blank">
+    <caption><![CDATA[Integracja sensoryczna]]></caption>
+  </image>
+  <image imageURL="images/IMG_1140.JPG"
+	thumbURL="thumbs/IMG_1140.JPG"
+	linkURL="images/IMG_1140.JPG"
+	linkTarget="_blank">
+    <caption><![CDATA[Psychologia]]></caption>
+  </image>
+  <image imageURL="images/IMG_1141.JPG"
+	thumbURL="thumbs/IMG_1141.JPG"
+	linkURL="images/IMG_1141.JPG"
+	linkTarget="_blank">
+    <caption><![CDATA[Psychologia]]></caption>
+  </image>
+  <image imageURL="images/IMG_1142.JPG"
+	thumbURL="thumbs/IMG_1142.JPG"
+	linkURL="images/IMG_1142.JPG"
+	linkTarget="_blank">
+    <caption><![CDATA[Psychologia]]></caption>
+  </image>
+  <image imageURL="images/IMG_1147.JPG"
+	thumbURL="thumbs/IMG_1147.JPG"
+	linkURL="images/IMG_1147.JPG"
+	linkTarget="_blank">
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/IMG_1148.JPG"
+	thumbURL="thumbs/IMG_1148.JPG"
+	linkURL="images/IMG_1148.JPG"
+	linkTarget="_blank">
+    <caption><![CDATA[]]></caption>
+  </image>
+</simpleviewergallery>
