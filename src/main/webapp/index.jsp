@@ -200,7 +200,7 @@
 
         <div class="col-md-4 col-sm-6">
             <a href="05_galeria.jsp">
-                <img class="img-responsive img-portfolio img-hover" src="./graphics/00_01_index.JPG" alt="">
+                <img class="img-responsive img-portfolio img-hover" src="../resources/01_web_page_graphics/00_01_index.JPG" alt="">
             </a>
         </div>
         <div class="col-md-4 col-sm-6">

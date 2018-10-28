@@ -59,7 +59,7 @@
         <div class="col-lg-12">
 
             <h1 class="page-header">
-                <center><img border="5" width=100% src="./graphics/baner.jpg" alt=""></center>
+                <center><img border="5" width=100% src="graphics/baner.jpg" alt=""></center>
 
             </h1>
             <ol class="breadcrumb">
@@ -89,7 +89,7 @@
 
         <div class="col-md-3 img-portfolio">
             <a href="02_10_specjalisci_aleksandra_szalla.jsp">
-                <img class="img-responsive img-hover" src="./graphics/02_10_aleksandra_szalla_wys_250.jpg" alt="">
+                <img class="img-responsive img-hover" src="graphics/02_10_aleksandra_szalla_wys_250.jpg" alt="">
             </a>
             <h3>
                 <a href="02_10_specjalisci_aleksandra_szalla.jsp">Aleksandra Szalla</a>
@@ -100,7 +100,7 @@
 
         <div class="col-md-3 img-portfolio">
             <a href="02_06_marta_chroscicka.jsp">
-                <img class="img-responsive img-hover" src="./graphics/02_06_marta_chroscicka_wys_250.jpg" alt="">
+                <img class="img-responsive img-hover" src="graphics/02_06_marta_chroscicka_wys_250.jpg" alt="">
             </a>
             <h3>
                 <a href="02_06_marta_chroscicka.jsp">Marta Chrościcka</a>
@@ -111,7 +111,7 @@
 
         <div class="col-md-3 img-portfolio">
             <a href="02_03_karina_choros_wrzeszcz.jsp">
-                <img class="img-responsive img-hover" src="./graphics/02_03_karina_choros_wrzeszcz_wys_250.jpg" alt="">
+                <img class="img-responsive img-hover" src="graphics/02_03_karina_choros_wrzeszcz_wys_250.jpg" alt="">
             </a>
             <h3>
                 <a href="02_03_karina_choros_wrzeszcz.jsp">Karina Choroś-Wrzeszcz</a>
@@ -128,7 +128,7 @@
 
         <div class="col-md-3 img-portfolio">
             <a href="02_09_katarzyna_andrusikiewicz.jsp">
-                <img class="img-responsive img-hover" src="./graphics/02_09_katarzyna_andrusikiewicz_wys_250.jpg"
+                <img class="img-responsive img-hover" src="graphics/02_09_katarzyna_andrusikiewicz_wys_250.jpg"
                      alt="">
             </a>
             <h3>
@@ -139,7 +139,7 @@
 
         <div class="col-md-3 img-portfolio">
             <a href="02_12_miroslaw_dudzinski.jsp">
-                <img class="img-responsive img-hover" src="./graphics/02_12_miroslaw_dudzinski_wys_250.jpg" alt="">
+                <img class="img-responsive img-hover" src="graphics/02_12_miroslaw_dudzinski_wys_250.jpg" alt="">
             </a>
             <h3>
                 <a href="02_12_miroslaw_dudzinski.jsp">Mirosław Dudziński</a>
@@ -150,7 +150,7 @@
 
         <div class="col-md-3 img-portfolio">
             <a href="02_05_anna_suchecka.jsp">
-                <img class="img-responsive img-hover" src="./graphics/02_05_anna_suchecka_wys_250.jpg" alt="">
+                <img class="img-responsive img-hover" src="graphics/02_05_anna_suchecka_wys_250.jpg" alt="">
             </a>
             <h3>
                 <a href="02_05_anna_suchecka.jsp">Aneta Suchecka</a>
@@ -161,7 +161,7 @@
 
         <div class="col-md-3 img-portfolio">
             <a href="02_13_paulina_staluszka.jsp">
-                <img class="img-responsive img-hover" src="./graphics/02_13_paulina_staluszka_wys_250.jpg" alt="">
+                <img class="img-responsive img-hover" src="graphics/02_13_paulina_staluszka_wys_250.jpg" alt="">
             </a>
             <h3>
                 <a href="02_13_paulina_staluszka.jsp">Paulina Staluszka</a>
@@ -179,7 +179,7 @@
 
         <div class="col-md-3 img-portfolio">
             <a href="02_14_katarzyna_wojcieszynska.jsp">
-                <img class="img-responsive img-hover" src="./graphics/02_14_katarzyna_wojcieszynska_wys_250.jpg" alt="">
+                <img class="img-responsive img-hover" src="graphics/02_14_katarzyna_wojcieszynska_wys_250.jpg" alt="">
             </a>
             <h3>
                 <a href="02_14_katarzyna_wojcieszynska.jsp">Katarzyna Wojcieszyńska</a>
