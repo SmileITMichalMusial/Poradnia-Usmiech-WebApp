@@ -50,68 +50,7 @@
 
 
 <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.jsp">Poradnia Psychologiczna "Uśmiech"</a>
-
-
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="01_o_nas.html">O Nas</a>
-                </li>
-                <li>
-                    <a href="02_specjalisci.html">Specjaliści</a>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Oferta <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="03_02_oferta_dzieci.html">Dzieci</a>
-                        </li>
-                        <li>
-                            <a href="03_01_oferta_dorosli.html">Dorośli</a>
-                        </li>
-                        <li>
-                            <a href="03_03_warsztaty_grupowe.html">Warsztaty grupowe</a>
-                        </li>
-
-                    </ul>
-                </li>
-
-                </li>
-                <li>
-                    <a href="04_wspolpraca_kariera.html">Kariera / Współpraca</a>
-                </li>
-                <li>
-                    <a href="05_galeria.html">Galeria</a>
-                </li>
-                <li>
-                    <a href="06_cennik.html">Cennik</a>
-                </li>
-                <li>
-                    <a href="07_kontakt.html">Kontakt</a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
+<%@include file="WEB-INF/01_headers_footers/000_header.jsp" %>
 
 
 <!-- Page Heading/Breadcrumbs -->
@@ -184,7 +123,7 @@
             <br>
             <h3 class="page-header">
                 <center>Uwaga !! Otwarte zapisy na  Trening Umiejętności Społecznych dla dzieci - szczegóły <a
-                        href="03_03_02_tus.html">tutaj</a><p>. Zapisy do 10-go września 2018.
+                        href="03_03_02_tus.jsp">tutaj</a><p>. Zapisy do 10-go września 2018.
 
                 </center>
             </h3>
@@ -209,7 +148,7 @@
                 <div class="panel-body">
                     <p>Poradnia Psychologiczna "Uśmiech" powstała z myślą o dostarczaniu profesjonalnej pomocy z zakresu
                         psychologi, pedagogiki i logopedii. Świadczymy usługi dla dzieci, młodzieży i dla dorosłych.</p>
-                    <a href="01_o_nas.html" class="btn btn-default">Dowiedz się więcej</a>
+                    <a href="01_o_nas.jsp" class="btn btn-default">Dowiedz się więcej</a>
                 </div>
             </div>
         </div>
@@ -222,9 +161,9 @@
                     <p>Oferta Poradni "Uśmiech" to spotkania indywidualne, jak i grupowe.
                         W naszej ofercie znajdziecie Państwo m.in. wsparcie pscyhologa i logopedy, warsztaty dla grup
                         zorganizowanych, kompleksową ofertę dla przedszkoli i wiele więcej</p>
-                    <a href="03_02_oferta_dzieci.html" class="btn btn-default">Dzieci</a>
-                    <a href="03_01_oferta_dorosli.html" class="btn btn-default">Dorośli</a>
-                    <a href="03_03_warsztaty_grupowe.html" class="btn btn-default">Warsztaty grupowe</a>
+                    <a href="03_02_oferta_dzieci.jsp" class="btn btn-default">Dzieci</a>
+                    <a href="03_01_oferta_dorosli.jsp" class="btn btn-default">Dorośli</a>
+                    <a href="03_03_warsztaty_grupowe.jsp" class="btn btn-default">Warsztaty grupowe</a>
                 </div>
             </div>
         </div>
@@ -237,7 +176,7 @@
                     <p>Zapraszamy do zapoznania sie z cennikiem usług Poradni Psychologicznej "Uśmiech"</p>
                     <p> &nbsp </p>
                     <p> &nbsp </p>
-                    <a href="06_cennik.html" class="btn btn-default">Dowiedz się więcej</a>
+                    <a href="06_cennik.jsp" class="btn btn-default">Dowiedz się więcej</a>
                 </div>
             </div>
         </div>
@@ -260,32 +199,32 @@
 
 
         <div class="col-md-4 col-sm-6">
-            <a href="05_galeria.html">
+            <a href="05_galeria.jsp">
                 <img class="img-responsive img-portfolio img-hover" src="./graphics/00_01_index.JPG" alt="">
             </a>
         </div>
         <div class="col-md-4 col-sm-6">
-            <a href="05_galeria.html">
+            <a href="05_galeria.jsp">
                 <img class="img-responsive img-portfolio img-hover" src="./graphics/00_02_index.JPG" alt="">
             </a>
         </div>
         <div class="col-md-4 col-sm-6">
-            <a href="05_galeria.html">
+            <a href="05_galeria.jsp">
                 <img class="img-responsive img-portfolio img-hover" src="./graphics/00_03_index.JPG" alt="">
             </a>
         </div>
         <div class="col-md-4 col-sm-6">
-            <a href="05_galeria.html">
+            <a href="05_galeria.jsp">
                 <img class="img-responsive img-portfolio img-hover" src="./graphics/00_04_index.JPG" alt="">
             </a>
         </div>
         <div class="col-md-4 col-sm-6">
-            <a href="05_galeria.html">
+            <a href="05_galeria.jsp">
                 <img class="img-responsive img-portfolio img-hover" src="./graphics/00_05_index.JPG" alt="">
             </a>
         </div>
         <div class="col-md-4 col-sm-6">
-            <a href="05_galeria.html">
+            <a href="05_galeria.jsp">
                 <img class="img-responsive img-portfolio img-hover" src="./graphics/00_06_index.JPG" alt="">
             </a>
         </div>
@@ -334,7 +273,7 @@
                     sprawdzenia naszej oferty i kontaktu.</p>
             </div>
             <div class="col-md-4">
-                <a class="btn btn-lg btn-default btn-block" href="07_kontakt.html">Kontakt</a>
+                <a class="btn btn-lg btn-default btn-block" href="07_kontakt.jsp">Kontakt</a>
             </div>
         </div>
     </div>
@@ -347,13 +286,7 @@
     <br>
 
     <!-- Footer -->
-    <footer>
-        <div class="row">
-            <div class="col-lg-12">
-                <p>2014-2018 &copy; Poradnia psychologiczna "Uśmiech". Wszelkie prawa zastrzeżone.</p>
-            </div>
-        </div>
-    </footer>
+    <%@include file="WEB-INF/01_headers_footers/001_footer.jsp" %>
 
 </div>
 <!-- /.container -->
