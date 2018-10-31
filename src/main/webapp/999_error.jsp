@@ -1,4 +1,8 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isErrorPage="true" %>
+<% request.getAttribute("errorTitle"); %>
+<% request.getAttribute("errorDecscription"); %>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,7 +68,7 @@
             <ol class="breadcrumb">
                 <li><a href="index.jsp">Strona główna</a></li>
 
-                <li class="active">Cennik</li>
+                <li class="active">Błąd</li>
             </ol>
         </div>
     </div>
@@ -72,14 +76,29 @@
 
 
     <!--// CODE HERE-->
-    <form class="form-wrapper" method="post" action="/LoginServlet">
-        <h4>Zaloguj się:</h4>
-        <input type="text" class="form-control" name="login" placeholder="login" required>
-        <input type="password" class="form-control" name="password" placeholder="hasło"
-               required>
-        <button type="submit" class="btn btn-primary">Zaloguj się <i
-                class="fa fa-envelope-open-o"></i></button>
-    </form>
+
+
+
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-wrapper">
+                        <div class="notfound">
+                            <div class="row">
+                                <div class="col-md-8 offset-md-2 text-center">
+                                    <h3>${errorTitle}</h3>
+                                    <p>${errorDecscription}</p>
+                                    <a href="index.jsp" class="btn btn-primary">Strona główna</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end page-wrapper -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </section>
+
 
     <br>
     <hr>
