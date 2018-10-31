@@ -1,4 +1,8 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<c:set var="login" scope="session" value="${login}"/>
+
+
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <!--<center>Warszawa Bielany, Marymoncka 105/29, Tel: 693-087-939</center>-->
@@ -57,8 +61,21 @@
                     <a href="../../07_kontakt.jsp">Kontakt</a>
                 </li>
                 <li>
-                    <a href="../../08_login.jsp">Zaloguj</a>
+                    <c:if test="${empty login}">
+                        <a href="../../08_login.jsp">Zaloguj</a>
+                    </c:if>
+                    <c:if test="${not empty login}">
+                        <a href="../../08_login.jsp">Witaj: ${login}</a>
+                    </c:if>
+
+
                 </li>
+
+                <c:if test="${not empty login}">
+                    <li>
+                        <a href="/LogoutServlet">Wyloguj się</a>
+                    </li>
+                </c:if>
 
             </ul>
         </div>
