@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<c:set var="login" scope="session" value="${login}"/>
+
 
 
 
@@ -155,7 +155,7 @@
                 <div class="panel-body">
                     <p>Poradnia Psychologiczna "Uśmiech" powstała z myślą o dostarczaniu profesjonalnej pomocy z zakresu
                         psychologi, pedagogiki i logopedii. Świadczymy usługi dla dzieci, młodzieży i dla dorosłych.</p>
-                    <a href="01_o_nas.jsp" class="btn btn-default">Dowiedz się więcej</a>
+                    <a href="jsp/o_nas/01_o_nas.jsp" class="btn btn-default">Dowiedz się więcej</a>
                 </div>
             </div>
         </div>

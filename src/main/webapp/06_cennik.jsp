@@ -58,7 +58,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
-              <img width=100% border="5" src="./graphics/baner.jpg" alt=""/>
+              <img width=100% border="5" src="graphics/baner.jpg" alt=""/>
 
             </h1>
             <ol class="breadcrumb">
@@ -454,7 +454,7 @@
             <td class="noborder_left" colspan="3">
                 <br><br>
                 Akceptujemy płatności kartą i zbliżeniowe:<p>
-                <img border="0" width="80%" src="./graphics/00_08_platnosc_zblizeniowa_podluzne.jpg" alt="">
+                <img border="0" width="80%" src="graphics/00_08_platnosc_zblizeniowa_podluzne.jpg" alt="">
 
 
             </td>

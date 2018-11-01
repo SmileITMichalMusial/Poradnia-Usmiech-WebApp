@@ -58,7 +58,7 @@ class LoginServlet extends HttpServlet {
                 req.getSession().setAttribute("id", loggedUser.getId());
                 req.getSession().setAttribute("userType", loggedUser.getUserType());
                 logger.info("Zalogowany użytkownik typu: " + loggedUser.getUserType());
-                redirect = "/index.jsp";
+                redirect = "../jsp/01_admin_pages/10_admin_menu.jsp";
                 RequestDispatcher rd = req.getRequestDispatcher(redirect);
                 rd.forward(req, resp);
                 return;

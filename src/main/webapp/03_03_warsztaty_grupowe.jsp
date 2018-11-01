@@ -58,7 +58,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
-                <center><img border="5" width=100% src="./graphics/baner.jpg" alt=""></center>
+                <center><img border="5" width=100% src="graphics/baner.jpg" alt=""></center>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="index.jsp">Strona główna</a>
@@ -74,7 +74,7 @@
         <div class="col-md-7">
             <a href="03_03_02_tus.jsp">
                 <img class="img-responsive img-hover"
-                     src="./graphics/fotolia/04_01_02_tus_600_300.jpg" alt="">
+                     src="graphics/fotolia/04_01_02_tus_600_300.jpg" alt="">
             </a>
         </div>
         <div class="col-md-5">
@@ -98,7 +98,7 @@
         <div class="col-md-7">
             <a href="03_03_01_wie.jsp">
                 <img class="img-responsive img-hover"
-                     src="./graphics/fotolia/04_01_01_wie_600_300.jpg" alt="">
+                     src="graphics/fotolia/04_01_01_wie_600_300.jpg" alt="">
             </a>
         </div>
         <div class="col-md-5">
@@ -122,7 +122,7 @@
         <div class="col-md-7">
             <a href="03_03_03_wuw.jsp">
                 <img class="img-responsive img-hover"
-                     src="./graphics/fotolia/04_02_01_wuw_600_300.jpg" alt="">
+                     src="graphics/fotolia/04_02_01_wuw_600_300.jpg" alt="">
             </a>
         </div>
         <div class="col-md-5">

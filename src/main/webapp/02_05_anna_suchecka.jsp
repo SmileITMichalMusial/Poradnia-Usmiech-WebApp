@@ -56,7 +56,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
-                <img width=100% border="5" src="./graphics/baner.jpg" alt=""/>
+                <img width=100% border="5" src="graphics/baner.jpg" alt=""/>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="index.jsp">Strona główna</a>
@@ -74,7 +74,7 @@
 
         <div class="col-md-obrazek">
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <img class="img-responsive" src="./graphics/anna_suchecka_szer_450.jpg"
+                <img class="img-responsive" src="graphics/anna_suchecka_szer_450.jpg"
                      alt="">
                 <!-- Indicators
                 <ol class="carousel-indicators">

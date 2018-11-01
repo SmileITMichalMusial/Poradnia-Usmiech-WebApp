@@ -60,20 +60,25 @@
                 <li>
                     <a href="../../07_kontakt.jsp">Kontakt</a>
                 </li>
-                <li>
-                    <c:if test="${empty login}">
+                <c:if test="${empty login}">
+                    <li>
                         <a href="../../08_login.jsp">Zaloguj</a>
-                    </c:if>
-                    <c:if test="${not empty login}">
-                        <a href="../../08_login.jsp">Witaj: ${login}</a>
-                    </c:if>
-
-
-                </li>
+                    </li>
+                </c:if>
 
                 <c:if test="${not empty login}">
-                    <li>
-                        <a href="/LogoutServlet">Wyloguj się</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Witaj: ${login} <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../../jsp/01_admin_pages/10_admin_menu.jsp">Panel administracyjny</a>
+                            </li>
+                            <li>
+                                <a href="/LogoutServlet">Wyloguj się</a>
+                            </li>
+
+
+                        </ul>
                     </li>
                 </c:if>
 
