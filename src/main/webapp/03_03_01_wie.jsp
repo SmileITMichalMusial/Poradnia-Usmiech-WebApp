@@ -52,7 +52,7 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header"><center><img border="5" width=100% src="./graphics/baner.jpg" alt=""> </center>
+                <h1 class="page-header"><center><img border="5" width=100% src="graphics/baner.jpg" alt=""> </center>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="index.jsp">Strona główna</a></li>
@@ -69,7 +69,7 @@
             <div class="col-md-obrazek">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 								<img class="img-responsive" 
-								src="./graphics/fotolia/04_01_01_wie_450_261.jpg" 
+								src="graphics/fotolia/04_01_01_wie_450_261.jpg"
 														alt="">
                     <!-- Indicators 
                     <ol class="carousel-indicators">
@@ -197,32 +197,32 @@ Pełen cennik znajduje się <a href="06_cennik.jsp">tutaj</a>.
 						
 						 <div class="col-sm-3 col-xs-6">
                 <a href="old/03_03_04_tus_wakacyjny.html">
-                    <img class="img-responsive img-hover img-related" 
-										src="./graphics/fotolia/04_01_04_tus_wakacyjny_259_150.jpg" alt="">
+                    <img class="img-responsive img-hover img-related"
+                         src="graphics/fotolia/04_01_04_tus_wakacyjny_259_150.jpg" alt="">
 										<center>Trening umiejętności społecznych - Wakacje 2018</center>
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
                 <a href="03_03_01_wie.jsp">
-                    <img class="img-responsive img-hover img-related" 
-										src="./graphics/fotolia/04_01_01_wie_259_150.jpg" alt="">
+                    <img class="img-responsive img-hover img-related"
+                         src="graphics/fotolia/04_01_01_wie_259_150.jpg" alt="">
 										<center>Warsztaty inteligencji emocjonalnej</center>
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
                 <a href="03_03_02_tus.jsp">
-                    <img class="img-responsive img-hover img-related" 
-										src="./graphics/fotolia/04_01_02_tus_225_150.jpg" alt="">
+                    <img class="img-responsive img-hover img-related"
+                         src="graphics/fotolia/04_01_02_tus_225_150.jpg" alt="">
 										<center>Trening umiejętności społecznych</center>
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
                 <a href="03_03_03_wuw.jsp">
-                    <img class="img-responsive img-hover img-related" 
-										src="./graphics/fotolia/04_02_01_wuw_226_150.jpg" alt="">
+                    <img class="img-responsive img-hover img-related"
+                         src="graphics/fotolia/04_02_01_wuw_226_150.jpg" alt="">
 										<center>Warsztaty umiejętności wychowawczych</center>
                 </a>
             </div>

@@ -99,13 +99,13 @@
         </div>
 
         <div class="col-md-3 img-portfolio">
-            <a href="02_06_marta_chroscicka.jsp">
+            <a href="jsp/o_nas/02_06_marta_chroscicka.jsp">
                 <img class="img-responsive img-hover" src="graphics/02_06_marta_chroscicka_wys_250.jpg" alt="">
             </a>
             <h3>
-                <a href="02_06_marta_chroscicka.jsp">Marta Chrościcka</a>
+                <a href="jsp/o_nas/02_06_marta_chroscicka.jsp">Marta Chrościcka</a>
             </h3>
-            <p>psycholog <a href="02_06_marta_chroscicka.jsp">(więcej)</a></p>
+            <p>psycholog <a href="jsp/o_nas/02_06_marta_chroscicka.jsp">(więcej)</a></p>
         </div>
 
 

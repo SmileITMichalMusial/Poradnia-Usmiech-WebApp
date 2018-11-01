@@ -49,7 +49,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-								<center><img border="5" width=100% src="./graphics/baner.jpg" alt=""> </center>
+								<center><img border="5" width=100% src="graphics/baner.jpg" alt=""> </center>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="index.jsp">Strona główna</a>
@@ -67,7 +67,7 @@
 
             <div class="col-md-obrazek">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-								<img class="img-responsive" src="./graphics/miroslaw_dudzinski_szer_450.jpg" 
+								<img class="img-responsive" src="graphics/miroslaw_dudzinski_szer_450.jpg"
 														alt="">
                     <!-- Indicators 
                     <ol class="carousel-indicators">

@@ -49,7 +49,7 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header"><center><img border="5" width=100% src="./graphics/baner.jpg" alt=""> </center>
+                <h1 class="page-header"><center><img border="5" width=100% src="graphics/baner.jpg" alt=""> </center>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="index.jsp">Strona główna</a>
@@ -68,7 +68,7 @@
             <div class="col-md-6">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 								<img class="img-responsive" 
-								src="./graphics/fotolia/03_02_05_gotowosc_szkolna_dzieci_563_375.jpg" 
+								src="graphics/fotolia/03_02_05_gotowosc_szkolna_dzieci_563_375.jpg"
 														alt="">
                     <!-- Indicators 
                     <ol class="carousel-indicators">
@@ -122,38 +122,38 @@ Cennik znajduje się <a href="06_cennik.jsp">tutaj</a>.
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6">
                 <a href="03_02_01_logopedia_dzieci.jsp">
-								<img class="img-responsive customer-img" 
-								src="./graphics/fotolia/03_02_01_logopedia_dzieci_500_300.jpg" alt="">
+								<img class="img-responsive customer-img"
+                                     src="graphics/fotolia/03_02_01_logopedia_dzieci_500_300.jpg" alt="">
 								<center>Logopedia</center></a>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6">
 							<a href="03_02_02_pedagogika_dzieci.jsp">
-                <img class="img-responsive customer-img" 
-								src="./graphics/fotolia/03_02_02_pedagogika_dzieci_500_300.jpg" alt="">
+                <img class="img-responsive customer-img"
+                     src="graphics/fotolia/03_02_02_pedagogika_dzieci_500_300.jpg" alt="">
 								<center>Terapia pedagogiczna</center></a>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6">
                 <a href="03_02_03_psychologia_dzieci.jsp">
-								<img class="img-responsive customer-img" 
-								src="./graphics/fotolia/03_02_03_psychologia_dzieci_500_300.jpg" alt="">
+								<img class="img-responsive customer-img"
+                                     src="graphics/fotolia/03_02_03_psychologia_dzieci_500_300.jpg" alt="">
 								<center>Psychologia</center></a>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6">
                 <a href="03_02_04_terapia_reki_dzieci.jsp">
-								<img class="img-responsive customer-img" 
-								src="./graphics/fotolia/03_02_04_terapia_reki_dzieci_500_300.jpg" alt="">
+								<img class="img-responsive customer-img"
+                                     src="graphics/fotolia/03_02_04_terapia_reki_dzieci_500_300.jpg" alt="">
 								<center>Terapia ręki</center></a>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6">
                 <a href="03_02_05_gotowosc_szkolna_dzieci.jsp">
-								<img class="img-responsive customer-img" 
-								src="./graphics/fotolia/03_02_05_gotowosc_szkolna_dzieci_500_300.jpg" alt="">
+								<img class="img-responsive customer-img"
+                                     src="graphics/fotolia/03_02_05_gotowosc_szkolna_dzieci_500_300.jpg" alt="">
 								<center>Gotowość szkolna</center></a>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6">
                 <a href="03_02_06_diagnoza_trudnosci_szkolnych.jsp">
-								<img class="img-responsive customer-img" 
-								src="./graphics/fotolia/03_02_06_diagnoza_trudnosci_szkolnych_500_300.jpg" alt="">
+								<img class="img-responsive customer-img"
+                                     src="graphics/fotolia/03_02_06_diagnoza_trudnosci_szkolnych_500_300.jpg" alt="">
 								<center>Diagnoza trudności szkolnych i dysleksji</center></a>
             </div>
         </div>

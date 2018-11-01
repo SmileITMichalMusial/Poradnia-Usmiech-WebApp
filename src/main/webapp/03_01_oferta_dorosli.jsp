@@ -57,7 +57,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
-                <center><img border="5" width=100% src="./graphics/baner.jpg" alt=""></center>
+                <center><img border="5" width=100% src="graphics/baner.jpg" alt=""></center>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="index.jsp">Strona główna</a>
@@ -73,7 +73,7 @@
         <div class="col-md-4 img-portfolio">
             <a href="03_01_01_psychologia_dorosli.jsp">
                 <img class="img-responsive img-hover"
-                     src="./graphics/fotolia/03_01_01_psychologia_dorosli_700_400.jpg" alt="">
+                     src="graphics/fotolia/03_01_01_psychologia_dorosli_700_400.jpg" alt="">
             </a>
             <h3>
                 <a href="03_01_01_psychologia_dorosli.jsp">Psychologia</a>
@@ -84,7 +84,7 @@
         <div class="col-md-4 img-portfolio">
             <a href="03_01_02_mediacje_dorosli.jsp">
                 <img class="img-responsive img-hover"
-                     src="./graphics/fotolia/03_01_02_mediacje_dorosli_700_400.jpg" alt="">
+                     src="graphics/fotolia/03_01_02_mediacje_dorosli_700_400.jpg" alt="">
             </a>
             <h3>
                 <a href="03_01_02_mediacje_dorosli.jsp">Mediacje / terapie par i rodzin</a>

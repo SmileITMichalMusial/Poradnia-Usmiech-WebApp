@@ -52,7 +52,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-								<center><img border="5" width=100% src="./graphics/baner.jpg" alt=""> </center>
+								<center><img border="5" width=100% src="graphics/baner.jpg" alt=""> </center>
 								
                 </h1>
                 </h1>
@@ -147,7 +147,7 @@
 										
 										<hr>
 										Akceptujemy płatności kartą i zbliżeniowe:
-										<center><img border="0" width=100% src="./graphics/07_01_platnosc_zblizeniowa.JPG" alt=""> </center>
+										<center><img border="0" width=100% src="graphics/07_01_platnosc_zblizeniowa.JPG" alt=""> </center>
 										
 										<!-- <i class="fa fa-phone"></i> 
 										Aleksandra Szalla  <br> pedagog specjalny, terapeuta ręki<br>

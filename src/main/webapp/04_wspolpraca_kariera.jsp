@@ -50,7 +50,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-								<center><img border="5" width=100% src="./graphics/baner.jpg" alt=""> </center>
+								<center><img border="5" width=100% src="graphics/baner.jpg" alt=""> </center>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="index.jsp">Strona główna</a>
@@ -82,7 +82,7 @@
 <div class="col-md-12">
 <center>
 <a href="http://www.przedszkole-przystanelfow.pl/" target=_blank>
-<img class="img-responsive" src="./graphics/04_01_przedszkole_przystan_elfow.jpg" alt=""></a>
+<img class="img-responsive" src="graphics/04_01_przedszkole_przystan_elfow.jpg" alt=""></a>
 <a href="http://www.przedszkole-przystanelfow.pl/" target=_blank>Przedszkole Publiczne "PRZYSTAŃ ELFÓW"</a><hr>
 </center>
 </div>
@@ -90,7 +90,7 @@
 <div class="col-md-12">
 <center>
 <a href="http://zlobek-przystanelfow.pl/" target=_blank>
-<img class="img-responsive" src="./graphics/04_02_zlobek_przystan_elfow.jpg" alt=""></a>
+<img class="img-responsive" src="graphics/04_02_zlobek_przystan_elfow.jpg" alt=""></a>
 <a href="http://zlobek-przystanelfow.pl/" target=_blank>Żłobek niepubliczny "PRZYSTAŃ ELFÓW"</a><hr>
 </center>
 </div>
@@ -98,7 +98,7 @@
 <div class="col-md-12">
 <center>
 <a href="https://www.facebook.com/MaliEkolodzy" target=_blank>
-<img class="img-responsive" src="./graphics/04_03_mali_ekolodzy.png" alt=""></a>
+<img class="img-responsive" src="graphics/04_03_mali_ekolodzy.png" alt=""></a>
 <a href="https://www.facebook.com/MaliEkolodzy" target=_blank>Przedszkole Niepubliczne Mali Ekolodzy</a><hr>
 </center>
 </div>
@@ -106,7 +106,7 @@
 <div class="col-md-12">
 <center>
 <a href="http://www.maliwynalazcy.pl/" target=_blank>
-<img class="img-responsive" src="./graphics/04_03_mali_wynalazcy.jpg" alt=""></a>
+<img class="img-responsive" src="graphics/04_03_mali_wynalazcy.jpg" alt=""></a>
 <a href="http://www.maliwynalazcy.pl/" target=_blank>Mali Wynalazcy - Ośrodek opieki nad dziećmi</a><hr>
 </center>
 </div>
@@ -114,7 +114,7 @@
 <div class="col-md-12">
 <center>
 <a href="http://aesowa.pl/" target=_blank>
-<img class="img-responsive" src="./graphics/04_05_akademia_sowa.png" alt=""></a>
+<img class="img-responsive" src="graphics/04_05_akademia_sowa.png" alt=""></a>
 <a href="http://aesowa.pl/" target=_blank>Akademia Edukacji Sowa</a><hr>
 </center>
 </div>
@@ -122,7 +122,7 @@
 <div class="col-md-12">
 <center>
 <a href="http://www.przedszkolechmurka.pl/" target=_blank>
-<img class="img-responsive" src="./graphics/04_07_przedszkole_chmurka.JPG" alt=""></a>
+<img class="img-responsive" src="graphics/04_07_przedszkole_chmurka.JPG" alt=""></a>
 <a href="http://www.przedszkolechmurka.pl/" target=_blank>Przedszkole Chmurka</a><hr>
 </center>
 </div>
@@ -130,7 +130,7 @@
 <div class="col-md-12">
 <center>
 <a href="http://www.przedszkole-pinokio.pl/" target=_blank>
-<img class="img-responsive" src="./graphics/04_08_przedszkole_pinokio.JPG" alt=""></a>
+<img class="img-responsive" src="graphics/04_08_przedszkole_pinokio.JPG" alt=""></a>
 <a href="http://www.przedszkole-pinokio.pl/" target=_blank>Przedszkole Pinokio</a><hr>
 </center>
 </div>
@@ -138,7 +138,7 @@
 <div class="col-md-12">
 <center>
 <a href="http://www.gabinetdarterapii.pl/" target=_blank>
-<img class="img-responsive" src="./graphics/04_06_dar_terapii.jpg" alt=""></a>
+<img class="img-responsive" src="graphics/04_06_dar_terapii.jpg" alt=""></a>
 <a href="http://www.gabinetdarterapii.pl/" target=_blank>Gabinet Terapeutyczny Dar Terapii</a><hr>
 </center>
 </div>
@@ -146,7 +146,7 @@
 <div class="col-md-12">
 <center>
 <a href="http://www.kancelaria-lewczyk.pl/" target=_blank>
-<img class="img-responsive" src="./graphics/04_04_kancelaria_adwokacka.jpg" alt=""></a>
+<img class="img-responsive" src="graphics/04_04_kancelaria_adwokacka.jpg" alt=""></a>
 <a href="http://www.kancelaria-lewczyk.pl/" target=_blank>Lege Artis - Kancelaria Adwokacka</a><hr>
 </center>
 </div>
@@ -155,7 +155,7 @@
 <div class="col-md-12">
 <center>
 <a href="http://akademiausmiechu.waw.pl" target=_blank>
-<img class="img-responsive" src="./graphics/04_10_akademia_usmiechu.JPG" alt=""></a>
+<img class="img-responsive" src="graphics/04_10_akademia_usmiechu.JPG" alt=""></a>
 <a href="http://akademiausmiechu.waw.pl" target=_blank>Akademia Uśmiechu Dwujęzyczne Przedszkole i Żłobek</a>
 </center>
 </div>

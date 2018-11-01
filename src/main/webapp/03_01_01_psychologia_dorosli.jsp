@@ -49,7 +49,7 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header"><center><img border="5" width=100% src="./graphics/baner.jpg" alt=""> </center>
+                <h1 class="page-header"><center><img border="5" width=100% src="graphics/baner.jpg" alt=""> </center>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="index.jsp">Strona główna</a>
@@ -67,7 +67,7 @@
 
             <div class="col-md-obrazek">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-								<br><img class="img-responsive" src="./graphics/fotolia/03_01_01_psychologia_dorosli_450_257.jpg" 
+								<br><img class="img-responsive" src="graphics/fotolia/03_01_01_psychologia_dorosli_450_257.jpg"
 														alt="">
                     <!-- Indicators 
                     <ol class="carousel-indicators">
@@ -160,32 +160,32 @@ Cennik znajduje się <a href="06_cennik.jsp">tutaj</a>.
 
             <div class="col-sm-3 col-xs-6">
                 <a href="03_01_01_psychologia_dorosli.jsp">
-                    <img class="img-responsive img-hover img-related" 
-										src="./graphics/fotolia/03_01_01_psychologia_dorosli_263_150.jpg" alt="">
+                    <img class="img-responsive img-hover img-related"
+                         src="graphics/fotolia/03_01_01_psychologia_dorosli_263_150.jpg" alt="">
 										<center>Psychologia</center>
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
                 <a href="03_01_02_mediacje_dorosli.jsp">
-                    <img class="img-responsive img-hover img-related" 
-										src="./graphics/fotolia/03_01_02_mediacje_dorosli_263_150.jpg" alt="">
+                    <img class="img-responsive img-hover img-related"
+                         src="graphics/fotolia/03_01_02_mediacje_dorosli_263_150.jpg" alt="">
 										<center>Mediacje / terapie par i rodzin</center>
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
                 <a href="03_01_03_dietetyk_dorosli.jsp">
-                    <img class="img-responsive img-hover img-related" 
-										src="./graphics/fotolia/03_01_03_dietetyk_dorosli_263_150.jpg" alt="">
+                    <img class="img-responsive img-hover img-related"
+                         src="graphics/fotolia/03_01_03_dietetyk_dorosli_263_150.jpg" alt="">
 										<center>Dietetyk</center>
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
   <a href="03_01_04_muzykoterapia.html">
-                    <img class="img-responsive img-hover img-related" 
-										src="./graphics/fotolia/03_01_04_muzykoterapia_263_150.jpg" alt="">
+                    <img class="img-responsive img-hover img-related"
+                         src="graphics/fotolia/03_01_04_muzykoterapia_263_150.jpg" alt="">
 										<center>Muzykoterapia</center>
 										</a>
             </div>
