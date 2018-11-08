@@ -26,7 +26,7 @@ body {
 /* Home Page Carousel */
 
 header.carousel {
-/* wysokosc przewijajacych sie banerow */
+    /* wysokosc przewijajacych sie banerow */
     height: 50%;
 }
 
@@ -38,10 +38,10 @@ header.carousel .carousel-inner {
 
 header.carousel .fill {
     width: 100%;
-    height:100%;
+    height: 100%;
     background-position: center;
-    /*background-size: cover;*/    /* rozciaga obrazek na cala strone */
-		background-repeat: no-repeat; /* nie duplikuje obrazka */
+    /*background-size: cover;*/ /* rozciaga obrazek na cala strone */
+    background-repeat: no-repeat; /* nie duplikuje obrazka */
 }
 
 /* 404 Page Styles 
@@ -78,15 +78,20 @@ footer {
 /* 
 tr.noBorder tr,td {border: 0;}
 */
-tr.noBorder td {border: 0; }
-tr.noLeftBorder td {border-left: 5px }
+tr.noBorder td {
+    border: 0;
+}
 
-td.border-left-bottom{
+tr.noLeftBorder td {
+    border-left: 5px
+}
+
+td.border-left-bottom {
     border-left: 5px;
     border-bottom: 5px;
 }
 
-tr.border-left-bottom{
+tr.border-left-bottom {
     border-left: 0px;
     border-bottom: 0px;
 }
@@ -96,16 +101,18 @@ aaaa {
     border-left: thick double #ff0000;
 }
 
-Responsive Styles */
+Responsive Styles *
 
-@media(max-width:991px) {
+/
+
+@media (max-width: 991px) {
     .customer-img,
     .img-related {
         margin-bottom: 30px;
     }
 }
 
-@media(max-width:767px) {
+@media (max-width: 767px) {
     .img-portfolio {
         margin-bottom: 15px;
     }

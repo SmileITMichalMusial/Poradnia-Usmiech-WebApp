@@ -58,7 +58,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
-              <img width=100% border="5" src="graphics/baner.jpg" alt=""/>
+                <img width=100% border="5" src="graphics/baner.jpg" alt=""/>
 
             </h1>
             <ol class="breadcrumb">
@@ -75,7 +75,7 @@
         <thead>
 
         <tr id="test">
-           <td colspan="3" class="noborder_up"><input id="myInput" type="text" placeholder="Wyszukaj usługę">
+            <td colspan="3" class="noborder_up"><input id="myInput" type="text" placeholder="Wyszukaj usługę">
             </td>
         </tr>
         <tr>

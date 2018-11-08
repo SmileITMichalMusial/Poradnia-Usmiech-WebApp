@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% request.getSession().getAttribute("listOfUsers"); %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -75,23 +76,54 @@
         <!-- Content Row -->
     <div class="row">
         <!-- Sidebar Column -->
-        <div class="col-md-3">
+        <div class="col-lg-2 col-md-2 col-sm-10">
             <%@include file="../../WEB-INF/01_headers_footers/002_admin_left_menu.jsp" %>
         </div>
         <!-- Content Column -->
-        <div class="col-md-9">
-            <h2>Lista użytkowników</h2>
-            <p>tabela</p>
+        <div class="col-lg-10 col-md-10 col-sm-10">
+
+
+            <form class="form-wrapper" method="post" action="/User">
+                <h4>Załóż konto:</h4>
+                <input type="text" class="form-control" name="login" placeholder="login" required>
+                <input type="password" class="form-control" name="password" placeholder="hasło"
+                       required>
+                <input type="text" class="form-control" name="name" placeholder="imię" required>
+                <input type="text" class="form-control" name="surname" placeholder="nazwisko" required>
+                <input type="email" class="form-control" name="email" placeholder="email" required>
+                <input type="tel" class="form-control" name="phone" placeholder="telefon">
+                <select required class="form-control" name="type">
+                    <option value="" selected disabled hidden>Typ użytkownika</option>
+                    <option>Klient</option>
+                    <option>Pracownik</option>
+                    <option>Admin</option>
+                </select>
+
+
+                <button type="submit" name="save" class="btn btn-default">Załóż konto <i
+                        class="fa fa-envelope-open-o"></i></button>
+                <a href="/jsp/01_admin_pages/21_1_users_view.jsp" class="btn btn-default">Anuluj<i
+                        class="fa fa-backward"></i></a>
+            </form>
+
+
         </div>
+
     </div>
-    <!-- /.row -->
 
-    <hr>
 
-    <!-- Footer -->
-    <%@include file="../../WEB-INF/01_headers_footers/001_footer.jsp" %>
 
+<!-- koniec tabeli userow -->
+
+
+<!-- /.row -->
+
+<hr>
+
+<!-- Footer -->
+<%@include file="../../WEB-INF/01_headers_footers/001_footer.jsp" %>
 </div>
+
 <!-- /.container -->
 
 <!-- jQuery -->

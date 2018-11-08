@@ -69,17 +69,26 @@
         </div>
     </div>
     <!-- /.row
+        <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3 col-lg-2-3">
 
-
-    <!--// CODE HERE-->
-    <form class="form-wrapper" method="post" action="/LoginServlet">
-        <h4>Zaloguj się:</h4>
-        <input type="text" class="form-control" name="login" placeholder="login" required>
-        <input type="password" class="form-control" name="password" placeholder="hasło"
-               required>
-        <button type="submit" class="btn btn-primary">Zaloguj się <i
-                class="fa fa-envelope-open-o"></i></button>
-    </form>
+            <!--// CODE HERE-->
+            <form class="form-wrapper" method="post" action="/LoginServlet">
+                <h4>Zaloguj się:</h4>
+                <input type="text" class="form-control" name="login" placeholder="login" required>
+                <input type="password" class="form-control" name="password" placeholder="hasło"
+                       required>
+                <button type="submit" class="btn btn-default">Zaloguj się <i
+                        class="fa fa-envelope-open-o"></i></button>
+                <a href="/jsp/01_admin_pages/21_1_users_view.jsp" class="btn btn-default">Załóż konto<i
+                        class="fa fa-xxx"></i></a>
+                <a href="/jsp/01_admin_pages/21_1_users_view.jsp" class="btn btn-default">Nie pamiętam hasła<i
+                        class="fa fa-xxx"></i></a>
+            </form>
+        </div>
+    </div>
 
     <br>
     <hr>
