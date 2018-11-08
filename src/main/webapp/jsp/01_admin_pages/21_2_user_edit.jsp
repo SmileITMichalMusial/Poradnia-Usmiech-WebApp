@@ -67,7 +67,7 @@
             <ol class="breadcrumb">
                 <li><a href="../../index.jsp">Strona główna</a></li>
 
-                <li class="active">Panel administracyjny</li>
+                <li class="active">Użytkownicy</li>
             </ol>
         </div>
     </div>
@@ -76,23 +76,57 @@
         <!-- Content Row -->
     <div class="row">
         <!-- Sidebar Column -->
-        <div class="col-md-2 col-lg-2-2">
+        <div class="col-lg-2 col-md-2 col-sm-10">
             <%@include file="../../WEB-INF/01_headers_footers/002_admin_left_menu.jsp" %>
         </div>
         <!-- Content Column -->
-        <div class="col-md-10 col-lg-2">
-            <h2>Panel administracyjny</h2>
-            <p>Wybierz opcje po lewej stronie ekranu</p>
+        <div class="col-lg-10 col-md-10 col-sm-10">
+
+
+            <form class="form-wrapper" method="post" action="/UserEditServlet">
+                <h4>Edycja użytkownika</h4>
+                Login (nieedytowalny): <input type="text" class="form-control" name="login" placeholder="login"
+                                             value="${user.getLogin()}" disabled>
+                Imię: <input type="text" class="form-control" name="name" placeholder="name"
+                             value="${user.getName()}" required>
+                Nazwisko: <input type="text" class="form-control" name="surname" placeholder="surname"
+                                value="${user.getSurname()}" required>
+                Email: <input type="email" class="form-control" name="email" placeholder="email"
+                              value="${user.getEmail()}" required>
+                Telefon: <input type="tel" class="form-control" name="phone" placeholder="phone"
+                              value="${user.getPhoneNumber()}">
+                Typ: <select required class="form-control" name="type" value="${user.getUserType()}">
+                <option value="" selected disabled hidden>Typ użytkownika</option>
+                <option>Klient</option>
+                <option>Pracownik</option>
+                <option>Admin</option>
+            </select>
+
+
+                <button type="submit" name="save" class="btn btn-default">Zaktualizuj <i
+                        class="fa fa-save"></i></button>
+                <a href="/jsp/01_admin_pages/21_1_users_view.jsp" class="btn btn-default">Anuluj<i
+                        class="fa fa-backward"></i></a>
+            </form>
+
+
         </div>
+
     </div>
-    <!-- /.row -->
 
-    <hr>
 
-    <!-- Footer -->
-    <%@include file="../../WEB-INF/01_headers_footers/001_footer.jsp" %>
 
+<!-- koniec tabeli userow -->
+
+
+<!-- /.row -->
+
+<hr>
+
+<!-- Footer -->
+<%@include file="../../WEB-INF/01_headers_footers/001_footer.jsp" %>
 </div>
+
 <!-- /.container -->
 
 <!-- jQuery -->

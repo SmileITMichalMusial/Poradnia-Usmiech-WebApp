@@ -67,7 +67,7 @@
             <ol class="breadcrumb">
                 <li><a href="../../index.jsp">Strona główna</a></li>
 
-                <li class="active">Panel administracyjny</li>
+                <li class="active">Użytkownicy</li>
             </ol>
         </div>
     </div>
@@ -76,23 +76,51 @@
         <!-- Content Row -->
     <div class="row">
         <!-- Sidebar Column -->
-        <div class="col-md-2 col-lg-2-2">
+        <div class="col-lg-2 col-md-2 col-sm-10">
             <%@include file="../../WEB-INF/01_headers_footers/002_admin_left_menu.jsp" %>
         </div>
         <!-- Content Column -->
-        <div class="col-md-10 col-lg-2">
-            <h2>Panel administracyjny</h2>
-            <p>Wybierz opcje po lewej stronie ekranu</p>
+        <div class="col-lg-10 col-md-10 col-sm-10">
+
+
+            <section class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="page-wrapper">
+                                <div class="notfound">
+                                    <div class="row">
+                                        <div class="col-md-8 offset-md-2 text-center">
+                                            <h3>${errorTitle}</h3>
+                                            <p>${errorDecscription}</p>
+                                            <a href="../jsp/01_admin_pages/10_admin_menu.jsp" class="btn btn-primary">Powrót</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end page-wrapper -->
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+                </div><!-- end container -->
+            </section>
+
+
         </div>
+
     </div>
+
+
+
+    <!-- koniec tabeli userow -->
+
+
     <!-- /.row -->
 
     <hr>
 
     <!-- Footer -->
     <%@include file="../../WEB-INF/01_headers_footers/001_footer.jsp" %>
-
 </div>
+
 <!-- /.container -->
 
 <!-- jQuery -->
