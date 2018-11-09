@@ -1,5 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <% request.getSession().getAttribute("listOfUsers"); %>
+<% request.getAttribute("errorTitle"); %>
+<% request.getAttribute("errorDecscription"); %>
+<% request.getAttribute("link"); %>
+<% request.getAttribute("infoText"); %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -93,7 +97,7 @@
                                         <div class="col-md-8 offset-md-2 text-center">
                                             <h3>${errorTitle}</h3>
                                             <p>${errorDecscription}</p>
-                                            <a href="../jsp/01_admin_pages/10_admin_menu.jsp" class="btn btn-primary">Powrót</a>
+                                            <a href="${link}" class="btn btn-primary">${infoText}</a>
                                         </div>
                                     </div>
                                 </div>

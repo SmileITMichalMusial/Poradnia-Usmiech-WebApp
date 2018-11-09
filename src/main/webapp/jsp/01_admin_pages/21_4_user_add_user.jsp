@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<% request.getSession().getAttribute("listOfUsers"); %>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -67,7 +67,7 @@
             <ol class="breadcrumb">
                 <li><a href="../../index.jsp">Strona główna</a></li>
 
-                <li class="active">Użytkownicy</li>
+                <li class="active">Zakładanie konta</li>
             </ol>
         </div>
     </div>
@@ -76,14 +76,12 @@
         <!-- Content Row -->
     <div class="row">
         <!-- Sidebar Column -->
-        <div class="col-lg-2 col-md-2 col-sm-10">
-            <%@include file="../../WEB-INF/01_headers_footers/002_admin_left_menu.jsp" %>
-        </div>
+
         <!-- Content Column -->
-        <div class="col-lg-10 col-md-10 col-sm-10">
+        <div class="col-md-3 col-lg-3">
 
 
-            <form class="form-wrapper" method="post" action="/User">
+            <form class="form-wrapper" method="post" action="/UserAddServletUser">
                 <h4>Załóż konto:</h4>
                 <input type="text" class="form-control" name="login" placeholder="login" required>
                 <input type="password" class="form-control" name="password" placeholder="hasło"
@@ -102,7 +100,7 @@
 
                 <button type="submit" name="save" class="btn btn-default">Załóż konto <i
                         class="fa fa-envelope-open-o"></i></button>
-                <a href="/jsp/01_admin_pages/21_1_users_view.jsp" class="btn btn-default">Anuluj<i
+                <a href="../../08_login.jsp" class="btn btn-default">Anuluj<i
                         class="fa fa-backward"></i></a>
             </form>
 

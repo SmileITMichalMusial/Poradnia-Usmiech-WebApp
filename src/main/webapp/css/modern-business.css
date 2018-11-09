@@ -101,9 +101,7 @@ aaaa {
     border-left: thick double #ff0000;
 }
 
-Responsive Styles *
 
-/
 
 @media (max-width: 991px) {
     .customer-img,
