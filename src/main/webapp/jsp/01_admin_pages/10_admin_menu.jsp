@@ -76,11 +76,11 @@
         <!-- Content Row -->
     <div class="row">
         <!-- Sidebar Column -->
-        <div class="col-md-2 col-lg-2-2">
+        <div class="col-md-2 col-lg-2">
             <%@include file="../../WEB-INF/01_headers_footers/002_admin_left_menu.jsp" %>
         </div>
         <!-- Content Column -->
-        <div class="col-md-10 col-lg-2">
+        <div class="col-md-10 col-lg-10">
             <h2>Panel administracyjny</h2>
             <p>Wybierz opcje po lewej stronie ekranu</p>
         </div>

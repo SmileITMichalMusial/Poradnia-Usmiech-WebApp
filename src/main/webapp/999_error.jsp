@@ -1,6 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isErrorPage="true" %>
 <% request.getAttribute("errorTitle"); %>
 <% request.getAttribute("errorDecscription"); %>
+<% request.getAttribute("link"); %>
+<% request.getAttribute("infoText"); %>
 
 
 <!DOCTYPE html>
@@ -68,7 +70,7 @@
             <ol class="breadcrumb">
                 <li><a href="index.jsp">Strona główna</a></li>
 
-                <li class="active">Błąd</li>
+                <li class="active">Informacja</li>
             </ol>
         </div>
     </div>
@@ -78,26 +80,20 @@
     <!--// CODE HERE-->
 
 
+    <div class="row">
 
-    <section class="section">
-        <div class="container">
+        <div class="page-wrapper">
+
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="page-wrapper">
-                        <div class="notfound">
-                            <div class="row">
-                                <div class="col-md-8 offset-md-2 text-center">
-                                    <h3>${errorTitle}</h3>
-                                    <p>${errorDecscription}</p>
-                                    <a href="index.jsp" class="btn btn-primary">Strona główna</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- end page-wrapper -->
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </section>
+                <div class="col-md-12 text-center">
+                    <h3>${errorTitle}</h3>
+                    <p>${errorDecscription}</p>
+                    <a href="${link}" class="btn btn-default">${infoText}</a>
+                </div>
+            </div>
+
+        </div><!-- end page-wrapper -->
+    </div><!-- end col -->
 
 
     <br>

@@ -83,7 +83,7 @@
         <div class="col-lg-10 col-md-10 col-sm-10">
 
 
-            <a href="/jsp/01_admin_pages/21_3_user_add.jsp" class="btn btn-default">Dodaj użytkownika <i
+            <a href="/jsp/01_admin_pages/21_3_user_add_admin.jsp" class="btn btn-default">Dodaj użytkownika <i
                     class="fa fa-plus-circle"></i></a>
             <br><br>
             <!-- Tabela userów-->

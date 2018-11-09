@@ -17,8 +17,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Logger;
 
-@WebServlet("/User")
-class UserAddServlet extends HttpServlet {
+@WebServlet("/UserAddServletAdmin")
+class UserAddServletAdmin extends HttpServlet {
 
     final Logger logger = Logger.getLogger(getClass().getName());
 
@@ -52,6 +52,8 @@ class UserAddServlet extends HttpServlet {
             logger.info("Przekierowanie do strony głównej");
             req.setAttribute("errorTitle", "Nie można utworzyć konta");
             req.setAttribute("errorDecscription", "Taki login już istnieje. Wybierz inny.");
+            req.setAttribute("infoText","Powrót");
+            req.setAttribute("link","/jsp/01_admin_pages/21_3_user_add_admin.jsp");
             RequestDispatcher rd = req.getRequestDispatcher("../jsp/01_admin_pages/99_error_admin_panel.jsp");
             rd.forward(req, resp);
             return;

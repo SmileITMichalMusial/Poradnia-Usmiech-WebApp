@@ -64,7 +64,7 @@
             <ol class="breadcrumb">
                 <li><a href="index.jsp">Strona główna</a></li>
 
-                <li class="active">Cennik</li>
+                <li class="active">Zaloguj</li>
             </ol>
         </div>
     </div>
@@ -72,7 +72,7 @@
         <!-- Content Row -->
     <div class="row">
         <!-- Sidebar Column -->
-        <div class="col-md-3 col-lg-2-3">
+        <div class="col-md-3 col-lg-3">
 
             <!--// CODE HERE-->
             <form class="form-wrapper" method="post" action="/LoginServlet">
@@ -80,12 +80,12 @@
                 <input type="text" class="form-control" name="login" placeholder="login" required>
                 <input type="password" class="form-control" name="password" placeholder="hasło"
                        required>
+                <br>
                 <button type="submit" class="btn btn-default">Zaloguj się <i
                         class="fa fa-envelope-open-o"></i></button>
-                <a href="/jsp/01_admin_pages/21_1_users_view.jsp" class="btn btn-default">Załóż konto<i
+                <a href="/jsp/01_admin_pages/21_4_user_add_user.jsp" class="btn btn-default">Załóż konto<i
                         class="fa fa-xxx"></i></a>
-                <a href="/jsp/01_admin_pages/21_1_users_view.jsp" class="btn btn-default">Nie pamiętam hasła<i
-                        class="fa fa-xxx"></i></a>
+
             </form>
         </div>
     </div>
