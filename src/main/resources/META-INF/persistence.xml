@@ -9,6 +9,7 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
         <class>pl.poradniausmiech.domain.User</class>
+        <class>pl.poradniausmiech.domain.Employee</class>
 
 
         <properties>

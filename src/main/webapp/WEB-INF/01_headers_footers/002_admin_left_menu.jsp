@@ -3,7 +3,7 @@
 
 <div class="list-group">
     <a href="/ListAllUsersAdminServlet" class="list-group-item">Użytkownicy</a>
-    <a href="about.html" class="list-group-item">Pracownicy</a>
+    <a href="/ListAllEmployeesAdminServlet" class="list-group-item">Pracownicy</a>
     <a href="services.html" class="list-group-item">Pliki</a>
 
 </div>
