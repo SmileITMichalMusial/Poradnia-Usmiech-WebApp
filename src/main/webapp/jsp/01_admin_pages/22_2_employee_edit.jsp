@@ -88,20 +88,19 @@
                 Imię: <input type="text" class="form-control" name="name" placeholder="imię"
                              value="${employee.getName()}" required>
                 Nazwisko: <input type="text" class="form-control" name="surname" placeholder="nazwisko"
-                                value="${employee.getSurname()}" required>
+                                 value="${employee.getSurname()}" required>
                 Rola (krótka): <input type="text" class="form-control" name="roleShort" placeholder="rola (krótka)"
-                                 value="${employee.getRoleShort()}" required>
+                                      value="${employee.getRoleShort()}" required>
                 Rola (długa): <input type="text" class="form-control" name="roleLong" placeholder="rola (długa)"
-                                      value="${employee.getRoleLong()}" required>
-                Opis: <input type="text" class="form-control" name="description" placeholder="opis"
-                                     value="${employee.getDescription()}" required>
+                                     value="${employee.getRoleLong()}" required>
+                Opis: <textarea id = "textBox1" class="form-control" name="description" placeholder="opis" TextMode = "Multiline" onkeyup="setHeight('textBox1');" onkeydown="setHeight('textBox1');"
+                                 required>${employee.getDescription()}</textarea>
                 Email: <input type="email" class="form-control" name="email" placeholder="email"
                               value="${employee.getEmail()}" required>
                 Telefon: <input type="tel" class="form-control" name="phoneNumber" placeholder="telefon"
-                              value="${employee.getPhoneNumber()}">
-                Numer konta: <input type="tel" class="form-control" name="bankAccountNumber" placeholder="numer konta"
-                                value="${employee.getBankAccountNumber()}">
-
+                                value="${employee.getPhoneNumber()}">
+                Numer konta: <input type="text" class="form-control" name="bankAccountNumber" placeholder="numer konta"
+                                    value="${employee.getBankAccountNumber()}">
 
 
                 <button type="submit" name="save" class="btn btn-default">Zaktualizuj <i
@@ -116,16 +115,15 @@
     </div>
 
 
+    <!-- koniec tabeli userow -->
 
-<!-- koniec tabeli userow -->
 
+    <!-- /.row -->
 
-<!-- /.row -->
+    <hr>
 
-<hr>
-
-<!-- Footer -->
-<%@include file="../../WEB-INF/01_headers_footers/001_footer.jsp" %>
+    <!-- Footer -->
+    <%@include file="../../WEB-INF/01_headers_footers/001_footer.jsp" %>
 </div>
 
 <!-- /.container -->
@@ -135,6 +133,14 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="../../js/bootstrap.min.js"></script>
+
+<!--JAVASCRIPT-->
+<script type="text/javascript">
+    function setHeight(fieldId){
+        document.getElementById(fieldId).style.height = document.getElementById(fieldId).scrollHeight + 3 +'px';
+    }
+    setHeight('textBox1');
+</script>
 
 </body>
 

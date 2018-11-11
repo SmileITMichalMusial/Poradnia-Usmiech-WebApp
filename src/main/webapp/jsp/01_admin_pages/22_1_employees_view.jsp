@@ -88,8 +88,8 @@
             <br><br>
             <!-- Tabela userów-->
 
-            <div class="table-responsive">
-                <table class="table">
+            <div class="table-responsive table-bordered table-striped table-hover table-condensed">
+                <table class="table-responsive table-bordered table-striped table-hover table-condensed">
                     <thead>
                     <tr>
 
@@ -98,9 +98,6 @@
                         <th>Imię</th>
                         <th>Nazwisko</th>
                         <th>Rola (krótko)</th>
-                        <th>Rola (długo)</th>
-                        <th>Opis</th>
-                        <th>Email</th>
                         <th>Telefon</th>
                         <th>Numer konta</th>
                         <th>Aktywny?</th>
@@ -115,7 +112,7 @@
                     <c:forEach items="${listOfEmployees}" var="employeeLoop">
                         <tr>
 
-                            <td align="center">
+                            <td>
                                 <a href="/EmployeeEditServlet?id=${employeeLoop.getId()}"><em
                                         class="fa fa-pencil color-aqua"></em></a>
                             </td>
@@ -131,15 +128,7 @@
                             <td>
                                     ${employeeLoop.getRoleShort()}
                             </td>
-                            <td>
-                                    ${employeeLoop.getRoleLong()}
-                            </td>
-                            <td>
-                                    ${employeeLoop.getDescription()}
-                            </td>
-                            <td>
-                                <a href="mailto:${employeeLoop.getEmail()}">${employeeLoop.getEmail()}</a>
-                            </td>
+
                             <td>
                                     ${employeeLoop.getPhoneNumber()}
                             </td>

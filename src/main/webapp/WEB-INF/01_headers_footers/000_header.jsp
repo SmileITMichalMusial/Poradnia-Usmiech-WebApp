@@ -30,6 +30,9 @@
                 <li>
                     <a href="../../02_specjalisci.jsp">Specjaliści</a>
                 </li>
+                <li>
+                    <a href="/ListAllActiveEmployeesMainPageServlet">loop</a>
+                </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Oferta <b class="caret"></b></a>
                     <ul class="dropdown-menu">
