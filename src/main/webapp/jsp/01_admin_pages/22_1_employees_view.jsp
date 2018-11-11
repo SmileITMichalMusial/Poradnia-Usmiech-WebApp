@@ -97,9 +97,9 @@
                         <th>ID</th>
                         <th>Imię</th>
                         <th>Nazwisko</th>
-                        <th>Rola (krótko)</th>
+                        <th>Rola</th>
                         <th>Telefon</th>
-                        <th>Numer konta</th>
+                        <th>Konto</th>
                         <th>Aktywny?</th>
                         <th><em class="fa fa-cog"></em></th>
                         <!--<th><em class="fa fa-remove"></em><em class="fa fa-plus"></em></th>-->

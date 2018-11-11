@@ -88,8 +88,8 @@
             <br><br>
             <!-- Tabela userów-->
 
-            <div class="table-responsive">
-                <table class="table">
+            <div class="table-responsive table-bordered table-striped table-hover table-condensed">
+                <table class="table-responsive table-bordered table-striped table-hover table-condensed">
                     <thead>
                     <tr>
 
@@ -113,7 +113,7 @@
                     <c:forEach items="${listOfUsers}" var="userLoop">
                         <tr>
 
-                            <td align="center">
+                            <td>
                                 <a href="/UserEditServlet?id=${userLoop.getId()}"><em
                                         class="fa fa-pencil color-aqua"></em></a>
                             </td>
