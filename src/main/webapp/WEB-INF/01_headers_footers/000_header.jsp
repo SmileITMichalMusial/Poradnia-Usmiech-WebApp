@@ -28,10 +28,10 @@
                     <a href="../../01_o_nas.jsp">O Nas</a>
                 </li>
                 <li>
-                    <a href="../../02_specjalisci.jsp">Specjaliści</a>
+                    <a href="/ListAllActiveEmployeesMainPageServlet">Specjaliści</a>
                 </li>
                 <li>
-                    <a href="/ListAllActiveEmployeesMainPageServlet">loop</a>
+                    <a href="../../02_specjalisci.jsp">Spec(old)</a>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Oferta <b class="caret"></b></a>

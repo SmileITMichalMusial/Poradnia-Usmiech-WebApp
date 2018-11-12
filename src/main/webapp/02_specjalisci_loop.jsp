@@ -83,7 +83,7 @@
         </c:if>
 
         <div class="col-md-3 img-portfolio">
-            <a href="/EmployeeEditServlet?id=${employeesLoop.getId()}">
+            <a href="/EmployeeUserViewServlet?id=${employeesLoop.getId()}&page=spec">
                 <img class="img-responsive img-hover" src="graphics/02_01_agnieszka_adamczyk_musial_wys_250.jpg"
                      alt="">
             </a>
