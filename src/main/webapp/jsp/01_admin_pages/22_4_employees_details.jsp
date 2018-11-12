@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<% request.getSession().getAttribute("listOfEmployees"); %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<% request.getAttribute("employee"); %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -76,38 +77,71 @@
         <!-- Content Row -->
     <div class="row">
         <!-- Sidebar Column -->
-        <div class="col-lg-2 col-md-2 col-sm-10">
+        <div class="col-lg-2 col-md-2 col-sm-2">
             <%@include file="../../WEB-INF/01_headers_footers/002_admin_left_menu.jsp" %>
         </div>
         <!-- Content Column -->
         <div class="col-lg-10 col-md-10 col-sm-10">
 
+            ${employee.getName()} ${employee.getSurname()}
 
-            <form class="form-wrapper" method="post" action="/EmployeeEditServlet">
-                <h4>Edycja pracownika</h4>
-                Imię: <input type="text" class="form-control" name="name" placeholder="imię"
-                             value="${employee.getName()}" required>
-                Nazwisko: <input type="text" class="form-control" name="surname" placeholder="nazwisko"
-                                 value="${employee.getSurname()}" required>
-                Rola (krótka): <input type="text" class="form-control" name="roleShort" placeholder="rola (krótka)"
-                                      value="${employee.getRoleShort()}" required>
-                Rola (długa): <input type="text" class="form-control" name="roleLong" placeholder="rola (długa)"
-                                     value="${employee.getRoleLong()}" required>
-                Opis: <textarea id = "textBox1" class="form-control" name="description" placeholder="opis" TextMode = "Multiline" onkeyup="setHeight('textBox1');" onkeydown="setHeight('textBox1');"
-                                 required>${employee.getDescription()}</textarea>
-                Email: <input type="email" class="form-control" name="email" placeholder="email"
-                              value="${employee.getEmail()}" required>
-                Telefon: <input type="tel" class="form-control" name="phoneNumber" placeholder="telefon"
-                                value="${employee.getPhoneNumber()}">
-                Numer konta: <input type="text" class="form-control" name="bankAccountNumber" placeholder="numer konta"
-                                    value="${employee.getBankAccountNumber()}">
+            <div class="table-responsive table-bordered table-striped table-hover table-condensed">
+                <table class="table-responsive table-bordered table-striped table-hover table-condensed">
 
+                    <tbody>
 
-                <button type="submit" name="save" class="btn btn-default">Zaktualizuj <i
-                        class="fa fa-save"></i></button>
-                <a href="/jsp/01_admin_pages/22_1_employees_view.jsp" class="btn btn-default">Anuluj<i
-                        class="fa fa-backward"></i></a>
-            </form>
+                    <tr>
+                        <td>ID</td>
+                        <td>${employee.getId()}</td>
+                    </tr>
+                    <tr>
+                        <td>Imie</td>
+                        <td>${employee.getName()}</td>
+                    </tr>
+                    <tr>
+                        <td>Nazwisko</td>
+                        <td>${employee.getSurname()}</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>${employee.getEmail()}</td>
+                    </tr>
+                    <tr>
+                        <td>Telefon</td>
+                        <td>${employee.getPhoneNumber()}</td>
+                    </tr>
+                    <tr>
+                        <td>Numer konta</td>
+                        <td>${employee.getBankAccountNumber()}</td>
+                    </tr>
+                    <tr>
+                        <td>Rola (któtka)</td>
+                        <td>${employee.getRoleShort()}</td>
+                    </tr>
+                    <tr>
+                        <td>Rola (długa)</td>
+                        <td>${employee.getRoleLong()}</td>
+                    </tr>
+                    <tr>
+                        <td>Opis</td>
+                        <td>${employee.getDescription()}</td>
+                    </tr>
+                    <tr>
+                        <td>Aktywny</td>
+                        <td>${employee.getActive()}</td>
+                    </tr>
+                    <tr>
+                        <td>Data stworzenia:</td>
+                        <td>${employee.getDateCreated()}</td>
+                    </tr>
+                    <tr>
+                        <td>Data modyfikacji:</td>
+                        <td>${employee.getDateModified()}</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
 
 
         </div>
@@ -124,8 +158,8 @@
 
     <!-- Footer -->
     <%@include file="../../WEB-INF/01_headers_footers/001_footer.jsp" %>
-</div>
 
+</div>
 <!-- /.container -->
 
 <!-- jQuery -->
@@ -133,14 +167,6 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="../../js/bootstrap.min.js"></script>
-
-<!--JAVASCRIPT-->
-<script type="text/javascript">
-    function setHeight(fieldId){
-        document.getElementById(fieldId).style.height = document.getElementById(fieldId).scrollHeight + 3 +'px';
-    }
-    setHeight('textBox1');
-</script>
 
 </body>
 

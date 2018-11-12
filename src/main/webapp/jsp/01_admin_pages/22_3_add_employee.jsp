@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<% request.getSession().getAttribute("listOfUsers"); %>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -89,7 +89,10 @@
                 <input type="text" class="form-control" name="surname" placeholder="nazwisko" required>
                 <input type="text" class="form-control" name="roleShort" placeholder="rola (krótka)" required>
                 <input type="text" class="form-control" name="roleLong" placeholder="rola (długa)" required>
-                <input type="text" class="form-control" name="description" placeholder="opis" required>
+              <!--  <input type="text" class="form-control" name="description" placeholder="opis" required>-->
+
+                <textarea id = "textBox1" class="form-control" name="description" placeholder="opis" TextMode = "Multiline" onkeyup="setHeight('textBox1');" onkeydown="setHeight('textBox1');"
+                          required></textarea>
 
                 <input type="email" class="form-control" name="email" placeholder="email" required>
                 <input type="tel" class="form-control" name="phoneNumber" placeholder="telefon">
@@ -128,6 +131,14 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="../../js/bootstrap.min.js"></script>
+
+<!--JAVASCRIPT-->
+<script type="text/javascript">
+    function setHeight(fieldId){
+        document.getElementById(fieldId).style.height = document.getElementById(fieldId).scrollHeight + 3 +'px';
+    }
+    setHeight('textBox1');
+</script>
 
 </body>
 

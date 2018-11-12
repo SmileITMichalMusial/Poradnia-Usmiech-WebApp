@@ -73,7 +73,7 @@
     </div>
     <!-- /.row
 
-        <!-- Content Row -->
+    <!-- Content Row -->
     <div class="row">
         <!-- Sidebar Column -->
         <div class="col-lg-2 col-md-2 col-sm-2">
@@ -88,21 +88,18 @@
             <br><br>
             <!-- Tabela userów-->
 
-            <div class="table-responsive">
-                <table class="table">
+            <div class="table-responsive table-bordered table-striped table-hover table-condensed">
+                <table class="table-responsive table-bordered table-striped table-hover table-condensed">
                     <thead>
                     <tr>
-
+                        <th>Podgląd</th>
                         <th>Edycja</th>
                         <th>ID</th>
                         <th>Imię</th>
                         <th>Nazwisko</th>
-                        <th>Rola (krótko)</th>
-                        <th>Rola (długo)</th>
-                        <th>Opis</th>
-                        <th>Email</th>
+                        <th>Rola</th>
                         <th>Telefon</th>
-                        <th>Numer konta</th>
+                        <th>Konto</th>
                         <th>Aktywny?</th>
                         <th><em class="fa fa-cog"></em></th>
                         <!--<th><em class="fa fa-remove"></em><em class="fa fa-plus"></em></th>-->
@@ -115,7 +112,11 @@
                     <c:forEach items="${listOfEmployees}" var="employeeLoop">
                         <tr>
 
-                            <td align="center">
+                            <td>
+                                <a href="/EmployeeUserViewServlet?id=${employeeLoop.getId()}&page=adm"><em
+                                        class="fa fa-newspaper-o color-aqua"></em></a>
+                            </td>
+                            <td>
                                 <a href="/EmployeeEditServlet?id=${employeeLoop.getId()}"><em
                                         class="fa fa-pencil color-aqua"></em></a>
                             </td>
@@ -131,15 +132,7 @@
                             <td>
                                     ${employeeLoop.getRoleShort()}
                             </td>
-                            <td>
-                                    ${employeeLoop.getRoleLong()}
-                            </td>
-                            <td>
-                                    ${employeeLoop.getDescription()}
-                            </td>
-                            <td>
-                                <a href="mailto:${employeeLoop.getEmail()}">${employeeLoop.getEmail()}</a>
-                            </td>
+
                             <td>
                                     ${employeeLoop.getPhoneNumber()}
                             </td>

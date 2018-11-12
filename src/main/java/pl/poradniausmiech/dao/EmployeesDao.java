@@ -10,6 +10,8 @@ public interface EmployeesDao {
 
     List<Employee> getEmployeesListFromDB();
 
+    List<Employee> getActiveEmployeesListFromDB();
+
     Employee read(int id);
 
     void modifyEmployeeDb(Employee employee);

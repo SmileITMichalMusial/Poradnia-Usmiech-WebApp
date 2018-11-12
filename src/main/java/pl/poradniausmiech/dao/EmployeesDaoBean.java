@@ -14,6 +14,7 @@ import java.util.List;
 public class EmployeesDaoBean implements EmployeesDao {
 
     private List<Employee> employeeList = new ArrayList<>();
+    private List<Employee> activeEmployeeList = new ArrayList<>();
     private static final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("primary");
 
     @Override
@@ -24,6 +25,16 @@ public class EmployeesDaoBean implements EmployeesDao {
         employeeList = entityManager.createQuery("FROM Employee ").getResultList();
 
         return employeeList;
+    }
+
+    @Override
+    public List<Employee> getActiveEmployeesListFromDB() {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
+        activeEmployeeList = entityManager.createQuery("FROM Employee where isActive = true ").getResultList();
+
+        return activeEmployeeList;
     }
 
     @Override

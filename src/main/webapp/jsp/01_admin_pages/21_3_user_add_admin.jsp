@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<% request.getSession().getAttribute("listOfEmployees"); %>
+<% request.getSession().getAttribute("listOfUsers"); %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -67,7 +67,7 @@
             <ol class="breadcrumb">
                 <li><a href="../../index.jsp">Strona główna</a></li>
 
-                <li class="active">Pracownicy</li>
+                <li class="active">Użytkownicy</li>
             </ol>
         </div>
     </div>
@@ -83,29 +83,26 @@
         <div class="col-lg-10 col-md-10 col-sm-10">
 
 
-            <form class="form-wrapper" method="post" action="/EmployeeEditServlet">
-                <h4>Edycja pracownika</h4>
-                Imię: <input type="text" class="form-control" name="name" placeholder="imię"
-                             value="${employee.getName()}" required>
-                Nazwisko: <input type="text" class="form-control" name="surname" placeholder="nazwisko"
-                                 value="${employee.getSurname()}" required>
-                Rola (krótka): <input type="text" class="form-control" name="roleShort" placeholder="rola (krótka)"
-                                      value="${employee.getRoleShort()}" required>
-                Rola (długa): <input type="text" class="form-control" name="roleLong" placeholder="rola (długa)"
-                                     value="${employee.getRoleLong()}" required>
-                Opis: <textarea id = "textBox1" class="form-control" name="description" placeholder="opis" TextMode = "Multiline" onkeyup="setHeight('textBox1');" onkeydown="setHeight('textBox1');"
-                                 required>${employee.getDescription()}</textarea>
-                Email: <input type="email" class="form-control" name="email" placeholder="email"
-                              value="${employee.getEmail()}" required>
-                Telefon: <input type="tel" class="form-control" name="phoneNumber" placeholder="telefon"
-                                value="${employee.getPhoneNumber()}">
-                Numer konta: <input type="text" class="form-control" name="bankAccountNumber" placeholder="numer konta"
-                                    value="${employee.getBankAccountNumber()}">
+            <form class="form-wrapper" method="post" action="/UserAddServletAdmin">
+                <h4>Załóż konto:</h4>
+                <input type="text" class="form-control" name="login" placeholder="login" required>
+                <input type="password" class="form-control" name="password" placeholder="hasło"
+                       required>
+                <input type="text" class="form-control" name="name" placeholder="imię" required>
+                <input type="text" class="form-control" name="surname" placeholder="nazwisko" required>
+                <input type="email" class="form-control" name="email" placeholder="email" required>
+                <input type="tel" class="form-control" name="phone" placeholder="telefon">
+                <select required class="form-control" name="type">
+                    <option value="" selected disabled hidden>Typ użytkownika</option>
+                    <option>Klient</option>
+                    <option>Pracownik</option>
+                    <option>Admin</option>
+                </select>
 
 
-                <button type="submit" name="save" class="btn btn-default">Zaktualizuj <i
-                        class="fa fa-save"></i></button>
-                <a href="/jsp/01_admin_pages/22_1_employees_view.jsp" class="btn btn-default">Anuluj<i
+                <button type="submit" name="save" class="btn btn-default">Załóż konto <i
+                        class="fa fa-envelope-open-o"></i></button>
+                <a href="/jsp/01_admin_pages/21_1_users_view.jsp" class="btn btn-default">Anuluj<i
                         class="fa fa-backward"></i></a>
             </form>
 
@@ -115,15 +112,16 @@
     </div>
 
 
-    <!-- koniec tabeli userow -->
+
+<!-- koniec tabeli userow -->
 
 
-    <!-- /.row -->
+<!-- /.row -->
 
-    <hr>
+<hr>
 
-    <!-- Footer -->
-    <%@include file="../../WEB-INF/01_headers_footers/001_footer.jsp" %>
+<!-- Footer -->
+<%@include file="../../WEB-INF/01_headers_footers/001_footer.jsp" %>
 </div>
 
 <!-- /.container -->
@@ -133,14 +131,6 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="../../js/bootstrap.min.js"></script>
-
-<!--JAVASCRIPT-->
-<script type="text/javascript">
-    function setHeight(fieldId){
-        document.getElementById(fieldId).style.height = document.getElementById(fieldId).scrollHeight + 3 +'px';
-    }
-    setHeight('textBox1');
-</script>
 
 </body>
 
