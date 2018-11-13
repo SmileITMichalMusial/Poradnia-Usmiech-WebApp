@@ -13,13 +13,13 @@
     <title>Poradnia Psychologiczna "Uśmiech"</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="../../css/modern-business.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -57,10 +57,10 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
-                <center><img border="5" width=100% src="graphics/baner.jpg" alt=""></center>
+                <center><img border="5" width=100% src="../../graphics/baner.jpg" alt=""></center>
             </h1>
             <ol class="breadcrumb">
-                <li><a href="index.jsp">Strona główna</a>
+                <li><a href="../../index.jsp">Strona główna</a>
                 </li>
                 <li><a href="02_specjalisci.jsp">Specjaliści</a>
                 </li>
@@ -75,7 +75,7 @@
 
         <div class="col-md-obrazek">
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <img class="img-responsive" src="graphics/agnieszka_adamczyk_musial_szer_450.jpg"
+                <img class="img-responsive" src="../../graphics/agnieszka_adamczyk_musial_szer_450.jpg"
                      alt="">
                 <!-- Indicators
                 <ol class="carousel-indicators">
@@ -204,10 +204,10 @@
 <!-- /.container -->
 
 <!-- jQuery -->
-<script src="js/jquery.js"></script>
+<script src="../../js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
 
 </body>
 

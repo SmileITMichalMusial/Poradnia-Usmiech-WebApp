@@ -1,10 +1,8 @@
 package pl.poradniausmiech.servlets.employeesServlets;
 
 import pl.poradniausmiech.dao.EmployeesDao;
-import pl.poradniausmiech.dao.UsersDao;
 import pl.poradniausmiech.domain.Employee;
-import pl.poradniausmiech.domain.User;
-import pl.poradniausmiech.domain.UserType;
+
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -13,8 +11,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.logging.Logger;
 
 @WebServlet("/EmployeeEditServlet")
@@ -56,6 +56,7 @@ class EmployeeEditServlet extends HttpServlet {
         String description = req.getParameter("description");
         String email = req.getParameter("email");
         String phoneNumber = req.getParameter("phoneNumber");
+        Integer orderId = Integer.valueOf(req.getParameter("orderId"));
         String bankAccountNumber = req.getParameter("bankAccountNumber");
 
         req.getSession().setAttribute("name", name);
@@ -64,6 +65,7 @@ class EmployeeEditServlet extends HttpServlet {
         req.getSession().setAttribute("roleLong", roleLong);
         req.getSession().setAttribute("email", email);
         req.getSession().setAttribute("phoneNumber", phoneNumber);
+        req.getSession().setAttribute("orderId",orderId);
         req.getSession().setAttribute("bankAccountNumber", bankAccountNumber);
 
         Employee employee = employeesDao.read(Integer.parseInt(idEmployee));
@@ -74,7 +76,12 @@ class EmployeeEditServlet extends HttpServlet {
         employee.setDescription(description);
         employee.setEmail(email);
         employee.setPhoneNumber(phoneNumber);
+        employee.setOrderId(orderId);
         employee.setBankAccountNumber(bankAccountNumber);
+        Date date= new Date();
+        long time = date.getTime();
+        Timestamp ts = new Timestamp(time);
+        employee.setDateModified(ts);
 
         employeesDao.modifyEmployeeDb(employee);
         logger.info("Employee id: " + idEmployee + " zaktualizowany");
@@ -85,6 +92,7 @@ class EmployeeEditServlet extends HttpServlet {
                 " | Nowy opis: " + description +
                 " | Nowy email: " + email +
                 " | Nowy telefon: " + phoneNumber +
+                " | Nowa kolejność: " + phoneNumber +
                 " | Nowy numer konta: " + bankAccountNumber
         );
 

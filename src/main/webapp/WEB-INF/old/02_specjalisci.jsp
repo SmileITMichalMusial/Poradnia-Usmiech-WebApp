@@ -1,7 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<% request.getSession().getAttribute("listOfActiveEmployees"); %>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,13 +13,13 @@
     <title>Poradnia Psychologiczna "Uśmiech"</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="../../css/modern-business.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,7 +50,7 @@
 
 
 <!-- Navigation -->
-<%@include file="WEB-INF/01_headers_footers/000_header.jsp" %>
+<%@include file="../01_headers_footers/000_header.jsp" %>
 <!-- Page Content -->
 <div class="container">
 
@@ -62,11 +59,11 @@
         <div class="col-lg-12">
 
             <h1 class="page-header">
-                <center><img border="5" width=100% src="graphics/baner.jpg" alt=""></center>
+                <center><img border="5" width=100% src="../../graphics/baner.jpg" alt=""></center>
 
             </h1>
             <ol class="breadcrumb">
-                <li><a href="index.jsp">Strona główna</a>
+                <li><a href="../../index.jsp">Strona główna</a>
                 </li>
                 <li class="active">Specjaliści</li>
             </ol>
@@ -74,39 +71,64 @@
     </div>
     <!-- /.row -->
 
-
-    <c:forEach items="${listOfActiveEmployees}" var="employeesLoop" varStatus="myIndex">
-        <!-- wyswietlanie pracownikow w petli; tworzenie mowego div dla czterech pracownikow tylko jesli modulo % 4 jest zero
-        liczę po myIndex.count; alternatywnie {myIndex.index} -->
-        <c:if test="${myIndex.count % 4 == 0 }">
-            <div class="row">
-        </c:if>
+    <!-- Projects Row -->
+    <!-- Specjalisci rzad 1 - 4 osoby -->
+    <div class="row">
 
         <div class="col-md-3 img-portfolio">
-            <a href="/EmployeeUserViewServlet?id=${employeesLoop.getId()}&page=spec">
-                <img class="img-responsive img-hover" src="graphics/02_01_agnieszka_adamczyk_musial_wys_250.jpg"
+            <a href="02_01_specjalisci_agnieszka_adamczyk_musial.jsp">
+                <img class="img-responsive img-hover" src="../../graphics/02_01_agnieszka_adamczyk_musial_wys_250.jpg"
                      alt="">
             </a>
             <h3>
-                <a href="02_01_specjalisci_agnieszka_adamczyk_musial.jsp">${employeesLoop.getName()} ${employeesLoop.getSurname()}</a>
+                <a href="02_01_specjalisci_agnieszka_adamczyk_musial.jsp">Agnieszka Adamczyk-Musiał</a>
             </h3>
-            <p>${employeesLoop.getRoleLong()} <a
+            <p>pedagog specjalny, psycholog, logopeda - założycielka Poradni <a
                     href="02_01_specjalisci_agnieszka_adamczyk_musial.jsp">(więcej)</a></p>
         </div>
 
-        <c:if test="${myIndex.count % 4 == 0 }">
-            </div>
-        </c:if>
-    </c:forEach>
+        <div class="col-md-3 img-portfolio">
+            <a href="02_10_specjalisci_aleksandra_szalla.jsp">
+                <img class="img-responsive img-hover" src="../../graphics/02_10_aleksandra_szalla_wys_250.jpg" alt="">
+            </a>
+            <h3>
+                <a href="02_10_specjalisci_aleksandra_szalla.jsp">Aleksandra Szalla</a>
+            </h3>
+            <p>dyrektor pedagogiczny, pedagog specjalny, terapeuta, trener umiejętności społecznych <a
+                    href="02_10_specjalisci_aleksandra_szalla.jsp">(więcej)</a></p>
+        </div>
 
+        <div class="col-md-3 img-portfolio">
+            <a href="jsp/o_nas/02_06_marta_chroscicka.jsp">
+                <img class="img-responsive img-hover" src="../../graphics/02_06_marta_chroscicka_wys_250.jpg" alt="">
+            </a>
+            <h3>
+                <a href="jsp/o_nas/02_06_marta_chroscicka.jsp">Marta Chrościcka</a>
+            </h3>
+            <p>psycholog <a href="jsp/o_nas/02_06_marta_chroscicka.jsp">(więcej)</a></p>
+        </div>
+
+
+        <div class="col-md-3 img-portfolio">
+            <a href="02_03_karina_choros_wrzeszcz.jsp">
+                <img class="img-responsive img-hover" src="../../graphics/02_03_karina_choros_wrzeszcz_wys_250.jpg" alt="">
+            </a>
+            <h3>
+                <a href="02_03_karina_choros_wrzeszcz.jsp">Karina Choroś-Wrzeszcz</a>
+            </h3>
+            <p>mediator, terapeuta <a href="02_03_karina_choros_wrzeszcz.jsp">(więcej)</a></p>
+        </div>
+
+
+    </div>
 
     <!-- Projects Row -->
     <!-- Specjalisci rzad 2 - 4 osoby -->
-    <!--<div class="row">
+    <div class="row">
 
         <div class="col-md-3 img-portfolio">
             <a href="02_09_katarzyna_andrusikiewicz.jsp">
-                <img class="img-responsive img-hover" src="graphics/02_09_katarzyna_andrusikiewicz_wys_250.jpg"
+                <img class="img-responsive img-hover" src="../../graphics/02_09_katarzyna_andrusikiewicz_wys_250.jpg"
                      alt="">
             </a>
             <h3>
@@ -117,7 +139,7 @@
 
         <div class="col-md-3 img-portfolio">
             <a href="02_12_miroslaw_dudzinski.jsp">
-                <img class="img-responsive img-hover" src="graphics/02_12_miroslaw_dudzinski_wys_250.jpg" alt="">
+                <img class="img-responsive img-hover" src="../../graphics/02_12_miroslaw_dudzinski_wys_250.jpg" alt="">
             </a>
             <h3>
                 <a href="02_12_miroslaw_dudzinski.jsp">Mirosław Dudziński</a>
@@ -128,7 +150,7 @@
 
         <div class="col-md-3 img-portfolio">
             <a href="02_05_anna_suchecka.jsp">
-                <img class="img-responsive img-hover" src="graphics/02_05_anna_suchecka_wys_250.jpg" alt="">
+                <img class="img-responsive img-hover" src="../../graphics/02_05_anna_suchecka_wys_250.jpg" alt="">
             </a>
             <h3>
                 <a href="02_05_anna_suchecka.jsp">Aneta Suchecka</a>
@@ -139,12 +161,31 @@
 
         <div class="col-md-3 img-portfolio">
             <a href="02_13_paulina_staluszka.jsp">
-                <img class="img-responsive img-hover" src="graphics/02_13_paulina_staluszka_wys_250.jpg" alt="">
+                <img class="img-responsive img-hover" src="../../graphics/02_13_paulina_staluszka_wys_250.jpg" alt="">
             </a>
             <h3>
                 <a href="02_13_paulina_staluszka.jsp">Paulina Staluszka</a>
             </h3>
             <p>pedagog, trener TUS <a href="02_13_paulina_staluszka.jsp">(więcej)</a></p>
+        </div>
+
+
+    </div>
+    <div class="row">
+
+        <!-- Projects Row -->
+        <!-- Specjalisci rzad 3 - 1 osoba -->
+
+
+        <div class="col-md-3 img-portfolio">
+            <a href="02_14_katarzyna_wojcieszynska.jsp">
+                <img class="img-responsive img-hover" src="../../graphics/02_14_katarzyna_wojcieszynska_wys_250.jpg" alt="">
+            </a>
+            <h3>
+                <a href="02_14_katarzyna_wojcieszynska.jsp">Katarzyna Wojcieszyńska</a>
+            </h3>
+            <p>fizjoterapeuta, pedagog specjalny, terapeuta SI (Integracji Sensorycznej)<a
+                    href="02_14_katarzyna_wojcieszynska.jsp">(więcej)</a></p>
         </div>
 
 
@@ -158,7 +199,7 @@
 
 
     <!-- Footer -->
-    <%@include file="WEB-INF/01_headers_footers/001_footer.jsp" %>
+    <%@include file="../01_headers_footers/001_footer.jsp" %>
 
 
 </div>
@@ -168,10 +209,10 @@
 <!-- /.container -->
 
 <!-- jQuery -->
-<script src="js/jquery.js"></script>
+<script src="../../js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
 
 </body>
 

@@ -13,13 +13,13 @@
     <title>Poradnia Psychologiczna "Uśmiech"</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="../../css/modern-business.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,7 +41,7 @@
 
 <body>
  <!-- Navigation -->
- <%@include file="WEB-INF/01_headers_footers/000_header.jsp" %>
+ <%@include file="../01_headers_footers/000_header.jsp" %>
     <!-- Page Content -->
     <div class="container">
 
@@ -49,14 +49,14 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-								<center><img border="5" width=100% src="graphics/baner.jpg" alt=""> </center>
+								<center><img border="5" width=100% src="../../graphics/baner.jpg" alt=""> </center>
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="index.jsp">Strona główna</a>
+                    <li><a href="../../index.jsp">Strona główna</a>
                     </li>
 										<li><a href="02_specjalisci.jsp">Specjaliści</a>
                     </li>
-                    <li class="active">Katarzyna Andrusikiewicz</li>
+                    <li class="active">Mirosław Dudziński</li>
                 </ol>
             </div>
         </div>
@@ -67,7 +67,7 @@
 
             <div class="col-md-obrazek">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-								<img class="img-responsive" src="graphics/katarzyna_andrusikiewicz_szer_450.jpg"
+								<img class="img-responsive" src="../../graphics/miroslaw_dudzinski_szer_450.jpg"
 														alt="">
                     <!-- Indicators 
                     <ol class="carousel-indicators">
@@ -101,31 +101,32 @@
             </div>
 
             <div class="col-md-tekst">
-                <h3>Katarzyna Andrusikiewicz</h3>
+                <h3>Mirosław Dudziński</h3>
 <p style="text-align:justify">
-Absolwentka Psychologii Klinicznej w Szkole Wyższej Psychologii Społecznej w Warszawie, ukończyła także Studium Terapii Uzależnień i Współuzależnienia w Instytucie Psychologii Zdrowia Polskiego Towarzystwa Psychologicznego w Warszawie.
+Ukończył psychologię na Uniwersytecie Jagiellońskim w Krakowie oraz 4–letnie całościowe szkolenie w zakresie psychoterapii w  Instytucie Integralnej Psychoterapii Gestalt. Pracował w Mazowieckim Centrum Neuropsychiatrii  z młodzieżą jako terapeuta wspierający. Posiada kilkuletnie doświadczenie w pracy terapeutycznej z osobami dorosłymi.
 <br><br>
+Pracuje w podejściu  Gestalt, którego celem jest poszerzanie świadomości w zakresie przeżywanych trudności oraz poszukiwanie nowych i adekwatnych reakcji na pojawiające się problemy. Korzysta aktywnie z różnych podejść  i technik w pracy terapeutycznej jak podejście psychodynamiczne, praca ze snem, praca z ciałem, analiza transakcyjna. Jest także certyfikowanym coachem.
+<br><br>
+Specjalizuje się w pracy z osobami zmagającymi się ze stanami depresyjnymi, lękowymi, obniżonym poczuciem wartości, brakiem satysfakcjonujących relacji.
+<br><br>
+Pracuje pod stałą superwizją.
 
-Obecnie jest w trakcie procesu certyfikacji terapeutycznej.
-<br><br>
-Specjalizuje się w pracy z pacjentami uzależnionymi od alkoholu, narkotyków, a także od hazardu, posiada też doświadczenie w pracy z pacjentami z podwójną diagnozą. Regularnie poddaje swoją pracę superwizji.
-<br><br>
-Swoje doświadczenie zawodowe zdobywała m.in. w Centrum Odwykowym SPZOZ w Warszawie, w Szpitalu Praskim, Szpitalu Bródnowskim w Warszawie oraz w Stowarzyszeniu Rozwoju Osobistego „Rehab” w Warszawie.
 </p>
 
         </div>
 				</div>
-        <!-- /.row -->
 <hr>
+        <!-- /.row -->
+
         <!-- Related Projects Row -->
-<!--         <div class="row">
+        <!-- <div class="row">
 
             <div class="col-lg-12">
                 <h3 class="pozostali_specjalisci">Pozostali specjaliści</h3>
 				</div>
 
 						
-				<div class="row"> -->
+				<div class="row">
 
 						<!--
             <div class="col-md-2">
@@ -133,9 +134,9 @@ Swoje doświadczenie zawodowe zdobywała m.in. w Centrum Odwykowym SPZOZ w Warsz
                     <img class="img-responsive img-hover img-related" src="./graphics/agnieszka_adamczyk_musial_wys_150.jpg" alt="">Agnieszka Adamczyk-Musiał<br>psycholog
                 </a>
             </div>
-						-->
+						
                 
-<!-- 						<div class="col-md-2">
+						<div class="col-md-2">
                 <a href="02_02_aleksandra_mazur.html">
                     <img class="img-responsive img-hover img-related" src="./graphics/aleksandra_mazur_wys_150.jpg" alt="">Aleksandra Mazur-Kyć<br>psycholog
                 </a>
@@ -173,28 +174,28 @@ Swoje doświadczenie zawodowe zdobywała m.in. w Centrum Odwykowym SPZOZ w Warsz
 								
 								
 				</div>
-						 
+						
 						
 						
 					
 
-            
 
 
-        <hr>
-				-->
+       
 
         <!-- Footer -->
-        <%@include file="WEB-INF/01_headers_footers/001_footer.jsp" %>
+
+
+        <%@include file="../01_headers_footers/001_footer.jsp" %>
 
     
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="../../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
 
 </body>
 

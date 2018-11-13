@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.logging.Logger;
 
 @WebServlet("/UserEditServlet")
@@ -70,6 +72,10 @@ class UserEditServlet extends HttpServlet
         user.setEmail(email);
         user.setPhoneNumber(phone);
         user.setUserType(UserType.valueOf(type));
+        Date date = new Date();
+        long time = date.getTime();
+        Timestamp ts = new Timestamp(time);
+        user.setDateModified(ts);
         
         usersDao.modifyUserDb(user);
         logger.info("User id: " + idUser + " successfully updated");

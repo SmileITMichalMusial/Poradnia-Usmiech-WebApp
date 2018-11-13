@@ -13,13 +13,13 @@
     <title>Poradnia Psychologiczna "Uśmiech"</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="../../css/modern-business.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,7 +41,7 @@
 
 <body>
  <!-- Navigation -->
- <%@include file="WEB-INF/01_headers_footers/000_header.jsp" %>
+ <%@include file="../01_headers_footers/000_header.jsp" %>
     <!-- Page Content -->
     <div class="container">
 
@@ -49,14 +49,14 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-								<center><img border="5" width=100% src="graphics/baner.jpg" alt=""> </center>
+								<center><img border="5" width=100% src="../../graphics/baner.jpg" alt=""> </center>
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="index.jsp">Strona główna</a>
+                    <li><a href="../../index.jsp">Strona główna</a>
                     </li>
 										<li><a href="02_specjalisci.jsp">Specjaliści</a>
                     </li>
-                    <li class="active">Marta Chrościcka</li>
+                    <li class="active">Aleksandra Szalla</li>
                 </ol>
             </div>
         </div>
@@ -67,7 +67,7 @@
 
             <div class="col-md-obrazek">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-								<img class="img-responsive" src="graphics/marta_chroscicka_szer_450.jpg"
+								<img class="img-responsive" src="../../graphics/aleksandra_szalla_szer_450.jpg"
 														alt="">
                     <!-- Indicators 
                     <ol class="carousel-indicators">
@@ -101,30 +101,26 @@
             </div>
 
             <div class="col-md-tekst">
-                <h3>Marta Chrościcka</h3>
-Psycholog<br><br>
+                <h3>Aleksandra Szalla</h3>
 <p style="text-align:justify">
 
-Absolwentka psychologii społecznej Uniwersytetu SWPS w Warszawie. Uzyskała specjalizację w
-Diagnozie psychologicznej w praktyce klinicznej. <br><br>
-Obecnie współpracuje z przedszkolami jako psycholog wspierający, prowadzi obserwacje,
-konsultacje, diagnozę i terapię dzieci i rodzin.<br><br>
-Pracowała z dziećmi z zaburzeniami ze spektrum autyzmu w ośrodku terapeutycznym z oddziałałem
-przedszkolnym Promitis , oraz ich rodzinami.<br><br>
-Konsultant do spraw rozwoju dzieci dla polskiej marki zabawek edukacyjnych.<br><br>
-Trener umiejętności miękkich skierowanych do kobiet dla firmy szkoleniowej Exertus.<br><br>
-Ukończyła warsztaty: Zabawa jako forma terapii, Porozumienie bez przemocy (NVC), Warsztaty
-rodzicielstwa bliskości.<br><br>
-Prywatnie mama siedmiolatka i trzyletnich bliźniaków.
+<br>
+Absolwentka Uniwersytetu Warmińsko-Mazurskiego w Olsztynie, kierunek Pedagogika Specjalna, specjalność Oligofrenopedagogika oraz Uniwersytetu Kardynała Stefana Wyszyńskiego w Warszawie, kierunek Pedagogika, specjalność Terapia Pedagogiczna z Edukacją Włączającą.
+<br><br>
+Ukończyła kurs Ruchu Rozwijającego Weroniki Sherborne, kurs Terapii Ręki, a także Trening Umiejętności Społecznych. Rozwijała swoje umiejętności odbywając wolontariat w przedszkolu integracyjnym pracując z dziećmi z zaburzeniami ze spektrum autyzmu. 
+<br><br>
+Obecnie studiuje na Uniwersytecie Warszawskim, gdzie rozpoczęła specjalizację Polityka Oświatowa – Menedżer Oświaty. 
+<br><br>
+Interesuje się dziećmi ze szczególnymi zaburzeniami rozwojowymi.
 </p>
 
-            </div>
-
         </div>
-        <!-- /.row -->
+				</div>
 <hr>
-       
-			  <!-- <div class="row">
+        <!-- /.row -->
+
+        <!-- Related Projects Row -->
+        <!-- <div class="row">
 
             <div class="col-lg-12">
                 <h3 class="pozostali_specjalisci">Pozostali specjaliści</h3>
@@ -133,11 +129,13 @@ Prywatnie mama siedmiolatka i trzyletnich bliźniaków.
 						
 				<div class="row">
 
+						<!--
             <div class="col-md-2">
                 <a href="02_01_specjalisci_agnieszka_adamczyk_musial.jsp">
                     <img class="img-responsive img-hover img-related" src="./graphics/agnieszka_adamczyk_musial_wys_150.jpg" alt="">Agnieszka Adamczyk-Musiał<br>psycholog
                 </a>
             </div>
+						
                 
 						<div class="col-md-2">
                 <a href="02_02_aleksandra_mazur.html">
@@ -161,17 +159,15 @@ Prywatnie mama siedmiolatka i trzyletnich bliźniaków.
                 <a href="02_05_anna_suchecka.jsp">
                     <img class="img-responsive img-hover img-related" src="./graphics/anna_suchecka_wys_150.jpg" alt="">Aneta Suchecka<br>logopeda
                 </a>
-            </div>	 -->
+            </div>	
 						
-						<!--
 						<div class="col-md-2">
                 <a href="02_06_radoslaw_jerzy_utnik.html">
                     <img class="img-responsive img-hover img-related" src="./graphics/radoslaw_jerzy_utnik_wys_150.jpg" alt="">Radosław Jerzy Utnik<br>psycholog, seksuolog, mediator w sprawach cywilnych
                 </a>
             </div>	
-						-->
 						
-<!-- 						<div class="col-md-2">
+						<div class="col-md-2">
                 <a href="02_07_marta_jagiello.html">
                     <img class="img-responsive img-hover img-related" src="./graphics/marta_jagiello_wys_150.jpg" alt="">Marta Jagiełło<br>psycholog
                 </a>
@@ -179,20 +175,28 @@ Prywatnie mama siedmiolatka i trzyletnich bliźniaków.
 								
 								
 				</div>
+						
+						
+						
+					
 
-        <hr> -->
+
+
+       
 
         <!-- Footer -->
-        <%@include file="WEB-INF/01_headers_footers/001_footer.jsp" %>
 
-    </div>
+
+        <%@include file="../01_headers_footers/001_footer.jsp" %>
+
+    
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="../../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
 
 </body>
 

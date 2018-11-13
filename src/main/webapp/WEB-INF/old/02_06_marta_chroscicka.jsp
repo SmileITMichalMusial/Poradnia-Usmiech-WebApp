@@ -13,57 +13,50 @@
     <title>Poradnia Psychologiczna "Uśmiech"</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="../../css/modern-business.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-87283178-1', 'auto');
-        ga('send', 'pageview');
+  ga('create', 'UA-87283178-1', 'auto');
+  ga('send', 'pageview');
 
-    </script>
+</script>
 </head>
 
 <body>
-<!-- Navigation -->
-<%@include file="WEB-INF/01_headers_footers/000_header.jsp" %>
-
-<!-- Page Content -->
+ <!-- Navigation -->
+ <%@include file="../01_headers_footers/000_header.jsp" %>
+    <!-- Page Content -->
     <div class="container">
 
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header"><center><img border="5" width=100% src="graphics/baner.jpg" alt=""> </center>
+                <h1 class="page-header">
+								<center><img border="5" width=100% src="../../graphics/baner.jpg" alt=""> </center>
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="index.jsp">Strona główna</a>
+                    <li><a href="../../index.jsp">Strona główna</a>
                     </li>
 										<li><a href="02_specjalisci.jsp">Specjaliści</a>
                     </li>
-                    <li class="active">Karina Choroś-Wrzeszcz</li>
+                    <li class="active">Marta Chrościcka</li>
                 </ol>
             </div>
         </div>
@@ -74,7 +67,7 @@
 
             <div class="col-md-obrazek">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-								<img class="img-responsive" src="graphics/karina_choros_wrzeszcz_szer_450.jpg"
+								<img class="img-responsive" src="../../graphics/marta_chroscicka_szer_450.jpg"
 														alt="">
                     <!-- Indicators 
                     <ol class="carousel-indicators">
@@ -108,24 +101,30 @@
             </div>
 
             <div class="col-md-tekst">
-                <h3>Karina Choroś-Wrzeszcz</h3>
+                <h3>Marta Chrościcka</h3>
+Psycholog<br><br>
 <p style="text-align:justify">
-Magister Psychologi, absolwentka Szkoły Wyższej Psychologii Społecznej w Warszawie, wydział Klinicznej Psychologii Społecznej.
-<br><br>
-W trakcie studiów rozwijała swoje umiejętności i doświadczenie w pracy z pacjentem, odbywając liczne staże na Oddziałach Psychiatrii Dziennych i Zamkniętych w Warszawskich Szpitalach, tym samym wzbogacała swoją wiedzę na temat zaburzeń utrudniających funkcjonowanie człowieka na co dzień.
-<br><br>
-Uczestniczyła w praktykach na temat terapii Zaburzeń Seksualnych, poszerzając zakres wiedzy na temat terapii par i małżeństw. Ukończyła szkolenie z zakresu "Coachingu Rodzicielskiego", poznając sekrety pracy z Rodzicami. Obecnie prowadzi terapię rodzinną, par i małżeństw.
-<br><br>
-Zawodowo: niebojąca się wyzwań terapeutka nurtu Systemowego w Terapii Rodzin
-Prywatnie: Świeżo upieczona szczęśliwa Mężatka 
+
+Absolwentka psychologii społecznej Uniwersytetu SWPS w Warszawie. Uzyskała specjalizację w
+Diagnozie psychologicznej w praktyce klinicznej. <br><br>
+Obecnie współpracuje z przedszkolami jako psycholog wspierający, prowadzi obserwacje,
+konsultacje, diagnozę i terapię dzieci i rodzin.<br><br>
+Pracowała z dziećmi z zaburzeniami ze spektrum autyzmu w ośrodku terapeutycznym z oddziałałem
+przedszkolnym Promitis , oraz ich rodzinami.<br><br>
+Konsultant do spraw rozwoju dzieci dla polskiej marki zabawek edukacyjnych.<br><br>
+Trener umiejętności miękkich skierowanych do kobiet dla firmy szkoleniowej Exertus.<br><br>
+Ukończyła warsztaty: Zabawa jako forma terapii, Porozumienie bez przemocy (NVC), Warsztaty
+rodzicielstwa bliskości.<br><br>
+Prywatnie mama siedmiolatka i trzyletnich bliźniaków.
 </p>
-<br><br>
+
             </div>
 
         </div>
         <!-- /.row -->
 <hr>
-<!--         <div class="row">
+       
+			  <!-- <div class="row">
 
             <div class="col-lg-12">
                 <h3 class="pozostali_specjalisci">Pozostali specjaliści</h3>
@@ -144,17 +143,15 @@ Prywatnie: Świeżo upieczona szczęśliwa Mężatka
                 <a href="02_02_aleksandra_mazur.html">
                     <img class="img-responsive img-hover img-related" src="./graphics/aleksandra_mazur_wys_150.jpg" alt="">Aleksandra Mazur-Kyć<br>psycholog
                 </a>
-            </div> -->
-						
-						<!--
+            </div>
+
             <div class="col-md-2">
                 <a href="02_03_karina_choros_wrzeszcz.jsp">
                     <img class="img-responsive img-hover img-related" src="./graphics/karina_choros_wrzeszcz_wys_150.jpg" alt="">Karina Choroś-Wrzeszcz<br>mediator, terapeuta
                 </a>
             </div>
-						-->
-						
-<!--             <div class="col-md-2">
+
+            <div class="col-md-2">
                 <a href="02_04_karolina_witak.html">
                     <img class="img-responsive img-hover img-related" src="./graphics/karolina_witak_wys_150.jpg" alt="">Karolina Witak<br>dietetyczka
                 </a>
@@ -164,15 +161,17 @@ Prywatnie: Świeżo upieczona szczęśliwa Mężatka
                 <a href="02_05_anna_suchecka.jsp">
                     <img class="img-responsive img-hover img-related" src="./graphics/anna_suchecka_wys_150.jpg" alt="">Aneta Suchecka<br>logopeda
                 </a>
-            </div>	
+            </div>	 -->
 						
+						<!--
 						<div class="col-md-2">
                 <a href="02_06_radoslaw_jerzy_utnik.html">
                     <img class="img-responsive img-hover img-related" src="./graphics/radoslaw_jerzy_utnik_wys_150.jpg" alt="">Radosław Jerzy Utnik<br>psycholog, seksuolog, mediator w sprawach cywilnych
                 </a>
             </div>	
+						-->
 						
-						<div class="col-md-2">
+<!-- 						<div class="col-md-2">
                 <a href="02_07_marta_jagiello.html">
                     <img class="img-responsive img-hover img-related" src="./graphics/marta_jagiello_wys_150.jpg" alt="">Marta Jagiełło<br>psycholog
                 </a>
@@ -180,20 +179,20 @@ Prywatnie: Świeżo upieczona szczęśliwa Mężatka
 								
 								
 				</div>
- 
-        <hr>
--->
+
+        <hr> -->
+
         <!-- Footer -->
-        <%@include file="WEB-INF/01_headers_footers/001_footer.jsp" %>
+        <%@include file="../01_headers_footers/001_footer.jsp" %>
 
     </div>
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="../../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
 
 </body>
 

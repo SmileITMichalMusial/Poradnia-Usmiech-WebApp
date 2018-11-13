@@ -83,7 +83,8 @@
         <!-- Content Column -->
         <div class="col-lg-10 col-md-10 col-sm-10">
 
-            ${employee.getName()} ${employee.getSurname()}
+            <h3>${employee.getName()} ${employee.getSurname()}</h3>
+            <br>
 
             <div class="table-responsive table-bordered table-striped table-hover table-condensed">
                 <table class="table-responsive table-bordered table-striped table-hover table-condensed">
@@ -93,6 +94,10 @@
                     <tr>
                         <td>ID</td>
                         <td>${employee.getId()}</td>
+                    </tr>
+                    <tr>
+                        <td>Kolejność</td>
+                        <td>${employee.getOrderId()}</td>
                     </tr>
                     <tr>
                         <td>Imie</td>

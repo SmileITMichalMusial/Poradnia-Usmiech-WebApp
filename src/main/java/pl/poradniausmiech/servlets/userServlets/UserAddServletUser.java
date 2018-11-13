@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -59,8 +60,7 @@ class UserAddServletUser extends HttpServlet {
             return;
         }
 
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        Date date = new Date();
+
 
         User user = new User();
         user.setLogin(login);
@@ -71,7 +71,10 @@ class UserAddServletUser extends HttpServlet {
         user.setPhoneNumber(phone);
         user.setUserType(UserType.valueOf(type));
         user.setActive(true);
-        user.setDateCreated(date);
+        Date date = new Date();
+        long time = date.getTime();
+        Timestamp ts = new Timestamp(time);
+        user.setDateCreated(ts);
 
         usersDao.saveUserToDb(user);
         logger.info("Użytkownik: " + login + " dodany do bazy danych");

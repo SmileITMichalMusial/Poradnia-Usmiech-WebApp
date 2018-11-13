@@ -100,6 +100,7 @@
                         <th>Rola</th>
                         <th>Telefon</th>
                         <th>Konto</th>
+                        <th>Kolejność</th>
                         <th>Aktywny?</th>
                         <th><em class="fa fa-cog"></em></th>
                         <!--<th><em class="fa fa-remove"></em><em class="fa fa-plus"></em></th>-->
@@ -138,6 +139,9 @@
                             </td>
                             <td>
                                     ${employeeLoop.getBankAccountNumber()}
+                            </td>
+                            <td>
+                                    ${employeeLoop.getOrderId()}
                             </td>
                             <td>
 

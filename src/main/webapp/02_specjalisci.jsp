@@ -1,4 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<% request.getAttribute("listOfActiveEmployees"); %>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,60 +74,35 @@
     </div>
     <!-- /.row -->
 
-    <!-- Projects Row -->
-    <!-- Specjalisci rzad 1 - 4 osoby -->
-    <div class="row">
+
+    <c:forEach items="${listOfActiveEmployees}" var="employeesLoop" varStatus="myIndex">
+        <!-- wyswietlanie pracownikow w petli; tworzenie mowego div dla czterech pracownikow tylko jesli modulo % 4 jest zero
+        liczę po myIndex.count; alternatywnie {myIndex.index} -->
+        <c:if test="${myIndex.count % 4 == 0 }">
+            <div class="row">
+        </c:if>
 
         <div class="col-md-3 img-portfolio">
-            <a href="02_01_specjalisci_agnieszka_adamczyk_musial.jsp">
+            <a href="/EmployeeUserViewServlet?id=${employeesLoop.getId()}&page=spec">
                 <img class="img-responsive img-hover" src="graphics/02_01_agnieszka_adamczyk_musial_wys_250.jpg"
                      alt="">
             </a>
             <h3>
-                <a href="02_01_specjalisci_agnieszka_adamczyk_musial.jsp">Agnieszka Adamczyk-Musiał</a>
+                <a href="WEB-INF/old/02_01_specjalisci_agnieszka_adamczyk_musial.jsp">${employeesLoop.getName()} ${employeesLoop.getSurname()}</a>
             </h3>
-            <p>pedagog specjalny, psycholog, logopeda - założycielka Poradni <a
-                    href="02_01_specjalisci_agnieszka_adamczyk_musial.jsp">(więcej)</a></p>
+            <p>${employeesLoop.getRoleLong()} <a
+                    href="WEB-INF/old/02_01_specjalisci_agnieszka_adamczyk_musial.jsp">(więcej)</a></p>
         </div>
 
-        <div class="col-md-3 img-portfolio">
-            <a href="02_10_specjalisci_aleksandra_szalla.jsp">
-                <img class="img-responsive img-hover" src="graphics/02_10_aleksandra_szalla_wys_250.jpg" alt="">
-            </a>
-            <h3>
-                <a href="02_10_specjalisci_aleksandra_szalla.jsp">Aleksandra Szalla</a>
-            </h3>
-            <p>dyrektor pedagogiczny, pedagog specjalny, terapeuta, trener umiejętności społecznych <a
-                    href="02_10_specjalisci_aleksandra_szalla.jsp">(więcej)</a></p>
-        </div>
+        <c:if test="${myIndex.count % 4 == 0 }">
+            </div>
+        </c:if>
+    </c:forEach>
 
-        <div class="col-md-3 img-portfolio">
-            <a href="jsp/o_nas/02_06_marta_chroscicka.jsp">
-                <img class="img-responsive img-hover" src="graphics/02_06_marta_chroscicka_wys_250.jpg" alt="">
-            </a>
-            <h3>
-                <a href="jsp/o_nas/02_06_marta_chroscicka.jsp">Marta Chrościcka</a>
-            </h3>
-            <p>psycholog <a href="jsp/o_nas/02_06_marta_chroscicka.jsp">(więcej)</a></p>
-        </div>
-
-
-        <div class="col-md-3 img-portfolio">
-            <a href="02_03_karina_choros_wrzeszcz.jsp">
-                <img class="img-responsive img-hover" src="graphics/02_03_karina_choros_wrzeszcz_wys_250.jpg" alt="">
-            </a>
-            <h3>
-                <a href="02_03_karina_choros_wrzeszcz.jsp">Karina Choroś-Wrzeszcz</a>
-            </h3>
-            <p>mediator, terapeuta <a href="02_03_karina_choros_wrzeszcz.jsp">(więcej)</a></p>
-        </div>
-
-
-    </div>
 
     <!-- Projects Row -->
     <!-- Specjalisci rzad 2 - 4 osoby -->
-    <div class="row">
+    <!--<div class="row">
 
         <div class="col-md-3 img-portfolio">
             <a href="02_09_katarzyna_andrusikiewicz.jsp">
@@ -167,25 +145,6 @@
                 <a href="02_13_paulina_staluszka.jsp">Paulina Staluszka</a>
             </h3>
             <p>pedagog, trener TUS <a href="02_13_paulina_staluszka.jsp">(więcej)</a></p>
-        </div>
-
-
-    </div>
-    <div class="row">
-
-        <!-- Projects Row -->
-        <!-- Specjalisci rzad 3 - 1 osoba -->
-
-
-        <div class="col-md-3 img-portfolio">
-            <a href="02_14_katarzyna_wojcieszynska.jsp">
-                <img class="img-responsive img-hover" src="graphics/02_14_katarzyna_wojcieszynska_wys_250.jpg" alt="">
-            </a>
-            <h3>
-                <a href="02_14_katarzyna_wojcieszynska.jsp">Katarzyna Wojcieszyńska</a>
-            </h3>
-            <p>fizjoterapeuta, pedagog specjalny, terapeuta SI (Integracji Sensorycznej)<a
-                    href="02_14_katarzyna_wojcieszynska.jsp">(więcej)</a></p>
         </div>
 
 
