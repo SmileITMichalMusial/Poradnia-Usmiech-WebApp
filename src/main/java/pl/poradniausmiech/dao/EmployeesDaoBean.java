@@ -27,15 +27,6 @@ public class EmployeesDaoBean implements EmployeesDao {
         return employeeList;
     }
 
-    @Override
-    public List<Employee> getActiveEmployeesListFromDB() {
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        EntityTransaction entityTransaction = entityManager.getTransaction();
-        entityTransaction.begin();
-        activeEmployeeList = entityManager.createQuery("FROM Employee where isActive = true ").getResultList();
-
-        return activeEmployeeList;
-    }
 
     @Override
     public Employee read(int id) {

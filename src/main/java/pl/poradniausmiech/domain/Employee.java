@@ -37,6 +37,9 @@ public class Employee {
     @Column(name = "bankAccountNumber")
     private String bankAccountNumber;
 
+    @Column(name = "orderId", nullable = false)
+    private Integer orderId;
+
     @Column(name = "isactive", nullable = false)
     private Boolean isActive;
 
@@ -120,6 +123,14 @@ public class Employee {
 
     public void setBankAccountNumber(String bankAccountNumber) {
         this.bankAccountNumber = bankAccountNumber;
+    }
+
+    public Integer getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(Integer orderId) {
+        this.orderId = orderId;
     }
 
     public Boolean getActive() {

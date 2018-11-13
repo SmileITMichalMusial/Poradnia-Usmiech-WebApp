@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -44,6 +45,7 @@ class EmployeeAddServletAdmin extends HttpServlet {
 
         String name = req.getParameter("name");
         String surname = req.getParameter("surname");
+        Integer orderId = Integer.valueOf(req.getParameter("orderId"));
         String roleShort = req.getParameter("roleShort");
         String roleLong = req.getParameter("roleLong");
         String description = req.getParameter("description");
@@ -51,21 +53,22 @@ class EmployeeAddServletAdmin extends HttpServlet {
         String phoneNumber = req.getParameter("phoneNumber");
         String bankAccountNumber = req.getParameter("bankAccountNumber");
 
-
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        Date date = new Date();
-
         Employee employee = new Employee();
         employee.setName(name);
         employee.setSurname(surname);
+        employee.setOrderId(orderId);
         employee.setRoleShort(roleShort);
         employee.setRoleLong(roleLong);
         employee.setDescription(description);
 
         employee.setEmail(email);
         employee.setPhoneNumber(phoneNumber);
+        employee.setBankAccountNumber(bankAccountNumber);
         employee.setActive(true);
-        employee.setDateCreated(date);
+        Date date = new Date();
+        long time = date.getTime();
+        Timestamp ts = new Timestamp(time);
+        employee.setDateCreated(ts);
 
         employeesDao.saveEmployeeToDb(employee);
         logger.info("Pracownik: " + name + " " + surname + " dodany do bazy danych");

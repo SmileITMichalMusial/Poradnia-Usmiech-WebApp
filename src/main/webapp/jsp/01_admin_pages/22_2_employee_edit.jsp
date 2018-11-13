@@ -99,6 +99,8 @@
                               value="${employee.getEmail()}" required>
                 Telefon: <input type="tel" class="form-control" name="phoneNumber" placeholder="telefon"
                                 value="${employee.getPhoneNumber()}">
+                Kolejność: <input type="number" class="form-control" name="orderId" placeholder="kolejność"
+                                value="${employee.getOrderId()}">
                 Numer konta: <input type="text" class="form-control" name="bankAccountNumber" placeholder="numer konta"
                                     value="${employee.getBankAccountNumber()}">
 

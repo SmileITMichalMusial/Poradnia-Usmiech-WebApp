@@ -146,11 +146,11 @@
 
             <b>Prowadzący</b><br/>
 
-            <a href="02_10_specjalisci_aleksandra_szalla.jsp">Aleksandra Szalla</a> - pedagog specjalny, terapeuta,
+            <a href="WEB-INF/old/02_10_specjalisci_aleksandra_szalla.jsp">Aleksandra Szalla</a> - pedagog specjalny, terapeuta,
             trener
             umiejętności społecznych
 
-            <a href="02_13_paulina_staluszka.jsp">Paulina Staluszka</a> - pedagog, trener umiejętności
+            <a href="WEB-INF/old/02_13_paulina_staluszka.jsp">Paulina Staluszka</a> - pedagog, trener umiejętności
             społecznych
             <br/><br/>
 

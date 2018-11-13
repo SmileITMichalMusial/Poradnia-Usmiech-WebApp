@@ -13,13 +13,13 @@
     <title>Poradnia Psychologiczna "Uśmiech"</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="../../css/modern-business.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -48,7 +48,7 @@
 
 <body>
 <!-- Navigation -->
-<%@include file="WEB-INF/01_headers_footers/000_header.jsp" %>
+<%@include file="../01_headers_footers/000_header.jsp" %>
 <!-- Page Content -->
 <div class="container">
 
@@ -56,10 +56,10 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
-                <img width=100% border="5" src="graphics/baner.jpg" alt=""/>
+                <img width=100% border="5" src="../../graphics/baner.jpg" alt=""/>
             </h1>
             <ol class="breadcrumb">
-                <li><a href="index.jsp">Strona główna</a>
+                <li><a href="../../index.jsp">Strona główna</a>
                 </li>
                 <li><a href="02_specjalisci.jsp">Specjaliści</a>
                 </li>
@@ -74,7 +74,7 @@
 
         <div class="col-md-obrazek">
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <img class="img-responsive" src="graphics/anna_suchecka_szer_450.jpg"
+                <img class="img-responsive" src="../../graphics/anna_suchecka_szer_450.jpg"
                      alt="">
                 <!-- Indicators
                 <ol class="carousel-indicators">
@@ -205,16 +205,16 @@
             <hr> -->
 
     <!-- Footer -->
-    <%@include file="WEB-INF/01_headers_footers/001_footer.jsp" %>
+    <%@include file="../01_headers_footers/001_footer.jsp" %>
 
 </div>
 <!-- /.container -->
 
 <!-- jQuery -->
-<script src="js/jquery.js"></script>
+<script src="../../js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
 
 </body>
 

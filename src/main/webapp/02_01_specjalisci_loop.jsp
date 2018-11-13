@@ -64,7 +64,7 @@
             <ol class="breadcrumb">
                 <li><a href="index.jsp">Strona główna</a>
                 </li>
-                <li><a href="02_specjalisci.jsp">Specjaliści</a>
+                <li><a href="WEB-INF/old/02_specjalisci.jsp">Specjaliści</a>
                 </li>
                 <li class="active">${employee.getName()} ${employee.getSurname()}</li>
             </ol>

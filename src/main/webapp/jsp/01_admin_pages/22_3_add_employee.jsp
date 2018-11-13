@@ -87,6 +87,7 @@
                 <h4>Dodaj pracownika:</h4>
                 <input type="text" class="form-control" name="name" placeholder="imię" required>
                 <input type="text" class="form-control" name="surname" placeholder="nazwisko" required>
+                <input type="number" class="form-control" name="orderId" placeholder="kolejność" required>
                 <input type="text" class="form-control" name="roleShort" placeholder="rola (krótka)" required>
                 <input type="text" class="form-control" name="roleLong" placeholder="rola (długa)" required>
               <!--  <input type="text" class="form-control" name="description" placeholder="opis" required>-->
