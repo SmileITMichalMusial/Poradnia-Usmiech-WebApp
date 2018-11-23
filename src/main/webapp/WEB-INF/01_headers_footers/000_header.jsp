@@ -55,7 +55,7 @@
                     <a href="../../05_galeria.jsp">Galeria</a>
                 </li>
                 <li>
-                    <a href="../../06_cennik.jsp">Cennik</a>
+                    <a href="/PriceListServlet">Cennik</a>
                 </li>
                 <li>
                     <a href="../../07_kontakt.jsp">Kontakt</a>
