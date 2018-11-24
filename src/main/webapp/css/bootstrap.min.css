@@ -7345,6 +7345,10 @@ tr.hover:hover {
     background: #33CC66;
 }
 
+.disabled {
+    pointer-events: none;
+    cursor: default;
+}
 
 
 /* table#b2, th, td {

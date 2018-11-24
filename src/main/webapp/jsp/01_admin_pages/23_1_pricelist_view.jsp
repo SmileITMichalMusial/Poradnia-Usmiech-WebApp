@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<% request.getAttribute("pricelistLayer1List"); %>
-<% request.getAttribute("pricelistLayer2List"); %>
+<% request.getSession().getAttribute("pricelistLayer1List"); %>
+<% request.getSession().getAttribute("pricelistLayer2List"); %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -68,7 +68,7 @@
             <ol class="breadcrumb">
                 <li><a href="../../index.jsp">Strona główna</a></li>
 
-                <li class="active">Pracownicy</li>
+                <li class="active">Cennik</li>
             </ol>
         </div>
     </div>
@@ -84,7 +84,7 @@
         <div class="col-lg-10 col-md-10 col-sm-10">
 
 
-            <a href="/jsp/01_admin_pages/22_3_add_employee.jsp" class="btn btn-default">Dodaj pracownika <i
+            <a href="/jsp/01_admin_pages/23_3_add_pricelist.jsp" class="btn btn-default">Dodaj usługe (warstwa 1) <i
                     class="fa fa-plus-circle"></i></a>
             <br><br>
             <!-- Tabela userów-->
@@ -144,6 +144,17 @@
                             </tr>
                         </c:if>
                     </c:forEach>
+
+                    <tr>
+                        <td colspan="6"><p align="right">
+                            <a href="/PriceListAddServlet?idl1=${pricelistLayer1Loop.getIdLayer1()}">dodaj
+                                usługę <em
+                                        class="fa fa-plus-circle"></em>
+                        </p></td>
+                        <td></td>
+                    </tr>
+
+
                 </c:forEach>
 
 

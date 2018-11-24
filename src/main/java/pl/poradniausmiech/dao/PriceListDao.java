@@ -23,7 +23,11 @@ public interface PriceListDao {
 
     void modifyPriceListLayer1(PricelistLayer1 pricelistLayer1);
 
+    void modifyPriceListLayer2(PriceListLayer2 priceListLayer2);
+
     void deletePriceListLayer1 (PricelistLayer1 pricelistLayer1);
 
     void deletePriceListLayer2 (PriceListLayer2 pricelistLayer2);
+
+    void savePricelistLayer1ToDb(PricelistLayer1 pricelistLayer1);
 }

@@ -1,5 +1,6 @@
 package pl.poradniausmiech.dao;
 
+import pl.poradniausmiech.domain.Employee;
 import pl.poradniausmiech.domain.pricelist.PriceListLayer2;
 import pl.poradniausmiech.domain.pricelist.PricelistLayer1;
 
@@ -73,6 +74,16 @@ public class PriceListDaoBean implements PriceListDao {
     }
 
     @Override
+    public void modifyPriceListLayer2(PriceListLayer2 pricelistLayer2) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
+        entityManager.merge(pricelistLayer2);
+        entityTransaction.commit();
+        entityManager.close();
+    }
+
+    @Override
     public void deletePriceListLayer1(PricelistLayer1 pricelistLayer1) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
@@ -88,6 +99,16 @@ public class PriceListDaoBean implements PriceListDao {
         entityTransaction.begin();
         entityManager.remove(entityManager.contains(pricelistLayer2) ? pricelistLayer2 : entityManager.merge(pricelistLayer2));
         entityTransaction.commit();
+        entityManager.close();
+    }
+
+    @Override
+    public void savePricelistLayer1ToDb(PricelistLayer1 pricelistLayer1) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        transaction.begin();
+        entityManager.persist(pricelistLayer1);
+        transaction.commit();
         entityManager.close();
     }
 }
