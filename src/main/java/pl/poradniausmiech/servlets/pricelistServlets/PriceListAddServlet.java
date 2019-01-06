@@ -1,8 +1,6 @@
 package pl.poradniausmiech.servlets.pricelistServlets;
 
-import pl.poradniausmiech.dao.EmployeesDao;
 import pl.poradniausmiech.dao.PriceListDao;
-import pl.poradniausmiech.domain.Employee;
 import pl.poradniausmiech.domain.pricelist.PricelistLayer1;
 
 import javax.inject.Inject;
@@ -42,7 +40,6 @@ class PriceListAddServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         req.setCharacterEncoding("UTF-8");
-
 
 
         Integer OrderIDLayer1 = Integer.valueOf(req.getParameter("OrderIDLayer1"));

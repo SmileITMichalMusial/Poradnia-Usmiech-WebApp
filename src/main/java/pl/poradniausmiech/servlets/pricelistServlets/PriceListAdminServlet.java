@@ -32,8 +32,8 @@ public class PriceListAdminServlet extends HttpServlet {
 
         List<PricelistLayer1> pricelistLayer1List = priceListDao.getPriceListLayer1FromDb();
         List<PriceListLayer2> pricelistLayer2List = priceListDao.getPriceListLayer2FromDb();
-        System.out.println( "desc zero"+ pricelistLayer1List.get(0).getDescription());
-        System.out.println( "dwa zero"+ pricelistLayer2List.get(0).getName());
+        System.out.println("desc zero" + pricelistLayer1List.get(0).getDescription());
+        System.out.println("dwa zero" + pricelistLayer2List.get(0).getName());
         request.getSession().setAttribute("pricelistLayer1List", pricelistLayer1List);
         request.getSession().setAttribute("pricelistLayer2List", pricelistLayer2List);
 
