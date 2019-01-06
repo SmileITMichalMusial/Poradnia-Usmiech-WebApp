@@ -10,6 +10,8 @@
 
         <class>pl.poradniausmiech.domain.User</class>
         <class>pl.poradniausmiech.domain.Employee</class>
+        <class>pl.poradniausmiech.domain.pricelist.PricelistLayer1</class>
+        <class>pl.poradniausmiech.domain.pricelist.PriceListLayer2</class>
 
 
         <properties>

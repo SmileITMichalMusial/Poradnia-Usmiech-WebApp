@@ -183,11 +183,13 @@ optgroup {
 
 table {
     border-spacing: 0;
-    border-collapse: collapse
+    border-collapse: collapse;
+
 }
 
 td, th {
-    padding: 0
+    padding: 0;
+
 }
 
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
@@ -7343,6 +7345,10 @@ tr.hover:hover {
     background: #33CC66;
 }
 
+.disabled {
+    pointer-events: none;
+    cursor: default;
+}
 
 
 /* table#b2, th, td {
