@@ -30,4 +30,6 @@ public interface PriceListDao {
     void deletePriceListLayer2 (PriceListLayer2 pricelistLayer2);
 
     void savePricelistLayer1ToDb(PricelistLayer1 pricelistLayer1);
+
+    void savePricelistLayer2ToDb(PriceListLayer2 priceListLayer1);
 }
