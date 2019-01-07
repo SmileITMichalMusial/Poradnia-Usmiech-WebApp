@@ -84,8 +84,10 @@
         <div class="col-lg-10 col-md-10 col-sm-10">
 
 
-            <a href="/jsp/01_admin_pages/23_3_add_pricelist.jsp" class="btn btn-default">Dodaj usługe (warstwa 1) <i
+            <a href="/PriceListAddServlet?layerID=1" class="btn btn-default">Dodaj usługe (warstwa 1) <i
                     class="fa fa-plus-circle"></i></a>
+
+            <!-- <a href="/jsp/01_admin_pages/23_3_add_pricelist.jsp" -->
             <br><br>
             <!-- Tabela userów-->
 
@@ -147,7 +149,7 @@
 
                     <tr>
                         <td colspan="6"><p align="right">
-                            <a href="/PriceListAddServlet?idl1=${pricelistLayer1Loop.getIdLayer1()}">dodaj
+                            <a href="/PriceListAddServlet?layerID=2&idl1=${pricelistLayer1Loop.getIdLayer1()}&idl1Description=${pricelistLayer1Loop.getDescription()}">dodaj
                                 usługę <em
                                         class="fa fa-plus-circle"></em>
                         </p></td>

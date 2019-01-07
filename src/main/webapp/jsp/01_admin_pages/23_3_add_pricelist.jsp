@@ -1,4 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% request.getAttribute("idl1"); %>
+<% request.getAttribute("idl1Description"); %>
+<% request.getAttribute("LayerXAdd"); %>
 
 
 <!DOCTYPE html>
@@ -71,9 +74,11 @@
             </ol>
         </div>
     </div>
-    <!-- /.row
+    <!-- /.row -->
 
-        <!-- Content Row -->
+    <!--  Content Row -->
+
+
     <div class="row">
         <!-- Sidebar Column -->
         <div class="col-lg-2 col-md-2 col-sm-10">
@@ -82,17 +87,38 @@
         <!-- Content Column -->
         <div class="col-lg-10 col-md-10 col-sm-10">
 
+            <c:if test="${LayerXAdd == '1'}">
+                <form class="form-wrapper" method="post" action="/PriceListAddServlet">
+                    <h4>Dodaj usługę:</h4>
+                    <input type="hidden" name="LayerNumber" value="Layer1">
+                    <input type="number" class="form-control" name="OrderIDLayer1" placeholder="kolejność" required>
+                    <input type="text" class="form-control" name="Description" placeholder="nazwa usługi" required>
 
-            <form class="form-wrapper" method="post" action="/PriceListAddServlet">
-                <h4>Dodaj usługę:</h4>
-                <input type="number" class="form-control" name="OrderIDLayer1" placeholder="kolejność" required>
-                <input type="text" class="form-control" name="Description" placeholder="nazwa usługi" required>
+                    <button type="submit" name="save" class="btn btn-default">Dodaj usługę <i
+                            class="fa fa-envelope-open-o"></i></button>
+                    <a href="/jsp/01_admin_pages/23_1_pricelist_view.jsp" class="btn btn-default">Anuluj<i
+                            class="fa fa-backward"></i></a>
+                </form>
+            </c:if>
 
-                <button type="submit" name="save" class="btn btn-default">Dodaj usługę <i
-                        class="fa fa-envelope-open-o"></i></button>
-                <a href="/jsp/01_admin_pages/23_1_pricelist_view.jsp" class="btn btn-default">Anuluj<i
-                        class="fa fa-backward"></i></a>
-            </form>
+            <c:if test="${LayerXAdd == '2'}">
+                <form class="form-wrapper" method="post" action="/PriceListAddServlet">
+                    <h4>Dodaj usługę:</h4>
+                    <input type="hidden" name="LayerNumber" value="Layer2">
+                    <input type="hidden" name="idl1" value="${idl1}">
+                    <input type="text" class="form-control" name="Description" placeholder="Warstwa1Opis" value="${idl1Description}"
+                           disabled>
+                    <input type="number" class="form-control" name="OrderIDLayer2" placeholder="kolejność" required>
+                    <input type="text" class="form-control" name="Name" placeholder="nazwa usługi" required>
+                    <input type="text" class="form-control" name="Duration" placeholder="czas trwania" required>
+                    <input type="text" class="form-control" name="Price" placeholder="kwota" required>
+
+                    <button type="submit" name="save" class="btn btn-default">Dodaj usługę <i
+                            class="fa fa-envelope-open-o"></i></button>
+                    <a href="/jsp/01_admin_pages/23_1_pricelist_view.jsp" class="btn btn-default">Anuluj<i
+                            class="fa fa-backward"></i></a>
+                </form>
+            </c:if>
 
 
         </div>
@@ -100,16 +126,10 @@
     </div>
 
 
+    <hr>
 
-<!-- koniec tabeli userow -->
-
-
-<!-- /.row -->
-
-<hr>
-
-<!-- Footer -->
-<%@include file="../../WEB-INF/01_headers_footers/001_footer.jsp" %>
+    <!-- Footer -->
+    <%@include file="../../WEB-INF/01_headers_footers/001_footer.jsp" %>
 </div>
 
 <!-- /.container -->
@@ -122,9 +142,10 @@
 
 <!--JAVASCRIPT-->
 <script type="text/javascript">
-    function setHeight(fieldId){
-        document.getElementById(fieldId).style.height = document.getElementById(fieldId).scrollHeight + 3 +'px';
+    function setHeight(fieldId) {
+        document.getElementById(fieldId).style.height = document.getElementById(fieldId).scrollHeight + 3 + 'px';
     }
+
     setHeight('textBox1');
 </script>
 

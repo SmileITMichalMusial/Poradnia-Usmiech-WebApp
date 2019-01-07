@@ -111,4 +111,14 @@ public class PriceListDaoBean implements PriceListDao {
         transaction.commit();
         entityManager.close();
     }
+
+    @Override
+    public void savePricelistLayer2ToDb(PriceListLayer2 priceListLayer2) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        transaction.begin();
+        entityManager.persist(priceListLayer2);
+        transaction.commit();
+        entityManager.close();
+    }
 }
