@@ -1,9 +1,8 @@
 package pl.poradniausmiech.servlets.pricelistServlets;
 
-import javassist.runtime.Desc;
 import pl.poradniausmiech.dao.PriceListDao;
+import pl.poradniausmiech.domain.pricelist.PriceListLayer1;
 import pl.poradniausmiech.domain.pricelist.PriceListLayer2;
-import pl.poradniausmiech.domain.pricelist.PricelistLayer1;
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -58,19 +57,19 @@ class PriceListAddServlet extends HttpServlet {
             Integer OrderIDLayer1 = Integer.valueOf(req.getParameter("OrderIDLayer1"));
             String Description = req.getParameter("Description");
 
-            PricelistLayer1 pricelistLayer1 = new PricelistLayer1();
-            pricelistLayer1.setOrderIDLayer1(OrderIDLayer1);
-            pricelistLayer1.setDescription(Description);
+            PriceListLayer1 priceListLayer1 = new PriceListLayer1();
+            priceListLayer1.setOrderIDLayer1(OrderIDLayer1);
+            priceListLayer1.setDescription(Description);
 
             Date date = new Date();
             long time = date.getTime();
             Timestamp ts = new Timestamp(time);
-            pricelistLayer1.setDateCreated(ts);
+            priceListLayer1.setDateCreated(ts);
 
-            priceListDao.savePricelistLayer1ToDb(pricelistLayer1);
+            priceListDao.savePricelistLayer1ToDb(priceListLayer1);
 
-            List<PricelistLayer1> pricelistLayer1List = priceListDao.getPriceListLayer1FromDb();
-            req.getSession().setAttribute("pricelistLayer1List", pricelistLayer1List);
+            List<PriceListLayer1> priceListLayer1List = priceListDao.getPriceListLayer1FromDb();
+            req.getSession().setAttribute("priceListLayer1List", priceListLayer1List);
 
             logger.info("Usługa: " + Description + ", kolejność " + OrderIDLayer1 + " dodana do bazy danych");
 
@@ -103,11 +102,11 @@ class PriceListAddServlet extends HttpServlet {
 
             priceListDao.savePricelistLayer2ToDb(priceListLayer2);
 
-            List<PricelistLayer1> pricelistLayer1List = priceListDao.getPriceListLayer1FromDb();
-            req.getSession().setAttribute("pricelistLayer1List", pricelistLayer1List);
+            List<PriceListLayer1> priceListLayer1List = priceListDao.getPriceListLayer1FromDb();
+            req.getSession().setAttribute("priceListLayer1List", priceListLayer1List);
 
-            List<PriceListLayer2> pricelistLayer2List = priceListDao.getPriceListLayer2FromDb();
-            req.getSession().setAttribute("pricelistLayer2List", pricelistLayer2List);
+            List<PriceListLayer2> priceListLayer2List = priceListDao.getPriceListLayer2FromDb();
+            req.getSession().setAttribute("priceListLayer2List", priceListLayer2List);
 
             logger.info("Usługa: " + Name + ", kolejność " + OrderIDLayer2 + " dodana do bazy danych");
 
