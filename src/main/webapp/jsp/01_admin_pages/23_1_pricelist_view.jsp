@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<% request.getSession().getAttribute("pricelistLayer1List"); %>
-<% request.getSession().getAttribute("pricelistLayer2List"); %>
+<% request.getSession().getAttribute("priceListLayer1List"); %>
+<% request.getSession().getAttribute("priceListLayer2List"); %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -112,35 +112,35 @@
                 <tbody id="myTable">
 
 
-                <c:forEach items="${pricelistLayer1List}" var="pricelistLayer1Loop">
+                <c:forEach items="${priceListLayer1List}" var="priceListLayer1Loop">
 
                     <tr>
                         <td style="width:1px;white-space:nowrap">
-                            <a href="/PriceListEditServlet?idl1=${pricelistLayer1Loop.getIdLayer1()}&page=adm&action=edit"><em
+                            <a href="/PriceListEditServlet?idl1=${priceListLayer1Loop.getIdLayer1()}&page=adm&action=edit"><em
                                     class="fa fa-pencil color-aqua"></em></a>
                         </td>
-                        <td style="width:1px;white-space:nowrap">${pricelistLayer1Loop.getOrderIDLayer1()}</td>
+                        <td style="width:1px;white-space:nowrap">${priceListLayer1Loop.getOrderIDLayer1()}</td>
                         <td style="width:1px;white-space:nowrap"></td>
-                        <td colspan="3" bgcolor="#33CC66">${pricelistLayer1Loop.getDescription()}</td>
+                        <td colspan="3" bgcolor="#33CC66">${priceListLayer1Loop.getDescription()}</td>
                         <td>
-                            <a href="/PriceListEditServlet?idl1=${pricelistLayer1Loop.getIdLayer1()}&page=adm&action=delete"><em
+                            <a href="/PriceListEditServlet?idl1=${priceListLayer1Loop.getIdLayer1()}&page=adm&action=delete"><em
                                     class="fa fa-trash color-aqua"></em></a>
                         </td>
                     </tr>
-                    <c:forEach items="${pricelistLayer2List}" var="pricelistLayer2Loop">
-                        <c:if test="${pricelistLayer1Loop.getIdLayer1() == pricelistLayer2Loop.getFkIdLayer1()}">
+                    <c:forEach items="${priceListLayer2List}" var="priceListLayer2Loop">
+                        <c:if test="${priceListLayer1Loop.getIdLayer1() == priceListLayer2Loop.getFkIdLayer1()}">
                             <tr>
                                 <td style="width:1px;white-space:nowrap">
-                                    <a href="/PriceListEditServlet?idl1=${pricelistLayer1Loop.getIdLayer1()}&idl2=${pricelistLayer2Loop.getIdLayer2()}&page=adm&action=edit"><em
+                                    <a href="/PriceListEditServlet?idl1=${priceListLayer1Loop.getIdLayer1()}&idl2=${priceListLayer2Loop.getIdLayer2()}&page=adm&action=edit"><em
                                             class="fa fa-pencil color-aqua"></em></a>
                                 </td>
                                 <td style="width:1px;white-space:nowrap"></td>
-                                <td style="width:1px;white-space:nowrap">${pricelistLayer2Loop.getOrderIdLayer2()}</td>
-                                <td>${pricelistLayer2Loop.getName()}</td>
-                                <td>${pricelistLayer2Loop.getDuration()}</td>
-                                <td>${pricelistLayer2Loop.getPrice()}</td>
+                                <td style="width:1px;white-space:nowrap">${priceListLayer2Loop.getOrderIdLayer2()}</td>
+                                <td>${priceListLayer2Loop.getName()}</td>
+                                <td>${priceListLayer2Loop.getDuration()}</td>
+                                <td>${priceListLayer2Loop.getPrice()}</td>
                                 <td>
-                                    <a href="/PriceListEditServlet?idl1=${pricelistLayer1Loop.getIdLayer1()}&idl2=${pricelistLayer2Loop.getIdLayer2()}&page=adm&action=delete"><em
+                                    <a href="/PriceListEditServlet?idl1=${priceListLayer1Loop.getIdLayer1()}&idl2=${priceListLayer2Loop.getIdLayer2()}&page=adm&action=delete"><em
                                             class="fa fa-trash color-aqua"></em></a>
                                 </td>
                             </tr>
@@ -149,7 +149,7 @@
 
                     <tr>
                         <td colspan="6"><p align="right">
-                            <a href="/PriceListAddServlet?layerID=2&idl1=${pricelistLayer1Loop.getIdLayer1()}&idl1Description=${pricelistLayer1Loop.getDescription()}">dodaj
+                            <a href="/PriceListAddServlet?layerID=2&idl1=${priceListLayer1Loop.getIdLayer1()}&idl1Description=${priceListLayer1Loop.getDescription()}">dodaj
                                 usługę <em
                                         class="fa fa-plus-circle"></em>
                         </p></td>

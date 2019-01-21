@@ -77,7 +77,7 @@
 
         <div class="col-md-obrazek">
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <img class="img-responsive" src="graphics/agnieszka_adamczyk_musial_szer_450.jpg"
+                <img class="img-responsive" src="${employee.getPhotoURL()}"
                      alt="">
 
             </div>

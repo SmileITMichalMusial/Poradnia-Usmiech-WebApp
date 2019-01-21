@@ -21,7 +21,6 @@ public class PriceListDaoBean implements PriceListDao {
                 "where p1.id_layer_1 = p2.fk_id_layer_1");
 
         List fullPriceList = query.getResultList();
-        System.out.println(fullPriceList.get(0).toString());
         return fullPriceList;
     }
 

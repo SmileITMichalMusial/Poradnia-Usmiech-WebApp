@@ -84,14 +84,16 @@
 
         <div class="col-md-3 img-portfolio">
             <a href="/EmployeeUserViewServlet?id=${employeesLoop.getId()}&page=spec">
-                <img class="img-responsive img-hover" src="graphics/02_01_agnieszka_adamczyk_musial_wys_250.jpg"
+                <!--  <img class="img-responsive img-hover" src="graphics/02_01_agnieszka_adamczyk_musial_wys_250.jpg"
+                       alt="">-->
+                <img class="img-responsive img-hover" src="${employeesLoop.getPhotoURL()}"
                      alt="">
             </a>
             <h3>
-                <a href="WEB-INF/old/02_01_specjalisci_agnieszka_adamczyk_musial.jsp">${employeesLoop.getName()} ${employeesLoop.getSurname()}</a>
+                <a href="/EmployeeUserViewServlet?id=${employeesLoop.getId()}&page=spec">${employeesLoop.getName()} ${employeesLoop.getSurname()}</a>
             </h3>
-            <p>${employeesLoop.getRoleLong()} <a
-                    href="WEB-INF/old/02_01_specjalisci_agnieszka_adamczyk_musial.jsp">(więcej)</a></p>
+            <p>${employeesLoop.getRoleLong()}<a
+                    href="/EmployeeUserViewServlet?id=${employeesLoop.getId()}&page=spec">(więcej) </a></p>
         </div>
 
         <c:if test="${myIndex.count % 4 == 0 }">

@@ -13,7 +13,7 @@ import java.util.List;
 @Stateless
 public class UsersDaoBean implements UsersDao {
 
-    private List<User> userList = new ArrayList<>();
+
     private static final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("primary");
 
     @Override
@@ -21,7 +21,7 @@ public class UsersDaoBean implements UsersDao {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
         entityTransaction.begin();
-        userList = entityManager.createQuery("FROM User ").getResultList();
+        List<User> userList = entityManager.createQuery("FROM User ").getResultList();
 
         return userList;
     }

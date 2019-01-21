@@ -37,6 +37,9 @@ public class Employee {
     @Column(name = "bankAccountNumber")
     private String bankAccountNumber;
 
+    @Column(name = "photoURL")
+    private String photoURL;
+
     @Column(name = "orderId", nullable = false)
     private Integer orderId;
 
@@ -125,6 +128,14 @@ public class Employee {
         this.bankAccountNumber = bankAccountNumber;
     }
 
+    public String getPhotoURL() {
+        return photoURL;
+    }
+
+    public void setPhotoURL(String photoURL) {
+        this.photoURL = photoURL;
+    }
+
     public Integer getOrderId() {
         return orderId;
     }
@@ -156,4 +167,6 @@ public class Employee {
     public void setDateModified(Date dateModified) {
         this.dateModified = dateModified;
     }
+
+
 }
