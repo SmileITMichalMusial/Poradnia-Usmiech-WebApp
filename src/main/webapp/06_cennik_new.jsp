@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<% request.getAttribute("pricelistLayer1List"); %>
-<% request.getAttribute("pricelistLayer2List"); %>
+<% request.getAttribute("priceListLayer1List"); %>
+<% request.getAttribute("priceListLayer2List"); %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -90,18 +90,18 @@
         <tbody id="myTable">
 
 
-        <c:forEach items="${pricelistLayer1List}" var="pricelistLayer1Loop">
+        <c:forEach items="${priceListLayer1List}" var="priceListLayer1Loop">
             <tr bgcolor=#33CC66>
                 <td colspan="3">
-                        ${pricelistLayer1Loop.getDescription()}
+                        ${priceListLayer1Loop.getDescription()}
                 </td>
             </tr>
-            <c:forEach items="${pricelistLayer2List}" var="pricelistLayer2Loop">
-                <c:if test="${pricelistLayer1Loop.getIdLayer1() == pricelistLayer2Loop.getFkIdLayer1()}">
+            <c:forEach items="${pricelistLayer2List}" var="priceListLayer2Loop">
+                <c:if test="${priceListLayer1Loop.getIdLayer1() == priceListLayer2Loop.getFkIdLayer1()}">
                     <tr class="hover">
-                        <td>${pricelistLayer2Loop.getName()}</td>
-                        <td>${pricelistLayer2Loop.getDuration()}</td>
-                        <td>${pricelistLayer2Loop.getPrice()}</td>
+                        <td>${priceListLayer2Loop.getName()}</td>
+                        <td>${priceListLayer2Loop.getDuration()}</td>
+                        <td>${priceListLayer2Loop.getPrice()}</td>
                     </tr>
                 </c:if>
             </c:forEach>

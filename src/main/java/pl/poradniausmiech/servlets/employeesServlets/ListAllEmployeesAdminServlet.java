@@ -2,9 +2,7 @@ package pl.poradniausmiech.servlets.employeesServlets;
 
 
 import pl.poradniausmiech.dao.EmployeesDao;
-import pl.poradniausmiech.dao.UsersDao;
 import pl.poradniausmiech.domain.Employee;
-import pl.poradniausmiech.domain.User;
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;

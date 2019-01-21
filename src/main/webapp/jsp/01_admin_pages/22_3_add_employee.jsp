@@ -73,7 +73,7 @@
     </div>
     <!-- /.row
 
-        <!-- Content Row -->
+    <!-- Content Row -->
     <div class="row">
         <!-- Sidebar Column -->
         <div class="col-lg-2 col-md-2 col-sm-10">
@@ -83,22 +83,42 @@
         <div class="col-lg-10 col-md-10 col-sm-10">
 
 
-            <form class="form-wrapper" method="post" action="/EmployeeAddServletAdmin">
+            <form class="form-wrapper" method="post" action="/EmployeeAddServletAdmin" enctype="multipart/form-data">
                 <h4>Dodaj pracownika:</h4>
                 <input type="text" class="form-control" name="name" placeholder="imię" required>
                 <input type="text" class="form-control" name="surname" placeholder="nazwisko" required>
                 <input type="number" class="form-control" name="orderId" placeholder="kolejność" required>
                 <input type="text" class="form-control" name="roleShort" placeholder="rola (krótka)" required>
                 <input type="text" class="form-control" name="roleLong" placeholder="rola (długa)" required>
-              <!--  <input type="text" class="form-control" name="description" placeholder="opis" required>-->
+                <!-- <input type="text" class="form-control" name="description" placeholder="opis" required>-->
 
-                <textarea id = "textBox1" class="form-control" name="description" placeholder="opis" TextMode = "Multiline" onkeyup="setHeight('textBox1');" onkeydown="setHeight('textBox1');"
+                <textarea id="textBox1" class="form-control" name="description" placeholder="opis" TextMode="Multiline"
+                          onkeyup="setHeight('textBox1');" onkeydown="setHeight('textBox1');"
                           required></textarea>
 
                 <input type="email" class="form-control" name="email" placeholder="email" required>
                 <input type="tel" class="form-control" name="phoneNumber" placeholder="telefon">
                 <input type="tel" class="form-control" name="bankAccountNumber" placeholder="numer konta">
 
+                <div class="input-group image-preview">
+
+                    <input type="text" class="form-control image-preview-filename" disabled="disabled"
+                           placeholder="Wybierz zdjęcie...">
+                    <!-- don't give a name === doesn't send on POST/GET -->
+                    <span class="input-group-append">
+    <!-- image-preview-clear button -->
+    <button type="button" class="btn btn-info image-preview-clear" style="display:none;">
+    <span class="glyphicon glyphicon-remove"></span> Wyczyść
+    </button>
+                        <!-- image-preview-input -->
+    <div type="button" class="btn btn-default image-preview-input">
+    <span class="glyphicon glyphicon-folder-open"></span>
+    <span class="image-preview-input-title">Wybierz</span>
+    <input type="file" accept="image/png, image/jpeg, image/gif"
+           name="image" id="file"/> <!-- rename it -->
+    </div>
+    </span>
+                </div>
 
 
                 <button type="submit" name="save" class="btn btn-default">Dodaj pracownika <i
@@ -113,16 +133,15 @@
     </div>
 
 
+    <!-- koniec tabeli userow -->
 
-<!-- koniec tabeli userow -->
 
+    <!-- /.row -->
 
-<!-- /.row -->
+    <hr>
 
-<hr>
-
-<!-- Footer -->
-<%@include file="../../WEB-INF/01_headers_footers/001_footer.jsp" %>
+    <!-- Footer -->
+    <%@include file="../../WEB-INF/01_headers_footers/001_footer.jsp" %>
 </div>
 
 <!-- /.container -->
@@ -135,9 +154,10 @@
 
 <!--JAVASCRIPT-->
 <script type="text/javascript">
-    function setHeight(fieldId){
-        document.getElementById(fieldId).style.height = document.getElementById(fieldId).scrollHeight + 3 +'px';
+    function setHeight(fieldId) {
+        document.getElementById(fieldId).style.height = document.getElementById(fieldId).scrollHeight + 3 + 'px';
     }
+
     setHeight('textBox1');
 </script>
 

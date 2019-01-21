@@ -5,7 +5,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "price_list_layer_1")
-public class PricelistLayer1 {
+public class PriceListLayer1 {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,7 +26,7 @@ public class PricelistLayer1 {
     private Date dateModified;
 
 
-    public PricelistLayer1() {
+    public PriceListLayer1() {
     }
 
 

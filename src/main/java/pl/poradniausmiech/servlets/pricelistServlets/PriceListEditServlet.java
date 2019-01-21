@@ -1,8 +1,8 @@
 package pl.poradniausmiech.servlets.pricelistServlets;
 
 import pl.poradniausmiech.dao.PriceListDao;
+import pl.poradniausmiech.domain.pricelist.PriceListLayer1;
 import pl.poradniausmiech.domain.pricelist.PriceListLayer2;
-import pl.poradniausmiech.domain.pricelist.PricelistLayer1;
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -20,7 +20,6 @@ import java.util.List;
 
 public class PriceListEditServlet extends HttpServlet {
 
-    private String LayerXEdit;
     @Inject
     PriceListDao priceListDao;
 
@@ -37,17 +36,17 @@ public class PriceListEditServlet extends HttpServlet {
             Integer OrderIDLayer1 = Integer.valueOf(request.getParameter("OrderIDLayer1"));
             String Description = request.getParameter("Description");
 
-            PricelistLayer1 pricelistLayer1 = priceListDao.getSinglePriceLayer1(Integer.valueOf(idl1));
-            pricelistLayer1.setOrderIDLayer1(OrderIDLayer1);
-            pricelistLayer1.setDescription(Description);
+            PriceListLayer1 priceListLayer1 = priceListDao.getSinglePriceLayer1(Integer.valueOf(idl1));
+            priceListLayer1.setOrderIDLayer1(OrderIDLayer1);
+            priceListLayer1.setDescription(Description);
             Date date = new Date();
             long time = date.getTime();
             Timestamp ts = new Timestamp(time);
-            pricelistLayer1.setDateModified(ts);
+            priceListLayer1.setDateModified(ts);
 
-            priceListDao.modifyPriceListLayer1(pricelistLayer1);
-            List<PricelistLayer1> pricelistLayer1List = priceListDao.getPriceListLayer1FromDb();
-            request.getSession().setAttribute("pricelistLayer1List", pricelistLayer1List);
+            priceListDao.modifyPriceListLayer1(priceListLayer1);
+            List<PriceListLayer1> priceListLayer1List = priceListDao.getPriceListLayer1FromDb();
+            request.getSession().setAttribute("priceListLayer1List", priceListLayer1List);
 
             RequestDispatcher rd = request.getRequestDispatcher("../jsp/01_admin_pages/23_1_pricelist_view.jsp");
             rd.forward(request, response);
@@ -71,8 +70,8 @@ public class PriceListEditServlet extends HttpServlet {
             priceListLayer2.setDateModified(ts);
 
             priceListDao.modifyPriceListLayer2(priceListLayer2);
-            List<PriceListLayer2> pricelistLayer2List = priceListDao.getPriceListLayer2FromDb();
-            request.getSession().setAttribute("pricelistLayer2List", pricelistLayer2List);
+            List<PriceListLayer2> priceListLayer2List = priceListDao.getPriceListLayer2FromDb();
+            request.getSession().setAttribute("priceListLayer2List", priceListLayer2List);
 
             RequestDispatcher rd = request.getRequestDispatcher("../jsp/01_admin_pages/23_1_pricelist_view.jsp");
             rd.forward(request, response);
@@ -98,11 +97,11 @@ public class PriceListEditServlet extends HttpServlet {
 
         if (idl1 != null && idl2 == null && page.equals("adm") && action.equals("delete")) {
             System.out.println("delete layer 1");
-            PricelistLayer1 pricelistLayer1 = priceListDao.getSinglePriceLayer1(Integer.valueOf(idl1));
-            priceListDao.deletePriceListLayer1(pricelistLayer1);
+            PriceListLayer1 priceListLayer1 = priceListDao.getSinglePriceLayer1(Integer.valueOf(idl1));
+            priceListDao.deletePriceListLayer1(priceListLayer1);
             // get the list again to display refreshed version after refresh
-            List<PricelistLayer1> pricelistLayer1List = priceListDao.getPriceListLayer1FromDb();
-            request.getSession().setAttribute("pricelistLayer1List", pricelistLayer1List);
+            List<PriceListLayer1> priceListLayer1List = priceListDao.getPriceListLayer1FromDb();
+            request.getSession().setAttribute("priceListLayer1List", priceListLayer1List);
             System.out.println("Wpis warstwy pierwszej, id: " + idl1 + " usunięty");
         }
         if (idl1 != null && idl2 != null && page.equals("adm") && action.equals("delete")) {
@@ -110,18 +109,19 @@ public class PriceListEditServlet extends HttpServlet {
             PriceListLayer2 priceListLayer2 = priceListDao.getSinglePriceLayer2(Integer.valueOf(idl2));
             priceListDao.deletePriceListLayer2(priceListLayer2);
             // get the list again to display refreshed version after refresh
-            List<PriceListLayer2> pricelistLayer2List = priceListDao.getPriceListLayer2FromDb();
-            request.getSession().setAttribute("pricelistLayer2List", pricelistLayer2List);
+            List<PriceListLayer2> priceListLayer2List = priceListDao.getPriceListLayer2FromDb();
+            request.getSession().setAttribute("priceListLayer2List", priceListLayer2List);
             System.out.println("Wpis warstwy drugiej, id: " + idl2 + " usunięty");
         }
+        String layerXEdit;
         if (idl1 != null && idl2 == null && page.equals("adm") && action.equals("edit")) {
             System.out.println("edit layer 1");
             request.getSession().setAttribute("idl1", idl1);
             request.getSession().setAttribute("idl2", idl2);
-            LayerXEdit = "1";
-            request.setAttribute("LayerXEdit", LayerXEdit);
-            PricelistLayer1 pricelistLayer1 = priceListDao.getSinglePriceLayer1(Integer.valueOf(idl1));
-            request.getSession().setAttribute("pricelistLayer1", pricelistLayer1);
+            layerXEdit = "1";
+            request.setAttribute("LayerXEdit", layerXEdit);
+            PriceListLayer1 priceListLayer1 = priceListDao.getSinglePriceLayer1(Integer.valueOf(idl1));
+            request.getSession().setAttribute("priceListLayer1", priceListLayer1);
             RequestDispatcher rd = request.getRequestDispatcher("../jsp/01_admin_pages/23_2_pricelist_layer1_edit.jsp");
             rd.forward(request, response);
             return;
@@ -131,10 +131,10 @@ public class PriceListEditServlet extends HttpServlet {
             System.out.println("edit layer 2");
             request.getSession().setAttribute("idl1", idl1);
             request.getSession().setAttribute("idl2", idl2);
-            LayerXEdit = "2";
-            request.setAttribute("LayerXEdit", LayerXEdit);
-            PriceListLayer2 pricelistLayer2 = priceListDao.getSinglePriceLayer2(Integer.valueOf(idl2));
-            request.getSession().setAttribute("pricelistLayer2", pricelistLayer2);
+            layerXEdit = "2";
+            request.setAttribute("LayerXEdit", layerXEdit);
+            PriceListLayer2 priceListLayer2 = priceListDao.getSinglePriceLayer2(Integer.valueOf(idl2));
+            request.getSession().setAttribute("priceListLayer2", priceListLayer2);
             RequestDispatcher rd = request.getRequestDispatcher("../jsp/01_admin_pages/23_2_pricelist_layer1_edit.jsp");
             rd.forward(request, response);
             return;

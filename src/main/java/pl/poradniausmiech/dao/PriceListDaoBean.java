@@ -1,20 +1,14 @@
 package pl.poradniausmiech.dao;
 
-import pl.poradniausmiech.domain.Employee;
+import pl.poradniausmiech.domain.pricelist.PriceListLayer1;
 import pl.poradniausmiech.domain.pricelist.PriceListLayer2;
-import pl.poradniausmiech.domain.pricelist.PricelistLayer1;
 
 import javax.ejb.Stateless;
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Stateless
 public class PriceListDaoBean implements PriceListDao {
-
-    private List fullPriceList = new ArrayList<>();
-    private List<PricelistLayer1> pricelistLayer1List = new ArrayList<PricelistLayer1>();
-    private List<PriceListLayer2> priceListLayer2List = new ArrayList<PriceListLayer2>();
 
     private static final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("primary");
 
@@ -26,18 +20,17 @@ public class PriceListDaoBean implements PriceListDao {
         Query query = entityManager.createNativeQuery("select p1.id_layer_1, p2.id_layer_2, p1.order_id_layer_1, p2.order_id_layer_2, p1.description, p2.name, p2.duration, p2.price from price_list_layer_1 p1, price_list_layer_2 p2\n" +
                 "where p1.id_layer_1 = p2.fk_id_layer_1");
 
-        fullPriceList = query.getResultList();
-        System.out.println(fullPriceList.get(0).toString());
+        List fullPriceList = query.getResultList();
         return fullPriceList;
     }
 
     @Override
-    public List<PricelistLayer1> getPriceListLayer1FromDb() {
+    public List<PriceListLayer1> getPriceListLayer1FromDb() {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
         entityTransaction.begin();
-        pricelistLayer1List = entityManager.createQuery("FROM PricelistLayer1 ").getResultList();
-        return pricelistLayer1List;
+        List<PriceListLayer1> priceListLayer1List = entityManager.createQuery("FROM PriceListLayer1 ").getResultList();
+        return priceListLayer1List;
     }
 
     @Override
@@ -45,15 +38,15 @@ public class PriceListDaoBean implements PriceListDao {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
         entityTransaction.begin();
-        priceListLayer2List = entityManager.createQuery("FROM PriceListLayer2 ").getResultList();
+        List<PriceListLayer2> priceListLayer2List = entityManager.createQuery("FROM PriceListLayer2 ").getResultList();
         return priceListLayer2List;
     }
 
     @Override
-    public PricelistLayer1 getSinglePriceLayer1(int id1) {
+    public PriceListLayer1 getSinglePriceLayer1(int id1) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
-        PricelistLayer1 pricelistLayer1 = entityManager.find(PricelistLayer1.class, id1);
-        return pricelistLayer1;
+        PriceListLayer1 priceListLayer1 = entityManager.find(PriceListLayer1.class, id1);
+        return priceListLayer1;
     }
 
     @Override
@@ -64,11 +57,11 @@ public class PriceListDaoBean implements PriceListDao {
     }
 
     @Override
-    public void modifyPriceListLayer1(PricelistLayer1 pricelistLayer1) {
+    public void modifyPriceListLayer1(PriceListLayer1 priceListLayer1) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
         entityTransaction.begin();
-        entityManager.merge(pricelistLayer1);
+        entityManager.merge(priceListLayer1);
         entityTransaction.commit();
         entityManager.close();
     }
@@ -84,11 +77,11 @@ public class PriceListDaoBean implements PriceListDao {
     }
 
     @Override
-    public void deletePriceListLayer1(PricelistLayer1 pricelistLayer1) {
+    public void deletePriceListLayer1(PriceListLayer1 priceListLayer1) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
         entityTransaction.begin();
-        entityManager.remove(entityManager.contains(pricelistLayer1) ? pricelistLayer1 : entityManager.merge(pricelistLayer1));
+        entityManager.remove(entityManager.contains(priceListLayer1) ? priceListLayer1 : entityManager.merge(priceListLayer1));
         entityTransaction.commit();
         entityManager.close();
     }
@@ -103,11 +96,11 @@ public class PriceListDaoBean implements PriceListDao {
     }
 
     @Override
-    public void savePricelistLayer1ToDb(PricelistLayer1 pricelistLayer1) {
+    public void savePricelistLayer1ToDb(PriceListLayer1 priceListLayer1) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
-        entityManager.persist(pricelistLayer1);
+        entityManager.persist(priceListLayer1);
         transaction.commit();
         entityManager.close();
     }

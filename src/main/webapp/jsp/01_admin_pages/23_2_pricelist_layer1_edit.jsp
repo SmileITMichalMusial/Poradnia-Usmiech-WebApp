@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<% request.getSession().getAttribute("pricelistLayer1List"); %>
-<% request.getSession().getAttribute("pricelistLayer2List"); %>
+<% request.getSession().getAttribute("priceListLayer1List"); %>
+<% request.getSession().getAttribute("priceListLayer2List"); %>
 <% request.getAttribute("LayerXEdit"); %>
 
 <!DOCTYPE html>
@@ -88,9 +88,9 @@
                 <form class="form-wrapper" method="post" action="/PriceListEditServlet">
                     <h4>Edycja warstwy pierwszej cennika</h4>
                     Kolejność: <input type="number" class="form-control" name="OrderIDLayer1" placeholder="kolejność"
-                                      value="${pricelistLayer1.getOrderIDLayer1()}" required>
+                                      value="${priceListLayer1.getOrderIDLayer1()}" required>
                     Opis: <input type="text" class="form-control" name="Description" placeholder="opis"
-                                 value="${pricelistLayer1.getDescription()}" required>
+                                 value="${priceListLayer1.getDescription()}" required>
 
 
                     <button type="submit" name="save" class="btn btn-default">Zaktualizuj <i
@@ -104,14 +104,14 @@
                 <form class="form-wrapper" method="post" action="/PriceListEditServlet">
                     <h4>Edycja warstwy pierwszej cennika</h4>
                     Kolejność: <input type="number" class="form-control" name="OrderIdLayer2" placeholder="kolejność"
-                                      value="${pricelistLayer2.getOrderIdLayer2()}" required>
+                                      value="${priceListLayer2.getOrderIdLayer2()}" required>
                     Nazwa: <input type="text" class="form-control" name="Name" placeholder="nazwa usługi"
-                                  value="${pricelistLayer2.getName()}" required>
+                                  value="${priceListLayer2.getName()}" required>
                     Czas trwania [min]: <input type="text" class="form-control" name="Duration"
                                                placeholder="czas trwania [min["
-                                               value="${pricelistLayer2.getDuration()}">
+                                               value="${priceListLayer2.getDuration()}">
                     Kwota [PLN]: <input type="text" class="form-control" name="Price" placeholder="kwota [PLN]"
-                                        value="${pricelistLayer2.getPrice()}" required>
+                                        value="${priceListLayer2.getPrice()}" required>
 
 
                     <button type="submit" name="save" class="btn btn-default">Zaktualizuj <i

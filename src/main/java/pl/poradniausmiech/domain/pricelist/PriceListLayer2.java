@@ -37,7 +37,6 @@ public class PriceListLayer2 {
     public PriceListLayer2() {
     }
 
-    ;
 
     public Integer getIdLayer2() {
         return idLayer2;
