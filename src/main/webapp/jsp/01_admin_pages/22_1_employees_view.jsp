@@ -95,12 +95,13 @@
                         <th>Podgląd</th>
                         <th>Edycja</th>
                         <th>ID</th>
+                        <th>Kolejność</th>
                         <th>Imię</th>
                         <th>Nazwisko</th>
                         <th>Rola</th>
                         <th>Telefon</th>
                         <th>Konto</th>
-                        <th>Kolejność</th>
+                        <th>Zdjęcia</th>
                         <th>Aktywny?</th>
                         <th><em class="fa fa-cog"></em></th>
                         <!--<th><em class="fa fa-remove"></em><em class="fa fa-plus"></em></th>-->
@@ -111,7 +112,10 @@
                     <tbody>
 
                     <c:forEach items="${listOfEmployees}" var="employeeLoop">
+
+
                         <tr>
+
 
                             <td>
                                 <a href="/EmployeeUserViewServlet?id=${employeeLoop.getId()}&page=adm"><em
@@ -121,32 +125,93 @@
                                 <a href="/EmployeeEditServlet?id=${employeeLoop.getId()}"><em
                                         class="fa fa-pencil color-aqua"></em></a>
                             </td>
+
                             <td>
+                                <c:if test="${!employeeLoop.getActive()}">
+                                    <p class="text-muted">
+                                            ${employeeLoop.getId()}
+                                    </p>
+                                </c:if>
+                                <c:if test="${employeeLoop.getActive()}">
                                     ${employeeLoop.getId()}
+                                </c:if>
                             </td>
                             <td>
+                                <c:if test="${!employeeLoop.getActive()}">
+                                    <p class="text-muted">
+                                            ${employeeLoop.getOrderId()}
+                                    </p>
+                                </c:if>
+                                <c:if test="${employeeLoop.getActive()}">
+                                    ${employeeLoop.getOrderId()}
+                                </c:if>
+                            </td>
+                            <td>
+                                <c:if test="${!employeeLoop.getActive()}">
+                                    <p class="text-muted">
+                                            ${employeeLoop.getName()}
+                                    </p>
+                                </c:if>
+                                <c:if test="${employeeLoop.getActive()}">
                                     ${employeeLoop.getName()}
+                                </c:if>
                             </td>
                             <td>
+                                <c:if test="${!employeeLoop.getActive()}">
+                                    <p class="text-muted">
+                                            ${employeeLoop.getSurname()}
+                                    </p>
+                                </c:if>
+                                <c:if test="${employeeLoop.getActive()}">
                                     ${employeeLoop.getSurname()}
+                                </c:if>
                             </td>
                             <td>
+                                <c:if test="${!employeeLoop.getActive()}">
+                                    <p class="text-muted">
+                                            ${employeeLoop.getRoleShort()}
+                                    </p>
+                                </c:if>
+                                <c:if test="${employeeLoop.getActive()}">
                                     ${employeeLoop.getRoleShort()}
+                                </c:if>
                             </td>
 
                             <td>
+                                <c:if test="${!employeeLoop.getActive()}">
+                                    <p class="text-muted">
+                                            ${employeeLoop.getPhoneNumber()}
+                                    </p>
+                                </c:if>
+                                <c:if test="${employeeLoop.getActive()}">
                                     ${employeeLoop.getPhoneNumber()}
+                                </c:if>
                             </td>
                             <td>
+                                <c:if test="${!employeeLoop.getActive()}">
+                                    <p class="text-muted">
+                                            ${employeeLoop.getBankAccountNumber()}
+                                    </p>
+                                </c:if>
+                                <c:if test="${employeeLoop.getActive()}">
                                     ${employeeLoop.getBankAccountNumber()}
+                                </c:if>
                             </td>
                             <td>
-                                    ${employeeLoop.getOrderId()}
+                                <c:if test="${!employeeLoop.getActive()}">
+                                    <p class="text-muted">
+                                            ${employeeLoop.getPhotoURL()}
+                                    </p>
+                                </c:if>
+                                <c:if test="${employeeLoop.getActive()}">
+                                    ${employeeLoop.getPhotoURL()}
+                                </c:if>
                             </td>
+
                             <td>
 
                                 <c:if test="${employeeLoop.getActive()}">Tak</c:if>
-                                <c:if test="${!employeeLoop.getActive()}">Nie</c:if>
+                                <c:if test="${!employeeLoop.getActive()}"><p class="text-muted">Nie</p></c:if>
 
                             </td>
 

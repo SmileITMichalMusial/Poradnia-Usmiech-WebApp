@@ -83,7 +83,7 @@
         <div class="col-lg-10 col-md-10 col-sm-10">
 
 
-            <form class="form-wrapper" method="post" action="/EmployeeEditServlet">
+            <form class="form-wrapper" method="post" action="/EmployeeEditServlet" enctype="multipart/form-data">
                 <h4>Edycja pracownika</h4>
                 Imię: <input type="text" class="form-control" name="name" placeholder="imię"
                              value="${employee.getName()}" required>
@@ -93,16 +93,33 @@
                                       value="${employee.getRoleShort()}" required>
                 Rola (długa): <input type="text" class="form-control" name="roleLong" placeholder="rola (długa)"
                                      value="${employee.getRoleLong()}" required>
-                Opis: <textarea id = "textBox1" class="form-control" name="description" placeholder="opis" TextMode = "Multiline" onkeyup="setHeight('textBox1');" onkeydown="setHeight('textBox1');"
-                                 required>${employee.getDescription()}</textarea>
+                Opis: <textarea id="textBox1" class="form-control" name="description" placeholder="opis"
+                                TextMode="Multiline" onkeyup="setHeight('textBox1');" onkeydown="setHeight('textBox1');"
+                                required>${employee.getDescription()}</textarea>
                 Email: <input type="email" class="form-control" name="email" placeholder="email"
                               value="${employee.getEmail()}" required>
                 Telefon: <input type="tel" class="form-control" name="phoneNumber" placeholder="telefon"
                                 value="${employee.getPhoneNumber()}">
                 Kolejność: <input type="number" class="form-control" name="orderId" placeholder="kolejność"
-                                value="${employee.getOrderId()}">
+                                  value="${employee.getOrderId()}">
                 Numer konta: <input type="text" class="form-control" name="bankAccountNumber" placeholder="numer konta"
                                     value="${employee.getBankAccountNumber()}">
+                <div class="input-group image-preview">
+
+                    Wybierz zdjęcie:<br>
+                    <!-- don't give a name === doesn't send on POST/GET -->
+                    <span class="input-group-append">
+    <!-- image-preview-clear button -->
+
+                        <!-- image-preview-input -->
+    <div type="button" class="btn btn-default image-preview-input">
+    <span class="glyphicon glyphicon-folder-open"></span>
+    <span class="image-preview-input-title">Wybierz</span>
+    <input type="file" accept="image/png, image/jpeg, image/gif"
+           name="image" id="file"/> <!-- rename it -->
+    </div>
+    </span>
+                </div>
 
 
                 <button type="submit" name="save" class="btn btn-default">Zaktualizuj <i
@@ -138,9 +155,10 @@
 
 <!--JAVASCRIPT-->
 <script type="text/javascript">
-    function setHeight(fieldId){
-        document.getElementById(fieldId).style.height = document.getElementById(fieldId).scrollHeight + 3 +'px';
+    function setHeight(fieldId) {
+        document.getElementById(fieldId).style.height = document.getElementById(fieldId).scrollHeight + 3 + 'px';
     }
+
     setHeight('textBox1');
 </script>
 
