@@ -1,28 +1,38 @@
 package pl.poradniausmiech.servlets.employeesServlets;
 
+import pl.poradniausmiech.Utils.UserImageNotFoundException;
 import pl.poradniausmiech.dao.EmployeesDao;
+import pl.poradniausmiech.dao.ImageUpload;
 import pl.poradniausmiech.domain.Employee;
 
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
+import java.io.File;
 import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @WebServlet("/EmployeeEditServlet")
+@MultipartConfig
 class EmployeeEditServlet extends HttpServlet {
 
     final Logger logger = Logger.getLogger(getClass().getName());
 
     @Inject
     EmployeesDao employeesDao;
+
+    @Inject
+    ImageUpload imageUpload;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -81,6 +91,15 @@ class EmployeeEditServlet extends HttpServlet {
         long time = date.getTime();
         Timestamp ts = new Timestamp(time);
         employee.setDateModified(ts);
+
+        Part filePart = req.getPart("image");
+        File file;
+        try {
+            file = imageUpload.uploadImageFile(filePart);
+            employee.setPhotoURL(file.getName());
+        } catch (UserImageNotFoundException userImageNotFound) {
+            logger.log(Level.SEVERE, userImageNotFound.getMessage());
+        }
 
         employeesDao.modifyEmployeeDb(employee);
         logger.info("Employee id: " + idEmployee + " zaktualizowany");

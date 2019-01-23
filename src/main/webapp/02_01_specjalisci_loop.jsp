@@ -59,12 +59,12 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
-                <center><img border="5" width=100% src="graphics/baner.jpg" alt=""></center>
+                <div style="text-align: center;"><img border="5" width=100% src="graphics/baner.jpg" alt=""></div>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="index.jsp">Strona główna</a>
                 </li>
-                <li><a href="WEB-INF/old/02_specjalisci.jsp">Specjaliści</a>
+                <li><a href="/ListAllActiveEmployeesMainPageServlet">Specjaliści</a>
                 </li>
                 <li class="active">${employee.getName()} ${employee.getSurname()}</li>
             </ol>
@@ -77,7 +77,7 @@
 
         <div class="col-md-obrazek">
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <img class="img-responsive" src="${employee.getPhotoURL()}"
+                <img class="img-responsive" src="/graphics/employees_photos/${employee.getPhotoURL()}"
                      alt="">
 
             </div>

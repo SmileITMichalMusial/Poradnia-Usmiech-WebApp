@@ -85,11 +85,15 @@
 
             <h3>${employee.getName()} ${employee.getSurname()}</h3>
             <br>
+            <img src="../../graphics/employees_photos/${employee.getPhotoURL()}" alt="foto">
+            <br>
+            <br>
 
             <div class="table-responsive table-bordered table-striped table-hover table-condensed">
                 <table class="table-responsive table-bordered table-striped table-hover table-condensed">
 
                     <tbody>
+
 
                     <tr>
                         <td>ID</td>

@@ -83,7 +83,7 @@ class EmployeeAddServletAdmin extends HttpServlet {
         File file;
         try {
             file = imageUpload.uploadImageFile(filePart);
-            employee.setPhotoURL("/graphics/employees_photos/" + file.getName());
+            employee.setPhotoURL(file.getName());
         } catch (UserImageNotFoundException userImageNotFound) {
             logger.log(Level.SEVERE, userImageNotFound.getMessage());
         }

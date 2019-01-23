@@ -62,7 +62,7 @@
         <div class="col-lg-12">
 
             <h1 class="page-header">
-                <center><img border="5" width=100% src="graphics/baner.jpg" alt=""></center>
+                <div style="text-align: center;"><img border="5" width=100% src="graphics/baner.jpg" alt=""></div>
 
             </h1>
             <ol class="breadcrumb">
@@ -86,11 +86,13 @@
             <a href="/EmployeeUserViewServlet?id=${employeesLoop.getId()}&page=spec">
                 <!--  <img class="img-responsive img-hover" src="graphics/02_01_agnieszka_adamczyk_musial_wys_250.jpg"
                        alt="">-->
-                <img class="img-responsive img-hover" src="${employeesLoop.getPhotoURL()}"
+                <!-- domyslny katalog na pliki graficzne to webapp, dlatego dodaje /graphics/employees_photos/-->
+                <img class="img-responsive img-hover" src="/graphics/employees_photos/${employeesLoop.getPhotoURL()}"
                      alt="">
+
             </a>
             <h3>
-                <a href="/EmployeeUserViewServlet?id=${employeesLoop.getId()}&page=spec">${employeesLoop.getName()} ${employeesLoop.getSurname()}</a>
+                <a href="/EmployeeUserViewServlet?id=${employeesLoop.getId()}&page=spec">${employeesLoop.getName()} ${employeesLoop.getSurname()} ${employeesLoop.getPhotoURL()}</a>
             </h3>
             <p>${employeesLoop.getRoleLong()}<a
                     href="/EmployeeUserViewServlet?id=${employeesLoop.getId()}&page=spec">(więcej) </a></p>

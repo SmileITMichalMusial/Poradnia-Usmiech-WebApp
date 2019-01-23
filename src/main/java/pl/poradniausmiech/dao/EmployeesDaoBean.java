@@ -21,7 +21,7 @@ public class EmployeesDaoBean implements EmployeesDao {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
         entityTransaction.begin();
-        employeeList = entityManager.createQuery("FROM Employee order by orderId").getResultList();
+        employeeList = entityManager.createQuery("FROM Employee").getResultList();
 
         return employeeList;
     }
