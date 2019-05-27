@@ -1,3 +1,5 @@
+<%@ page import="javax.swing.*" %>
+<%@ page import="java.awt.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <% request.getAttribute("listOfActiveEmployees"); %>
@@ -87,12 +89,14 @@
                 <!--  <img class="img-responsive img-hover" src="graphics/02_01_agnieszka_adamczyk_musial_wys_250.jpg"
                        alt="">-->
                 <!-- domyslny katalog na pliki graficzne to webapp, dlatego dodaje /graphics/employees_photos/-->
-                <img class="img-responsive img-hover" src="/graphics/employees_photos/${employeesLoop.getPhotoURL()}"
-                     alt="">
+
+                <img  height="100px" class="img-responsive img-hover" src="/graphics/employees_photos/250_height_${employeesLoop.getPhotoURL()}"
+                     alt="" >
+
 
             </a>
             <h3>
-                <a href="/EmployeeUserViewServlet?id=${employeesLoop.getId()}&page=spec">${employeesLoop.getName()} ${employeesLoop.getSurname()} ${employeesLoop.getPhotoURL()}</a>
+                <a href="/EmployeeUserViewServlet?id=${employeesLoop.getId()}&page=spec">${employeesLoop.getName()} ${employeesLoop.getSurname()}</a>
             </h3>
             <p>${employeesLoop.getRoleLong()}<a
                     href="/EmployeeUserViewServlet?id=${employeesLoop.getId()}&page=spec">(więcej) </a></p>
@@ -155,10 +159,10 @@
     </div>
 
 
-    <!-- </div> -->
+    </div>
 
 
-    <hr>
+    <hr>-->
 
 
     <!-- Footer -->

@@ -118,25 +118,76 @@
                                         class="fa fa-pencil color-aqua"></em></a>
                             </td>
                             <td>
+                                <c:if test="${!userLoop.getActive()}">
+                                    <p class="text-muted">
+                                            ${userLoop.getId()}
+                                    </p>
+                                </c:if>
+                                <c:if test="${userLoop.getActive()}">
                                     ${userLoop.getId()}
+                                </c:if>
                             </td>
                             <td>
+                                <c:if test="${!userLoop.getActive()}">
+                                    <p class="text-muted">
+                                            ${userLoop.getLogin()}
+                                    </p>
+                                </c:if>
+                                <c:if test="${userLoop.getActive()}">
                                     ${userLoop.getLogin()}
+                                </c:if>
                             </td>
                             <td>
+                                <c:if test="${!userLoop.getActive()}">
+                                    <p class="text-muted">
+                                            ${userLoop.getName()}
+                                    </p>
+                                </c:if>
+                                <c:if test="${userLoop.getActive()}">
                                     ${userLoop.getName()}
+                                </c:if>
                             </td>
                             <td>
+                                <c:if test="${!userLoop.getActive()}">
+                                    <p class="text-muted">
+                                            ${userLoop.getSurname()}
+                                    </p>
+                                </c:if>
+                                <c:if test="${userLoop.getActive()}">
                                     ${userLoop.getSurname()}
+                                </c:if>
                             </td>
                             <td>
-                                <a href="mailto:${userLoop.getEmail()}">${userLoop.getEmail()}</a>
+
+                                <c:if test="${!userLoop.getActive()}">
+                                    <p class="text-muted">
+                                        <a href="mailto:${userLoop.getEmail()}">${userLoop.getEmail()}</a>
+                                    </p>
+                                </c:if>
+                                <c:if test="${userLoop.getActive()}">
+                                    <a href="mailto:${userLoop.getEmail()}">${userLoop.getEmail()}</a>
+                                </c:if>
                             </td>
                             <td>
+                                <c:if test="${!userLoop.getActive()}">
+                                    <p class="text-muted">
+                                            ${userLoop.getPhoneNumber()}
+                                    </p>
+                                </c:if>
+                                <c:if test="${userLoop.getActive()}">
                                     ${userLoop.getPhoneNumber()}
+                                </c:if>
                             </td>
                             <td>
+                                <c:if test="${!userLoop.getActive()}">
+                                    <p class="text-muted">
+                                            ${userLoop.getUserType()}
+                                    </p>
+                                </c:if>
+                                <c:if test="${userLoop.getActive()}">
                                     ${userLoop.getUserType()}
+                                </c:if>
+
                             </td>
                             <td>
 

@@ -13,7 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @WebServlet("/ListAllEmployeesAdminServlet")
 
@@ -32,6 +34,13 @@ public class ListAllEmployeesAdminServlet extends HttpServlet {
         request.getSession().getAttribute("listOfEmployees");
         response.setContentType("text/html;charset=UTF-8");
         List<Employee> listOfEmployees = employeesDao.getEmployeesListFromDB();
+
+        listOfEmployees = listOfEmployees
+                .stream()
+                .sorted(Comparator.comparing(Employee::getActive).reversed()
+                        .thenComparing(Employee::getOrderId))
+                .collect(Collectors.toList());
+
         request.setAttribute("listOfEmployees", listOfEmployees);
         request.getSession().setAttribute("listOfEmployees", listOfEmployees);
         RequestDispatcher rd = request.getRequestDispatcher("../jsp/01_admin_pages/22_1_employees_view.jsp");
