@@ -92,6 +92,17 @@
             <p><a href="03_01_02_mediacje_dorosli.jsp">(więcej)</a></p>
         </div>
 
+        <div class="col-md-4 img-portfolio">
+            <a href="03_01_04_terapia_uzaleznien.jsp">
+                <img class="img-responsive img-hover"
+                     src="./graphics/fotolia/03_01_04_terapia_uzaleznien_700_400.jpg" alt="">
+            </a>
+            <h3>
+                <a href="03_01_04_terapia_uzaleznien.jsp">Terapia uzależnień</a>
+            </h3>
+            <p><a href="03_01_04_terapia_uzaleznien.jsp">(więcej)</a></p>
+        </div>
+
 
     </div>
     <!-- /.row -->

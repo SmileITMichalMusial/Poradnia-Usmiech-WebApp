@@ -61,7 +61,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
-                <img width=100% border="5" src="../../graphics/baner.png" alt=""/>
+                <img width=100% border="5" src="../../graphics/baner.jpg" alt=""/>
 
             </h1>
             <ol class="breadcrumb">

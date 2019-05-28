@@ -73,7 +73,7 @@
         <div class="col-md-4 img-portfolio">
             <a href="03_02_01_logopedia_dzieci.jsp">
                 <img class="img-responsive img-hover"
-                     src="graphics/fotolia/03_02_01_logopedia_dzieci_700_400.jpg" alt="">
+                     src="./graphics/fotolia/03_02_01_logopedia_dzieci_700_400.jpg" alt="">
             </a>
             <h3>
                 <a href="03_02_01_logopedia_dzieci.jsp">Logopedia</a>
@@ -82,20 +82,20 @@
         </div>
 
         <div class="col-md-4 img-portfolio">
-            <a href="03_02_02_pedagogika_dzieci.jsp">
+            <a href="03_02_08_integracja_sensoryczna.jsp">
                 <img class="img-responsive img-hover"
-                     src="graphics/fotolia/03_02_02_pedagogika_dzieci_700_400.jpg" alt="">
+                     src="./graphics/fotolia/03_02_08_integracja_sensoryczna_700_400.jpg" alt="">
             </a>
             <h3>
-                <a href="03_02_02_pedagogika_dzieci.jsp">Terapia pedagogiczna</a>
+                <a href="03_02_08_integracja_sensoryczna.jsp">Integracja sensoryczna</a>
             </h3>
-            <p>Diagnoza i terapia <a href="03_02_02_pedagogika_dzieci.jsp">(więcej)</a></p>
+            <p>Diagnoza i terapia <a href="03_02_08_integracja_sensoryczna.jsp">(więcej)</a></p>
         </div>
 
         <div class="col-md-4 img-portfolio">
             <a href="03_02_03_psychologia_dzieci.jsp">
                 <img class="img-responsive img-hover"
-                     src="graphics/fotolia/03_02_03_psychologia_dzieci_700_400.jpg" alt="">
+                     src="./graphics/fotolia/03_02_03_psychologia_dzieci_700_400.jpg" alt="">
             </a>
             <h3>
                 <a href="03_02_03_psychologia_dzieci.jsp">Psychologia</a>
@@ -110,7 +110,7 @@
         <div class="col-md-4 img-portfolio">
             <a href="03_02_04_terapia_reki_dzieci.jsp">
                 <img class="img-responsive img-hover"
-                     src="graphics/fotolia/03_02_04_terapia_reki_dzieci_700_400.jpg" alt="">
+                     src="./graphics/fotolia/03_02_04_terapia_reki_dzieci_700_400.jpg" alt="">
             </a>
             <h3>
                 <a href="03_02_04_terapia_reki_dzieci.jsp">Terapia ręki</a>
@@ -120,7 +120,7 @@
         <div class="col-md-4 img-portfolio">
             <a href="03_02_05_gotowosc_szkolna_dzieci.jsp">
                 <img class="img-responsive img-hover"
-                     src="graphics/fotolia/03_02_05_gotowosc_szkolna_dzieci_700_400.jpg" alt="">
+                     src="./graphics/fotolia/03_02_05_gotowosc_szkolna_dzieci_700_400.jpg" alt="">
             </a>
             <h3>
                 <a href="03_02_05_gotowosc_szkolna_dzieci.jsp">Gotowość szkolna</a>
@@ -130,7 +130,7 @@
         <div class="col-md-4 img-portfolio">
             <a href="03_02_06_diagnoza_trudnosci_szkolnych.jsp">
                 <img class="img-responsive img-hover"
-                     src="graphics/fotolia/03_02_06_diagnoza_trudnosci_szkolnych_700_400.jpg" alt="">
+                     src="./graphics/fotolia/03_02_06_diagnoza_trudnosci_szkolnych_700_400.jpg" alt="">
             </a>
             <h3>
                 <a href="03_02_06_diagnoza_trudnosci_szkolnych.jsp">Diagnoza trudności szkolnych i dysleksji </a>
@@ -152,6 +152,17 @@
                 <a href="03_02_07_porada_wychowawcza.jsp">Porada wychowawcza</a>
             </h3>
             <p>Porada wychowawcza <a href="03_02_07_porada_wychowawcza.jsp">(więcej)</a></p>
+        </div>
+
+        <div class="col-md-4 img-portfolio">
+            <a href="03_02_02_pedagogika_dzieci.jsp">
+                <img class="img-responsive img-hover"
+                     src="./graphics/fotolia/03_02_02_pedagogika_dzieci_700_400.jpg" alt="">
+            </a>
+            <h3>
+                <a href="03_02_02_pedagogika_dzieci.jsp">Terapia pedagogiczna</a>
+            </h3>
+            <p>Diagnoza i terapia <a href="03_02_02_pedagogika_dzieci.jsp">(więcej)</a></p>
         </div>
 
     </div>

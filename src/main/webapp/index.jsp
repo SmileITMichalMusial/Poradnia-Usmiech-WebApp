@@ -66,7 +66,7 @@
 
 
     <h1 class="page-header">
-        <div style="text-align: center;"><img border="5" width=100% src="./graphics/baner.png" alt=""></div>
+        <div style="text-align: center;"><img border="5" width=100% src="./graphics/baner.jpg" alt=""></div>
     </h1>
 
     <!-- Tekst specjalny - ogłoszenie
