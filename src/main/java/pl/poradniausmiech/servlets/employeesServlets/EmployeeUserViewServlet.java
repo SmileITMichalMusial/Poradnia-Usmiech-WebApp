@@ -31,12 +31,24 @@ public class EmployeeUserViewServlet extends HttpServlet {
         String pageID = request.getParameter("page");
         Employee employee = employeesDao.read(Integer.parseInt(id));
         request.setAttribute("employee", employee);
+        request.getSession().getAttribute("login");
+        System.out.println("Login to: " + request.getSession().getAttribute("login"));
+
+        String login = (String) request.getSession().getAttribute("login");
+
         if (pageID.equals("spec")) {
             RequestDispatcher rd = request.getRequestDispatcher("02_01_specjalisci_loop.jsp");
             rd.forward(request, response);
             return;
         }
         if (pageID.equals("adm")) {
+
+            if (login.equals("null") || login.isEmpty() || login.equals("") || login == "null") {
+                RequestDispatcher rd = request.getRequestDispatcher("08_login.jsp");
+                rd.forward(request, response);
+                return;
+            }
+
             RequestDispatcher rd = request.getRequestDispatcher("../jsp/01_admin_pages/22_4_employees_details.jsp");
             rd.forward(request, response);
             return;

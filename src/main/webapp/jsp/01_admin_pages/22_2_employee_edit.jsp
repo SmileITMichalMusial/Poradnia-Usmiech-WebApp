@@ -81,10 +81,14 @@
         </div>
         <!-- Content Column -->
         <div class="col-lg-10 col-md-10 col-sm-10">
+            <h4>Edycja pracownika</h4>
+            <br>
+            <img src="../../graphics/employees_photos/${employee.getPhotoURL()}" width="20%" height="20%" alt="foto">
+            <br>
 
 
             <form class="form-wrapper" method="post" action="/EmployeeEditServlet" enctype="multipart/form-data">
-                <h4>Edycja pracownika</h4>
+
                 Imię: <input type="text" class="form-control" name="name" placeholder="imię"
                              value="${employee.getName()}" required>
                 Nazwisko: <input type="text" class="form-control" name="surname" placeholder="nazwisko"

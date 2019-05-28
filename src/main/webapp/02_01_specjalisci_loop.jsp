@@ -77,7 +77,7 @@
 
         <div class="col-md-obrazek">
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <img class="img-responsive" src="/graphics/employees_photos/${employee.getPhotoURL()}"
+                <img class="img-responsive" src="/graphics/employees_photos/450_width_${employee.getPhotoURL()}"
                      alt="">
 
             </div>

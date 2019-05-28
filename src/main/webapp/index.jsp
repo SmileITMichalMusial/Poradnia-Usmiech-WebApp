@@ -60,70 +60,16 @@
 <%@include file="WEB-INF/01_headers_footers/000_header.jsp" %>
 
 
-<!-- Page Heading/Breadcrumbs -->
-
-<!-- /.row -->
-
-
-<!-- Header Carousel -->
-<!-- <header id="myCarousel" class="carousel slide">
-     <!-- Indicators -->
-<!--   <ol class="carousel-indicators">
-       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-       <li data-target="#myCarousel" data-slide-to="1"></li>
-       <li data-target="#myCarousel" data-slide-to="2"></li>
-   </ol>
-
-   <!-- Wrapper for slides -->
-
-<!--   <div class="carousel-inner">
-       <div class="item active">
-                   <!-- rozmia 1135 x 180 (30%)) -->
-<!--         <div class="fill" style="background-image:url(./graphics/fotolia/baner_01_1135_300.jpg);" ></div>
-
-         <div class="carousel-caption">
-             <h2></h2>
-         </div>
-     </div>
-     <div class="item">
-         <div class="fill" style="background-image:url(./graphics/fotolia/baner_02_1135_300.jpg);"></div>
-         <div class="carousel-caption">
-             <h2></h2>
-         </div>
-     </div>
-     <div class="item">
-         <div class="fill" style="background-image:url(./graphics/fotolia/baner_03_1135_300.jpg);"></div>
-         <div class="carousel-caption">
-             <h2></h2>
-         </div>
-     </div>
- </div>
-
- <!-- Controls -->
-<!--     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-         <span class="icon-prev"></span>
-     </a>
-     <a class="right carousel-control" href="#myCarousel" data-slide="next">
-         <span class="icon-next"></span>
-     </a>
- </header>
-
-
-
-
-
-
- <!-- Page Content -->
 
 
 <div class="container">
 
 
     <h1 class="page-header">
-        <center><img border="5" width=100% src="./graphics/baner.jpg" alt=""></center>
+        <div style="text-align: center;"><img border="5" width=100% src="./graphics/baner.jpg" alt=""></div>
     </h1>
 
-    <!-- Tekst specjalny - ogłoszenie -->
+    <!-- Tekst specjalny - ogłoszenie
     <hr>
     <div class="row">
         <div class="col-lg-12">
@@ -135,7 +81,7 @@
                 </center>
             </h3>
         </div>
-    </div>
+    </div>-->
     <hr>
 
 
@@ -197,9 +143,9 @@
         <div class="col-lg-12">
             <br>
             <h2 class="page-header">
-                <center>Poradnia znajduje się w Warszawie, na Bielanach, przy ul. Marymonckiej 105, obok Szpitala
+                <div style="text-align: center;">Poradnia znajduje się w Warszawie, na Bielanach, przy ul. Twardowska 3, niedaleko Szpitala
                     Bielańskiego
-                </center>
+                </div>
             </h2>
 
         </div>
@@ -207,32 +153,32 @@
 
         <div class="col-md-4 col-sm-6">
             <a href="05_galeria.jsp">
-                <img class="img-responsive img-portfolio img-hover" src="../resources/01_web_page_graphics/00_01_index.JPG" alt="">
+                <img class="img-responsive img-portfolio img-hover" src="./graphics/00_01_01_700_450.JPG" alt="">
             </a>
         </div>
         <div class="col-md-4 col-sm-6">
             <a href="05_galeria.jsp">
-                <img class="img-responsive img-portfolio img-hover" src="./graphics/00_02_index.JPG" alt="">
+                <img class="img-responsive img-portfolio img-hover" src="./graphics/00_01_02_700_450.JPG" alt="">
             </a>
         </div>
         <div class="col-md-4 col-sm-6">
             <a href="05_galeria.jsp">
-                <img class="img-responsive img-portfolio img-hover" src="./graphics/00_03_index.JPG" alt="">
+                <img class="img-responsive img-portfolio img-hover" src="./graphics/00_01_03_700_450.JPG" alt="">
             </a>
         </div>
         <div class="col-md-4 col-sm-6">
             <a href="05_galeria.jsp">
-                <img class="img-responsive img-portfolio img-hover" src="./graphics/00_04_index.JPG" alt="">
+                <img class="img-responsive img-portfolio img-hover" src="./graphics/00_01_04_700_450.JPG" alt="">
             </a>
         </div>
         <div class="col-md-4 col-sm-6">
             <a href="05_galeria.jsp">
-                <img class="img-responsive img-portfolio img-hover" src="./graphics/00_05_index.JPG" alt="">
+                <img class="img-responsive img-portfolio img-hover" src="./graphics/00_01_05_700_450.JPG" alt="">
             </a>
         </div>
         <div class="col-md-4 col-sm-6">
             <a href="05_galeria.jsp">
-                <img class="img-responsive img-portfolio img-hover" src="./graphics/00_06_index.JPG" alt="">
+                <img class="img-responsive img-portfolio img-hover" src="./graphics/00_01_06_700_450.JPG" alt="">
             </a>
         </div>
     </div>

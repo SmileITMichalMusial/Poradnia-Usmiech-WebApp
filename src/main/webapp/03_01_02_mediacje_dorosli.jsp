@@ -162,7 +162,7 @@ Cennik znajduje się <a href="06_cennik.jsp">tutaj</a>.
         </div>
         <!-- /.row -->
 <hr>
-        <!-- Related Projects Row -->
+        <!-- Related Projects Row
         <div class="row">
 
             <div class="col-lg-12">
@@ -200,7 +200,7 @@ Cennik znajduje się <a href="06_cennik.jsp">tutaj</a>.
 										<center>Muzykoterapia</center></a>
             </div>
 
-        </div>
+        </div> -->
         <!-- /.row -->
 
         <hr>

@@ -13,7 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @WebServlet("/ListAllUsersAdminServlet")
 
@@ -34,6 +36,14 @@ public class ListAllUsersAdminServlet extends HttpServlet {
         request.getSession().getAttribute("listOfUsers");
         response.setContentType("text/html;charset=UTF-8");
         List<User> listOfUsers = usersDao.getUsersListFromDB();
+
+        listOfUsers = listOfUsers
+                .stream()
+                .sorted(Comparator.comparing(User::getActive).reversed()
+                        .thenComparing(User::getUserType)
+                        .thenComparing(User::getId))
+                .collect(Collectors.toList());
+
         request.setAttribute("listOfUsers", listOfUsers);
         request.getSession().setAttribute("listOfUsers", listOfUsers);
         RequestDispatcher rd = request.getRequestDispatcher("../jsp/01_admin_pages/21_1_users_view.jsp");

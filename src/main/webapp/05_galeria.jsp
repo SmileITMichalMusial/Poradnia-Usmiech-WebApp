@@ -67,7 +67,7 @@
                 <p>
 											
 	<!--START SIMPLEVIEWER EMBED -->
-	<script type="text/javascript" src="svcore/js/simpleviewer.js"></script>
+	<script type="text/javascript" src="/svcore/js/simpleviewer.js"></script>
 	<script type="text/javascript">
 	simpleviewer.ready(function () {
 		simpleviewer.load('sv-container', '100%', '100%', 'transparent', true);

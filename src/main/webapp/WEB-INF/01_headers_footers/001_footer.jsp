@@ -10,7 +10,7 @@
 <footer>
     <div class="row">
         <div class="col-lg-12">
-            <p>2014-2018 &copy; Poradnia psychologiczna "Uśmiech". Wszelkie prawa zastrzeżone.</p>
+            <p>2014-2019 &copy; Poradnia psychologiczna "Uśmiech". Wszelkie prawa zastrzeżone.</p>
         </div>
     </div>
 </footer>
