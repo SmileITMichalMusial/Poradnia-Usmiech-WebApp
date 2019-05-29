@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% request.getAttribute("contactList"); %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -116,9 +117,11 @@
             </div>
             <!-- Contact Details Column -->
             <div class="col-md-4">
-                <h4>Adres</h4> 
-                
-                    ul. Marymoncka 105/20<p>01-813 Warszawa<br><hr>
+                <h4>Adres</h4>
+
+                ${contactList.get(0).getStreet()}<br>
+                        ${contactList.get(0).getPostcode()} ${contactList.get(0).getCity()}
+                <hr>
                 
 								 <h4>Telefon</h4> 
 										<h3><b><i class="fa fa-phone"></i> 606-663-683</b></h3>

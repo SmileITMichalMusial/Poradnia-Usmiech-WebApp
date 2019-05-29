@@ -1,7 +1,8 @@
 package pl.poradniausmiech.dao;
 
 import pl.poradniausmiech.Utils.Dates;
-import pl.poradniausmiech.domain.User;
+import pl.poradniausmiech.domain.Contact;
+import pl.poradniausmiech.domain.Employee;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -12,51 +13,51 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Stateless
-public class UsersDaoBean implements UsersDao {
+public class ContactDaoBean implements ContactDao {
 
-
+    private List<Contact> contactList = new ArrayList<>();
     private static final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("primary");
 
     @Override
-    public List<User> getUsersListFromDB() {
+    public List<Contact> getContactListFromDB() {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
         entityTransaction.begin();
-        List<User> userList = entityManager.createQuery("FROM User ").getResultList();
+        contactList = entityManager.createQuery("FROM Contact ").getResultList();
 
-        return userList;
+        return contactList;
     }
 
     @Override
-    public User read(int id) {
+    public Contact read(int id) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
-        User user = entityManager.find(User.class, id);
-        return user;
+        Contact contact = entityManager.find(Contact.class, id);
+        return contact;
     }
 
     @Override
-    public void modifyUserDb(User user) {
+    public void modifyContactDb(Contact contact) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
         entityTransaction.begin();
-        entityManager.merge(user);
+        entityManager.merge(contact);
         entityTransaction.commit();
         entityManager.close();
     }
 
     @Override
-    public void markUserAsInactiveInDb(int id) {
+    public void markContactAsInactiveInDb(int id) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
         entityTransaction.begin();
-        User user = read(id);
-        System.out.println("User id: " + id);
-        System.out.println("User status: " + user.getActive());
+        Contact contact = read(id);
+        System.out.println("Contact id: " + id);
+        System.out.println("Contact status: " + contact.getActive());
         System.out.println("Setting up as inactive...");
-        user.setActive(false);
-        user.setDateModified(Dates.getCurrentDateForDbModifications());
-        System.out.println("USer status: " + user.getActive());
-        entityManager.merge(user);
+        contact.setActive(false);
+        contact.setDateModified(Dates.getCurrentDateForDbModifications());
+        System.out.println("Contact status: " + contact.getActive());
+        entityManager.merge(contact);
         entityTransaction.commit();
         entityManager.close();
 
@@ -64,42 +65,29 @@ public class UsersDaoBean implements UsersDao {
     }
 
     @Override
-    public void markUserAsActiveInDb(int id) {
+    public void markContactAsActiveInDb(int id) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
         entityTransaction.begin();
-        User user = read(id);
-        System.out.println("User id: " + id);
-        System.out.println("User status: " + user.getActive());
+        Contact contact = read(id);
+        System.out.println("Contact id: " + id);
+        System.out.println("Contact status: " + contact.getActive());
         System.out.println("Setting up as inactive...");
-        user.setActive(true);
-        user.setDateModified(Dates.getCurrentDateForDbModifications());
-        System.out.println("USer status: " + user.getActive());
-        entityManager.merge(user);
+        contact.setActive(true);
+        contact.setDateModified(Dates.getCurrentDateForDbModifications());
+        System.out.println("Contact status: " + contact.getActive());
+        entityManager.merge(contact);
         entityTransaction.commit();
         entityManager.close();
-
-
     }
 
     @Override
-    public boolean isUniqueLogin(String login) {
-
-        return this.getUsersListFromDB()
-                .stream()
-                .anyMatch(t -> t.getLogin().equals(login));
-
-    }
-
-    @Override
-    public void saveUserToDb(User user) {
+    public void saveContactToDb(Contact contact) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
-        entityManager.persist(user);
+        entityManager.persist(contact);
         transaction.commit();
         entityManager.close();
     }
-
-
 }

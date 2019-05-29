@@ -1,5 +1,6 @@
 package pl.poradniausmiech.dao;
 
+import pl.poradniausmiech.Utils.Dates;
 import pl.poradniausmiech.domain.Employee;
 
 import javax.ejb.Stateless;
@@ -54,6 +55,7 @@ public class EmployeesDaoBean implements EmployeesDao {
         System.out.println("Employee status: " + employee.getActive());
         System.out.println("Setting up as inactive...");
         employee.setActive(false);
+        employee.setDateModified(Dates.getCurrentDateForDbModifications());
         System.out.println("Employee status: " + employee.getActive());
         entityManager.merge(employee);
         entityTransaction.commit();
@@ -72,6 +74,7 @@ public class EmployeesDaoBean implements EmployeesDao {
         System.out.println("Employee status: " + employee.getActive());
         System.out.println("Setting up as inactive...");
         employee.setActive(true);
+        employee.setDateModified(Dates.getCurrentDateForDbModifications());
         System.out.println("Employee status: " + employee.getActive());
         entityManager.merge(employee);
         entityTransaction.commit();

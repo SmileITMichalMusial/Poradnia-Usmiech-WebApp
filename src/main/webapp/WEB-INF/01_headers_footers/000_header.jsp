@@ -58,7 +58,7 @@
                     <a href="/PriceListServlet">Cennik</a>
                 </li>
                 <li>
-                    <a href="../../07_kontakt.jsp">Kontakt</a>
+                    <a href="/ContactServlet">Kontakt</a>
                 </li>
                 <c:if test="${empty login}">
                     <li>
