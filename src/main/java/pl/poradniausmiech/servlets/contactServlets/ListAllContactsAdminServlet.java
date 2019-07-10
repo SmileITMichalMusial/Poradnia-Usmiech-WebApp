@@ -44,7 +44,7 @@ public class ListAllContactsAdminServlet extends HttpServlet {
                 .collect(Collectors.toList());
 
         request.setAttribute("listOfContacts", listOfContacts);
-        request.getSession().setAttribute(String.valueOf(listOfContacts), listOfContacts);
+        request.getSession().setAttribute("listOfContacts", listOfContacts);
         RequestDispatcher rd = request.getRequestDispatcher("../jsp/01_admin_pages/24_1_contacts_view.jsp");
         rd.forward(request, response);
 

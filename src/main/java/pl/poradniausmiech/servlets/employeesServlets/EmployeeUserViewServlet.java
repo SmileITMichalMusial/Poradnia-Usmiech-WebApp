@@ -42,12 +42,12 @@ public class EmployeeUserViewServlet extends HttpServlet {
             return;
         }
         if (pageID.equals("adm")) {
-
-            if (login.equals("null") || login.isEmpty() || login.equals("") || login == "null") {
-                RequestDispatcher rd = request.getRequestDispatcher("08_login.jsp");
-                rd.forward(request, response);
-                return;
-            }
+// FIXME dodac filtrowanie po loginie aby nie mozna bylo sie dostac bez logowania
+          //  if (login.equals("null") || login.isEmpty() || login.equals("") || login == "null") {
+          //      RequestDispatcher rd = request.getRequestDispatcher("08_login.jsp");
+          //      rd.forward(request, response);
+          //      return;
+          //  }
 
             RequestDispatcher rd = request.getRequestDispatcher("../jsp/01_admin_pages/22_4_employees_details.jsp");
             rd.forward(request, response);
