@@ -1,42 +1,39 @@
-package pl.poradniausmiech.domain;
+package pl.poradniausmiech.domain.pages;
 
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table (name="Pages")
-public class Pages {
+@Table(name = "pages_layer_1")
+public class PagesLayer1 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", unique = true, nullable = false)
+    @Column(name = "id")
     private Integer id;
 
-    @Column(name = "pageLayer", nullable = false)
-    private Integer pageLayer;
+    @Column(name = "orderId")
+    private Integer orderId;
 
-    @Column(name = "pageLayerOrderId", nullable = false)
-    private Integer pageLayerOrderId;
-
-    @Column(name = "pageName", nullable = false)
+    @Column(name = "pageName")
     private String pageName;
 
-    @Column(name = "pageAddress", nullable = false)
+    @Column(name = "pageAddress")
     private String pageAddress;
 
-    @Column(name = "pageDescription", nullable = true)
+    @Column(name = "pageDescription")
     private String pageDescription;
 
-    @Column(name = "isactive", nullable = false)
+    @Column(name = "isActive")
     private Boolean isActive;
 
-    @Column(name = "dateCreated", nullable = false)
+    @Column(name = "dateCreated")
     private Date dateCreated;
 
-    @Column(name = "dateModified", nullable = false)
+    @Column(name = "dateModified")
     private Date dateModified;
 
-    public Pages() {
+    public PagesLayer1() {
 
     }
 
@@ -48,20 +45,12 @@ public class Pages {
         this.id = id;
     }
 
-    public Integer getPageLayer() {
-        return pageLayer;
+    public Integer getOrderId() {
+        return orderId;
     }
 
-    public void setPageLayer(Integer pageLayer) {
-        this.pageLayer = pageLayer;
-    }
-
-    public Integer getPageLayerOrderId() {
-        return pageLayerOrderId;
-    }
-
-    public void setPageLayerOrderId(Integer pageLayerOrderId) {
-        this.pageLayerOrderId = pageLayerOrderId;
+    public void setOrderId(Integer orderId) {
+        this.orderId = orderId;
     }
 
     public String getPageName() {

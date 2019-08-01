@@ -13,6 +13,8 @@
         <class>pl.poradniausmiech.domain.Contact</class>
         <class>pl.poradniausmiech.domain.pricelist.PriceListLayer1</class>
         <class>pl.poradniausmiech.domain.pricelist.PriceListLayer2</class>
+        <class>pl.poradniausmiech.domain.pages.PagesLayer1</class>
+        <class>pl.poradniausmiech.domain.pages.PagesLayer2</class>
 
 
         <properties>
