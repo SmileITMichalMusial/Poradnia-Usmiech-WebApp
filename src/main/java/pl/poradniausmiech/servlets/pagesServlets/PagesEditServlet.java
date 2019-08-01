@@ -103,7 +103,7 @@ public class PagesEditServlet extends HttpServlet {
         String action = request.getParameter("action");
         String mode = request.getParameter("mode");
 
-        if(action.equals("edit") && mode.equals("edit_inactive")) {
+        if (action.equals("edit") && mode.equals("edit_inactive")) {
             request.getSession().setAttribute("edit_active", "NO");
             request.getSession().setAttribute("pageID_l1", null);
             request.getSession().setAttribute("pageID_l2", null);
@@ -115,7 +115,6 @@ public class PagesEditServlet extends HttpServlet {
             rd.forward(request, response);
             return;
         }
-
 
         if (pageID_l1 != null && pageID_l2 == null && action.equals("edit") && mode.equals("edit_active")) {
             request.getSession().setAttribute("edit_active", "YES");
@@ -142,7 +141,7 @@ public class PagesEditServlet extends HttpServlet {
             return;
         }
 
-        if (pageID_l1 != null && action.equals("delete")) {
+        if (pageID_l1 != null && pageID_l2 == null & action.equals("delete")) {
 
             PagesLayer1 pagesLayer1 = pagesDao.getSinglePageLayer1(Integer.parseInt(pageID_l1));
             if (pagesLayer1.getActive()) {
@@ -152,6 +151,29 @@ public class PagesEditServlet extends HttpServlet {
                 pagesDao.markPageLayer1AsActiveInDb(Integer.parseInt(pageID_l1));
                 logger.info("PageID: " + pagesLayer1.getId() + "; PageName: " + pagesLayer1.getPageName() + "; PageAddress: " + pagesLayer1.getPageName() + " marked as active in DB.");
             }
+
+
+            List<PagesLayer1> pagesLayer1List = pagesDao.getPagesLayer1FromDbSortedByOrderId();
+            request.getSession().setAttribute("pagesLayer1List", pagesLayer1List);
+            List<PagesLayer2> pagesLayer2List = pagesDao.getPagesLayer2FromDbSortedByOrderId();
+            request.getSession().setAttribute("pagesLayer2List", pagesLayer2List);
+            RequestDispatcher rd = request.getRequestDispatcher("../jsp/01_admin_pages/31_1_pages_view.jsp");
+            rd.forward(request, response);
+            return;
+
+        }
+
+        if (pageID_l1 != null && pageID_l2 != null & action.equals("delete")) {
+
+            PagesLayer2 pagesLayer2 = pagesDao.getSinglePageLayer2(Integer.parseInt(pageID_l2));
+            if (pagesLayer2.getActive()) {
+                pagesDao.markPageLayer2AsInactiveInDb(Integer.parseInt(pageID_l2));
+                logger.info("PageID: " + pagesLayer2.getId() + "; PageName: " + pagesLayer2.getPageName() + "; PageAddress: " + pagesLayer2.getPageName() + " marked as inactive in DB.");
+            } else {
+                pagesDao.markPageLayer2AsActiveInDb(Integer.parseInt(pageID_l2));
+                logger.info("PageID: " + pagesLayer2.getId() + "; PageName: " + pagesLayer2.getPageName() + "; PageAddress: " + pagesLayer2.getPageName() + " marked as active in DB.");
+            }
+
 
             List<PagesLayer1> pagesLayer1List = pagesDao.getPagesLayer1FromDbSortedByOrderId();
             request.getSession().setAttribute("pagesLayer1List", pagesLayer1List);

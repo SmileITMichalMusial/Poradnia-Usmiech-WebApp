@@ -104,15 +104,6 @@
                 </tr>
 
                 <tr>
-                    <td colspan="2"> pageID_l1 to: ${pageID_l1}
-                    </td>
-                    <td colspan="2"> pageID_l2 to: ${pageID_l2}
-                    </td>
-                    <td colspan="2"> edit_active to: ${edit_active}
-                    </td>
-                </tr>
-
-                <tr>
                     <th>Edycja</th>
                     <th>Kol. 1</th>
                     <th>Kol. 2</th>
@@ -235,14 +226,14 @@
                                                     class="fa fa-pencil color-aqua"></em></a></td>
                                         </td>
                                         <td style="width:1px;white-space:nowrap">
-                                            <c:if test="${pagesLayer1List.getActive()}">Tak</c:if>
-                                            <c:if test="${!pagesLayer1List.getActive()}"><p class="text-muted">
+                                            <c:if test="${pagesLayer2List.getActive()}">Tak</c:if>
+                                            <c:if test="${!pagesLayer2List.getActive()}"><p class="text-muted">
                                                 Nie</p></c:if>
                                         </td>
 
                                         <td>
                                             <c:set var="active" scope="session"
-                                                   value="${pagesLayer1List.getActive()}"/>
+                                                   value="${pagesLayer2List.getActive()}"/>
                                             <c:if test="${active}">
                                                 <a href="/PagesEditServlet?pageID_l1=${pagesLayer1List.getId()}&pageID_l2=${pagesLayer2List.getId()}&action=delete"><em
                                                         class="fa fa-trash color-green"></em></a>
@@ -292,7 +283,7 @@
                                             <td style="background-color: #33CC66;font-weight: bold;color: black">
                                                 <input type="text" class="form-control" name="PageAddress"
                                                        placeholder="adres strony"
-                                                       value="${pagesLayer1List.getPageAddress()}" required>
+                                                       value="${pagesLayer1List.getPageAddress()}">
                                             </td>
                                         </form>
                                         <td>

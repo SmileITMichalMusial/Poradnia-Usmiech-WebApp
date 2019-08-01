@@ -135,4 +135,30 @@ public class PagesDaoBean implements PagesDao {
         entityTransaction.commit();
         entityManager.close();
     }
+
+    @Override
+    public void markPageLayer2AsInactiveInDb(int pageID_l2) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
+        PagesLayer2 pagesLayer2 = getSinglePageLayer2(pageID_l2);
+        pagesLayer2.setActive(false);
+        pagesLayer2.setDateModified(Dates.getCurrentDateForDbModifications());
+        entityManager.merge(pagesLayer2);
+        entityTransaction.commit();
+        entityManager.close();
+    }
+
+    @Override
+    public void markPageLayer2AsActiveInDb(int pageID_l2) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
+        PagesLayer2 pagesLayer2 = getSinglePageLayer2(pageID_l2);
+        pagesLayer2.setActive(true);
+        pagesLayer2.setDateModified(Dates.getCurrentDateForDbModifications());
+        entityManager.merge(pagesLayer2);
+        entityTransaction.commit();
+        entityManager.close();
+    }
 }
