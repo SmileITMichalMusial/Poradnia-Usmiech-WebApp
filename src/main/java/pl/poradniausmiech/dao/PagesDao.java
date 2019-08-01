@@ -21,6 +21,8 @@ public interface PagesDao {
     void modifyPagesLayer2(PagesLayer2 pagesLayer2);
     void markPageLayer1AsActiveInDb (int pageID_l1);
     void markPageLayer1AsInactiveInDb (int pageID_l1);
+    void markPageLayer2AsActiveInDb (int pageID_l2);
+    void markPageLayer2AsInactiveInDb (int pageID_l2);
 
 
 }
