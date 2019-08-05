@@ -1,5 +1,6 @@
 package pl.poradniausmiech.servlets.userServlets;
 
+import pl.poradniausmiech.Utils.Dates;
 import pl.poradniausmiech.dao.UsersDao;
 import pl.poradniausmiech.domain.User;
 import pl.poradniausmiech.domain.UserType;
@@ -12,9 +13,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.logging.Logger;
 
 @WebServlet("/UserAddServletAdmin")
@@ -59,9 +57,6 @@ class UserAddServletAdmin extends HttpServlet {
             return;
         }
 
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        Date date = new Date();
-
         User user = new User();
         user.setLogin(login);
         user.setPassword(password);
@@ -71,10 +66,17 @@ class UserAddServletAdmin extends HttpServlet {
         user.setPhoneNumber(phone);
         user.setUserType(UserType.valueOf(type));
         user.setActive(true);
-        user.setDateCreated(date);
+        user.setDateCreated(Dates.getCurrentDateForDbModifications());
 
         usersDao.saveUserToDb(user);
-        logger.info("Użytkownik: " + login + " dodany do bazy danych");
+        logger.info("Użytkownik dodany do bazy danych:" +
+                " Login: " + login +
+                " | Imię: " + name +
+                " | Nazwisko: " + surname +
+                " | Email: " + email +
+                " | Numer telefonu: " + phone +
+                " | Typ użytkownika: " + UserType.valueOf(type)
+        );
 
         RequestDispatcher rd = req.getRequestDispatcher("../jsp/01_admin_pages/21_1_users_view.jsp");
         resp.sendRedirect(req.getContextPath() + "/ListAllUsersAdminServlet");

@@ -36,6 +36,9 @@ public class ListAllUsersAdminServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         List<User> listOfUsers = usersDao.getUsersListFromDB();
 
+        // FIX_ME
+        // Sortowanie do beana
+
         listOfUsers = listOfUsers
                 .stream()
                 .sorted(Comparator.comparing(User::getActive).reversed()

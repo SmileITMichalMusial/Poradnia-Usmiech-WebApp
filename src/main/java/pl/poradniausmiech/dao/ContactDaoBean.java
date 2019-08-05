@@ -51,17 +51,11 @@ public class ContactDaoBean implements ContactDao {
         EntityTransaction entityTransaction = entityManager.getTransaction();
         entityTransaction.begin();
         Contact contact = read(id);
-        System.out.println("Contact id: " + id);
-        System.out.println("Contact status: " + contact.getActive());
-        System.out.println("Setting up as inactive...");
         contact.setActive(false);
         contact.setDateModified(Dates.getCurrentDateForDbModifications());
-        System.out.println("Contact status: " + contact.getActive());
         entityManager.merge(contact);
         entityTransaction.commit();
         entityManager.close();
-
-
     }
 
     @Override
@@ -70,12 +64,8 @@ public class ContactDaoBean implements ContactDao {
         EntityTransaction entityTransaction = entityManager.getTransaction();
         entityTransaction.begin();
         Contact contact = read(id);
-        System.out.println("Contact id: " + id);
-        System.out.println("Contact status: " + contact.getActive());
-        System.out.println("Setting up as inactive...");
         contact.setActive(true);
         contact.setDateModified(Dates.getCurrentDateForDbModifications());
-        System.out.println("Contact status: " + contact.getActive());
         entityManager.merge(contact);
         entityTransaction.commit();
         entityManager.close();

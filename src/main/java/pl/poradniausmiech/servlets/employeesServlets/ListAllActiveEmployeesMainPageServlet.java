@@ -32,10 +32,6 @@ public class ListAllActiveEmployeesMainPageServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
-        //    List<Employee> listOfActiveEmployees = (List<Employee>) request.getSession().getAttribute("listOfActiveEmployees");
-        //  System.out.println(listOfActiveEmployees);
-
-
         List<Employee> listOfActiveEmployees = employeesDao.getEmployeesListFromDB();
 
         listOfActiveEmployees = listOfActiveEmployees

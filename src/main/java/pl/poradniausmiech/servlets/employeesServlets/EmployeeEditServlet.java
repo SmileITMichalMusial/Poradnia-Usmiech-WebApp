@@ -1,5 +1,6 @@
 package pl.poradniausmiech.servlets.employeesServlets;
 
+import pl.poradniausmiech.Utils.Dates;
 import pl.poradniausmiech.Utils.UserImageNotFoundException;
 import pl.poradniausmiech.dao.EmployeesDao;
 import pl.poradniausmiech.dao.ImageUpload;
@@ -17,8 +18,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import java.io.File;
 import java.io.IOException;
-import java.sql.Timestamp;
-import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -87,10 +86,7 @@ class EmployeeEditServlet extends HttpServlet {
         employee.setPhoneNumber(phoneNumber);
         employee.setOrderId(orderId);
         employee.setBankAccountNumber(bankAccountNumber);
-        Date date= new Date();
-        long time = date.getTime();
-        Timestamp ts = new Timestamp(time);
-        employee.setDateModified(ts);
+        employee.setDateModified(Dates.getCurrentDateForDbModifications());
 
         Part filePart = req.getPart("image");
         File file;
@@ -102,7 +98,7 @@ class EmployeeEditServlet extends HttpServlet {
         }
 
         employeesDao.modifyEmployeeDb(employee);
-        logger.info("Employee id: " + idEmployee + " zaktualizowany");
+        logger.info("Pracownik: " + idEmployee + " zaktualizowany: ");
         logger.info("Nowe imię: " + name +
                 " | Nowe nazwisko: " + surname +
                 " | Nowa rola (krótka): " + roleShort +

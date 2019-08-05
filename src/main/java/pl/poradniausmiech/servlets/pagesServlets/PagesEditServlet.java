@@ -47,7 +47,12 @@ public class PagesEditServlet extends HttpServlet {
 
             pagesDao.modifyPagesLayer1(pagesLayer1);
 
-            logger.info("Zaktualizowano strone warstwy pierwszej o id= " + pageID_l1 + ": OrderID = " + OrderId + "; PageName = " + PageName + "; PageAddress = " + PageAddress + ";");
+            logger.info("Zaktualizowano stronę warstwy pierwszej:" +
+                    " Id strony: " + pageID_l1 +
+                    " | Kolejność: " + OrderId +
+                    " | Nazwa strony: " + PageName +
+                    " | Adres strony: " + PageAddress
+            );
 
             List<PagesLayer1> pagesLayer1List = pagesDao.getPagesLayer1FromDbSortedByOrderId();
             request.getSession().setAttribute("pagesLayer1List", pagesLayer1List);
@@ -75,7 +80,12 @@ public class PagesEditServlet extends HttpServlet {
 
             pagesDao.modifyPagesLayer2(pagesLayer2);
 
-            logger.info("Zaktualizowano strone warstwy drugiej o id= " + pageID_l2 + ": OrderID = " + OrderId + "; PageName = " + PageName + "; PageAddress = " + PageAddress + ";");
+            logger.info("Zaktualizowano stronę warstwy drugiej:" +
+                    " Id strony: " + pageID_l2 +
+                    " | Kolejność: " + OrderId +
+                    " | Nazwa strony: " + PageName +
+                    " | Adres strony: " + PageAddress
+            );
 
             List<PagesLayer1> pagesLayer1List = pagesDao.getPagesLayer1FromDbSortedByOrderId();
             request.setAttribute("pagesLayer1List", pagesLayer1List);
@@ -146,10 +156,10 @@ public class PagesEditServlet extends HttpServlet {
             PagesLayer1 pagesLayer1 = pagesDao.getSinglePageLayer1(Integer.parseInt(pageID_l1));
             if (pagesLayer1.getActive()) {
                 pagesDao.markPageLayer1AsInactiveInDb(Integer.parseInt(pageID_l1));
-                logger.info("PageID: " + pagesLayer1.getId() + "; PageName: " + pagesLayer1.getPageName() + "; PageAddress: " + pagesLayer1.getPageName() + " marked as inactive in DB.");
+                logger.info("Strona warstwy pierwszej: Id strony: " + pagesLayer1.getId() + " | Nazwa strony: " + pagesLayer1.getPageName() + " | Adres strony: " + pagesLayer1.getPageName() + " oznaczona jako nieaktywna w bazie danych");
             } else {
                 pagesDao.markPageLayer1AsActiveInDb(Integer.parseInt(pageID_l1));
-                logger.info("PageID: " + pagesLayer1.getId() + "; PageName: " + pagesLayer1.getPageName() + "; PageAddress: " + pagesLayer1.getPageName() + " marked as active in DB.");
+                logger.info("Strona warstwy pierwszej: Id strony: " + pagesLayer1.getId() + " | Nazwa strony: " + pagesLayer1.getPageName() + " | Adres strony: " + pagesLayer1.getPageName() + " oznaczona jako aktywna w bazie danych");
             }
 
 
@@ -168,10 +178,10 @@ public class PagesEditServlet extends HttpServlet {
             PagesLayer2 pagesLayer2 = pagesDao.getSinglePageLayer2(Integer.parseInt(pageID_l2));
             if (pagesLayer2.getActive()) {
                 pagesDao.markPageLayer2AsInactiveInDb(Integer.parseInt(pageID_l2));
-                logger.info("PageID: " + pagesLayer2.getId() + "; PageName: " + pagesLayer2.getPageName() + "; PageAddress: " + pagesLayer2.getPageName() + " marked as inactive in DB.");
+                logger.info("Strona warstwy drugiej: Id strony: " + pagesLayer2.getId() + " | Nazwa strony: " + pagesLayer2.getPageName() + " | Adres strony: " + pagesLayer2.getPageName() + "oznaczona jako nieaktywna w bazie danych.");
             } else {
                 pagesDao.markPageLayer2AsActiveInDb(Integer.parseInt(pageID_l2));
-                logger.info("PageID: " + pagesLayer2.getId() + "; PageName: " + pagesLayer2.getPageName() + "; PageAddress: " + pagesLayer2.getPageName() + " marked as active in DB.");
+                logger.info("Strona warstwy drugiej: Id strony: " + pagesLayer2.getId() + " | Nazwa strony: " + pagesLayer2.getPageName() + " | Adres strony: " + pagesLayer2.getPageName() + "oznaczona jako aktywna w bazie danych.");
             }
 
 

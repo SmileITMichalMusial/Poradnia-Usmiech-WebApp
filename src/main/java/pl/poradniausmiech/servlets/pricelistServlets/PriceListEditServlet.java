@@ -1,5 +1,6 @@
 package pl.poradniausmiech.servlets.pricelistServlets;
 
+import pl.poradniausmiech.Utils.Dates;
 import pl.poradniausmiech.dao.PriceListDao;
 import pl.poradniausmiech.domain.pricelist.PriceListLayer1;
 import pl.poradniausmiech.domain.pricelist.PriceListLayer2;
@@ -12,13 +13,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Timestamp;
-import java.util.Date;
 import java.util.List;
+import java.util.logging.Logger;
 
 @WebServlet("/PriceListEditServlet")
 
 public class PriceListEditServlet extends HttpServlet {
+
+    final Logger logger = Logger.getLogger(getClass().getName());
 
     @Inject
     PriceListDao priceListDao;
@@ -29,8 +31,7 @@ public class PriceListEditServlet extends HttpServlet {
 
         String idl1 = (String) request.getSession().getAttribute("idl1");
         String idl2 = (String) request.getSession().getAttribute("idl2");
-        System.out.println("1: " + idl1);
-        System.out.println("2: " + idl2);
+
 
         if (idl1 != null && idl2 == null) {
             Integer OrderIDLayer1 = Integer.valueOf(request.getParameter("OrderIDLayer1"));
@@ -39,12 +40,10 @@ public class PriceListEditServlet extends HttpServlet {
             PriceListLayer1 priceListLayer1 = priceListDao.getSinglePriceLayer1(Integer.valueOf(idl1));
             priceListLayer1.setOrderIDLayer1(OrderIDLayer1);
             priceListLayer1.setDescription(Description);
-            Date date = new Date();
-            long time = date.getTime();
-            Timestamp ts = new Timestamp(time);
-            priceListLayer1.setDateModified(ts);
+            priceListLayer1.setDateModified(Dates.getCurrentDateForDbModifications());
 
             priceListDao.modifyPriceListLayer1(priceListLayer1);
+            logger.info("Cennik warstwy pierwszej zmodyfikowany: Kolejność: " + OrderIDLayer1 + " | Opis: " + Description);
             List<PriceListLayer1> priceListLayer1List = priceListDao.getPriceListLayer1FromDb();
             request.getSession().setAttribute("priceListLayer1List", priceListLayer1List);
 
@@ -64,12 +63,10 @@ public class PriceListEditServlet extends HttpServlet {
             priceListLayer2.setName(Name);
             priceListLayer2.setDuration(Duration);
             priceListLayer2.setPrice(Price);
-            Date date = new Date();
-            long time = date.getTime();
-            Timestamp ts = new Timestamp(time);
-            priceListLayer2.setDateModified(ts);
+            priceListLayer2.setDateModified(Dates.getCurrentDateForDbModifications());
 
             priceListDao.modifyPriceListLayer2(priceListLayer2);
+            logger.info("Cennik warstwy drugiej zmodyfikowany: Kolejność: " + OrderIdLayer2 + " | Nazwa: " + Name + " | Długość: " + Duration + " | Cena: " + Price);
             List<PriceListLayer2> priceListLayer2List = priceListDao.getPriceListLayer2FromDb();
             request.getSession().setAttribute("priceListLayer2List", priceListLayer2List);
 
@@ -90,32 +87,33 @@ public class PriceListEditServlet extends HttpServlet {
         String page = request.getParameter("page");
         String action = request.getParameter("action");
 
-        System.out.println("id1: " + idl1);
-        System.out.println("id2: " + idl2);
-        System.out.println("page: " + page);
-        System.out.println("action: " + action);
-
         if (idl1 != null && idl2 == null && page.equals("adm") && action.equals("delete")) {
-            System.out.println("delete layer 1");
             PriceListLayer1 priceListLayer1 = priceListDao.getSinglePriceLayer1(Integer.valueOf(idl1));
             priceListDao.deletePriceListLayer1(priceListLayer1);
-            // get the list again to display refreshed version after refresh
             List<PriceListLayer1> priceListLayer1List = priceListDao.getPriceListLayer1FromDb();
             request.getSession().setAttribute("priceListLayer1List", priceListLayer1List);
-            System.out.println("Wpis warstwy pierwszej, id: " + idl1 + " usunięty");
+            logger.info("Usługa warstwy pierwszej usunięta:" +
+                    " Id: " + idl1 +
+                    " | Kolejność: " + priceListLayer1.getIdLayer1() +
+                    " | Opis: " + priceListLayer1.getDescription()
+            );
         }
         if (idl1 != null && idl2 != null && page.equals("adm") && action.equals("delete")) {
             System.out.println("delete layer 2");
             PriceListLayer2 priceListLayer2 = priceListDao.getSinglePriceLayer2(Integer.valueOf(idl2));
             priceListDao.deletePriceListLayer2(priceListLayer2);
-            // get the list again to display refreshed version after refresh
             List<PriceListLayer2> priceListLayer2List = priceListDao.getPriceListLayer2FromDb();
             request.getSession().setAttribute("priceListLayer2List", priceListLayer2List);
-            System.out.println("Wpis warstwy drugiej, id: " + idl2 + " usunięty");
+            logger.info("Usługa warstwy drugiej usunięta:" +
+                    " Id: " + idl2 +
+                    " | Kolejność: " + priceListLayer2.getIdLayer2() +
+                    " | Nazwa: " + priceListLayer2.getName() +
+                    " | Długość: " + priceListLayer2.getDuration() +
+                    " | Cena: " + priceListLayer2.getPrice()
+            );
         }
         String layerXEdit;
         if (idl1 != null && idl2 == null && page.equals("adm") && action.equals("edit")) {
-            System.out.println("edit layer 1");
             request.getSession().setAttribute("idl1", idl1);
             request.getSession().setAttribute("idl2", idl2);
             layerXEdit = "1";
@@ -128,7 +126,6 @@ public class PriceListEditServlet extends HttpServlet {
 
         }
         if (idl1 != null && idl2 != null && page.equals("adm") && action.equals("edit")) {
-            System.out.println("edit layer 2");
             request.getSession().setAttribute("idl1", idl1);
             request.getSession().setAttribute("idl2", idl2);
             layerXEdit = "2";

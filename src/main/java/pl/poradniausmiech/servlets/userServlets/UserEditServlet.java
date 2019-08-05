@@ -1,5 +1,6 @@
 package pl.poradniausmiech.servlets.userServlets;
 
+import pl.poradniausmiech.Utils.Dates;
 import pl.poradniausmiech.dao.UsersDao;
 import pl.poradniausmiech.domain.User;
 import pl.poradniausmiech.domain.UserType;
@@ -13,8 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.sql.Timestamp;
-import java.util.Date;
 import java.util.logging.Logger;
 
 @WebServlet("/UserEditServlet")
@@ -72,15 +71,17 @@ class UserEditServlet extends HttpServlet
         user.setEmail(email);
         user.setPhoneNumber(phone);
         user.setUserType(UserType.valueOf(type));
-        Date date = new Date();
-        long time = date.getTime();
-        Timestamp ts = new Timestamp(time);
-        user.setDateModified(ts);
+        user.setDateModified(Dates.getCurrentDateForDbModifications());
         
         usersDao.modifyUserDb(user);
-        logger.info("User id: " + idUser + " successfully updated");
-        logger.info("New name: " + name + " | New Surname: " + surname + " | New email: " + email + " | New Phone: " + phone
-                    + " | New type: " + type);
+        logger.info("Użytkownik zaktualizowany:" +
+                " Login: " + user.getLogin() +
+                " | Imię: " + name +
+                " | Nazwisko: " + surname +
+                " | Email: " + email +
+                " | Numer telefonu: " + phone +
+                " | Typ użytkownika: " + UserType.valueOf(type)
+        );
         
         RequestDispatcher rd = req.getRequestDispatcher("../jsp/01_admin_pages/21_1_users_view.jsp");
         resp.sendRedirect(req.getContextPath() + "/ListAllUsersAdminServlet");

@@ -1,11 +1,10 @@
 package pl.poradniausmiech.servlets.employeesServlets;
 
+import pl.poradniausmiech.Utils.Dates;
 import pl.poradniausmiech.Utils.UserImageNotFoundException;
 import pl.poradniausmiech.dao.EmployeesDao;
 import pl.poradniausmiech.dao.ImageUpload;
 import pl.poradniausmiech.domain.Employee;
-import pl.poradniausmiech.domain.User;
-import pl.poradniausmiech.domain.UserType;
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -18,10 +17,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import java.io.File;
 import java.io.IOException;
-import java.sql.Timestamp;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -74,10 +69,7 @@ class EmployeeAddServletAdmin extends HttpServlet {
         employee.setPhoneNumber(phoneNumber);
         employee.setBankAccountNumber(bankAccountNumber);
         employee.setActive(true);
-        Date date = new Date();
-        long time = date.getTime();
-        Timestamp ts = new Timestamp(time);
-        employee.setDateCreated(ts);
+        employee.setDateCreated(Dates.getCurrentDateForDbModifications());
 
         Part filePart = req.getPart("image");
         File file;
@@ -90,7 +82,7 @@ class EmployeeAddServletAdmin extends HttpServlet {
 
 
         employeesDao.saveEmployeeToDb(employee);
-        logger.info("Pracownik: " + name + " " + surname + " dodany do bazy danych");
+        logger.info("Pracownik dodany: Imię " + name + " | Nazwisko: " + surname + " | Rola krótka " + roleShort);
 
         RequestDispatcher rd = req.getRequestDispatcher("../jsp/01_admin_pages/22_1_employees_view.jsp");
         resp.sendRedirect(req.getContextPath() + "/ListAllEmployeesAdminServlet");

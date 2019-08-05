@@ -30,10 +30,10 @@ class EmpoloyeeDeleteServlet extends HttpServlet {
 
         if (employee.getActive()) {
             employeesDao.markEmployeeAsInactiveInDb(Integer.parseInt(id));
-            logger.info("Pracownik: " + employee.getName() + " " + employee.getSurname() + " oznaczony jako nieaktywny w bazie danych");
+            logger.info("Pracownik oznaczony jako nieaktywny w bazie danych: Imię: " + employee.getName() + " | Nazwisko: " + employee.getSurname());
         } else {
             employeesDao.markEmployeeAsActiveInDb(Integer.parseInt(id));
-            logger.info("Pracownik: " + employee.getName() + " " + employee.getSurname() + " oznaczony jako aktywny w bazie danych");
+            logger.info("Pracownik oznaczony jako aktywny w bazie danych: Imię: " + employee.getName() + " | Nazwisko: " + employee.getSurname());
         }
 
         RequestDispatcher rd = req.getRequestDispatcher("ListAllEmployeesAdminServlet");
