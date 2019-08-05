@@ -1,5 +1,6 @@
 package pl.poradniausmiech.servlets.userServlets;
 
+import pl.poradniausmiech.Utils.Dates;
 import pl.poradniausmiech.dao.UsersDao;
 import pl.poradniausmiech.domain.User;
 import pl.poradniausmiech.domain.UserType;
@@ -12,8 +13,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Timestamp;
-import java.util.Date;
 import java.util.logging.Logger;
 
 @WebServlet("/UserAddServletUser")
@@ -69,13 +68,17 @@ class UserAddServletUser extends HttpServlet {
         user.setPhoneNumber(phone);
         user.setUserType(UserType.valueOf(type));
         user.setActive(true);
-        Date date = new Date();
-        long time = date.getTime();
-        Timestamp ts = new Timestamp(time);
-        user.setDateCreated(ts);
+        user.setDateCreated(Dates.getCurrentDateForDbModifications());
 
         usersDao.saveUserToDb(user);
-        logger.info("Użytkownik: " + login + " dodany do bazy danych");
+        logger.info("Użytkownik dodany do bazy danych:" +
+                " Login " + login +
+                " | Imię " + name +
+                " | Nazwisko " + surname +
+                " | Email " + email +
+                " | Numer yelefonu " + phone +
+                " | Typ użytkownika " + UserType.valueOf(type)
+        );
 
         req.setAttribute("errorTitle", "Gratulacje");
         req.setAttribute("errorDecscription", "Użytkownik założony");
@@ -83,7 +86,6 @@ class UserAddServletUser extends HttpServlet {
         req.setAttribute("infoText", "Powrót na stronę logowania");
 
         RequestDispatcher rd = req.getRequestDispatcher("999_error.jsp");
-        //resp.sendRedirect(req.getContextPath() + "/ListAllUsersAdminServlet");
         rd.forward(req, resp);
 
     }

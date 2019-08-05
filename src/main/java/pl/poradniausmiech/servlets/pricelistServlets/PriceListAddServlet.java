@@ -1,5 +1,6 @@
 package pl.poradniausmiech.servlets.pricelistServlets;
 
+import pl.poradniausmiech.Utils.Dates;
 import pl.poradniausmiech.dao.PriceListDao;
 import pl.poradniausmiech.domain.pricelist.PriceListLayer1;
 import pl.poradniausmiech.domain.pricelist.PriceListLayer2;
@@ -71,7 +72,7 @@ class PriceListAddServlet extends HttpServlet {
             List<PriceListLayer1> priceListLayer1List = priceListDao.getPriceListLayer1FromDb();
             req.getSession().setAttribute("priceListLayer1List", priceListLayer1List);
 
-            logger.info("Usługa: " + Description + ", kolejność " + OrderIDLayer1 + " dodana do bazy danych");
+            logger.info("Usługa warstwy pierwszej dodana: Id usługi: " + priceListLayer1.getIdLayer1() + " | Opis: " + Description + " | Kolejność: " + OrderIDLayer1);
 
             RequestDispatcher rd = req.getRequestDispatcher("../jsp/01_admin_pages/23_1_pricelist_view.jsp");
             rd.forward(req, resp);
@@ -94,11 +95,7 @@ class PriceListAddServlet extends HttpServlet {
             priceListLayer2.setName(Name);
             priceListLayer2.setDuration(Duration);
             priceListLayer2.setPrice(Price);
-
-            Date date = new Date();
-            long time = date.getTime();
-            Timestamp ts = new Timestamp(time);
-            priceListLayer2.setDateCreated(ts);
+            priceListLayer2.setDateCreated(Dates.getCurrentDateForDbModifications());
 
             priceListDao.savePricelistLayer2ToDb(priceListLayer2);
 
@@ -108,7 +105,7 @@ class PriceListAddServlet extends HttpServlet {
             List<PriceListLayer2> priceListLayer2List = priceListDao.getPriceListLayer2FromDb();
             req.getSession().setAttribute("priceListLayer2List", priceListLayer2List);
 
-            logger.info("Usługa: " + Name + ", kolejność " + OrderIDLayer2 + " dodana do bazy danych");
+            logger.info("Usługa warstwy drugiej dodana: Id usługi: " + priceListLayer2.getIdLayer2() + " | Nazwa: " + Name + " | Kolejność: " + OrderIDLayer2 + " | Długość: " + Duration + " | Cena: " + Price);
 
             RequestDispatcher rd = req.getRequestDispatcher("../jsp/01_admin_pages/23_1_pricelist_view.jsp");
             rd.forward(req, resp);

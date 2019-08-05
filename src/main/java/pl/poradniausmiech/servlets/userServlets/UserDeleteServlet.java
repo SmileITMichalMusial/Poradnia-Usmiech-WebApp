@@ -14,35 +14,45 @@ import java.io.IOException;
 import java.util.logging.Logger;
 
 @WebServlet("/UserDeleteServlet")
-class UserDeleteServlet extends HttpServlet
-{
-    
+class UserDeleteServlet extends HttpServlet {
+
     final Logger logger = Logger.getLogger(getClass().getName());
-    
+
     @Inject
     UsersDao usersDao;
-    
+
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
-    {
-        
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         String id = req.getParameter("id");
-        
+
         User user = usersDao.read(Integer.parseInt(id));
-        
-        if(user.getActive())
-        {
+
+        if (user.getActive()) {
             usersDao.markUserAsInactiveInDb(Integer.parseInt(id));
-            logger.info("User login: " + user.getLogin() + " marked as inactive in DB.");
-        }
-        else
-        {
+            logger.info("Użytkownik oznaczony jako nieaktywny w bazie danych:" +
+                    " Login: " + user.getLogin() +
+                    " | Imię: " + user.getName() +
+                    " | Nazwisko: " + user.getSurname() +
+                    " | Email: " + user.getEmail() +
+                    " | Numee telefonu: " + user.getPhoneNumber() +
+                    " | Typ: " + user.getUserType()
+            );
+        } else {
             usersDao.markUserAsActiveInDb(Integer.parseInt(id));
-            logger.info("User login: " + user.getLogin() + " marked as active in DB.");
+            logger.info("Użytkownik oznaczony jako aktywny w bazie danych:" +
+                    " Login: " + user.getLogin() +
+                    " | Imię: " + user.getName() +
+                    " | Nazwisko: " + user.getSurname() +
+                    " | Email: " + user.getEmail() +
+                    " | Numee telefonu: " + user.getPhoneNumber() +
+                    " | Typ: " + user.getUserType()
+            );
         }
-        
+// FIX_ME
+// odswieaznie parametru sesji aby miec biezaca liste
         RequestDispatcher rd = req.getRequestDispatcher("ListAllUsersAdminServlet");
         rd.forward(req, resp);
     }
-    
+
 }

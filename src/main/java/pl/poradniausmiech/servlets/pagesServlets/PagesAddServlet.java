@@ -44,8 +44,7 @@ public class PagesAddServlet extends HttpServlet {
             pagesLayer1.setDateCreated(Dates.getCurrentDateForDbModifications());
             pagesDao.savePagesLayer1ToDb(pagesLayer1);
 
-            logger.info("Strona dodana: orderId=" + orderId + ", pageName=" + pageName + ", pageAddress=" + pageAddress);
-
+            logger.info("Strona dodana: Id strony: " + orderId + " | Nazwa strony: " + pageName + " | Adres strony: " + pageAddress);
             List<PagesLayer1> pagesLayer1List = pagesDao.getPagesLayer1FromDbSortedByOrderId();
             request.getSession().setAttribute("pagesLayer1List", pagesLayer1List);
 

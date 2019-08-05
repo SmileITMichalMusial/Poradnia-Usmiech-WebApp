@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 @WebServlet("/LogoutServlet")
 class LogoutServlet extends HttpServlet {
-    
+
     final Logger logger = Logger.getLogger(getClass().getName());
 
 
@@ -24,7 +24,7 @@ class LogoutServlet extends HttpServlet {
 
         HttpSession session = req.getSession();
         String login = (String) session.getAttribute("login");
-        logger.info("User: " + login + " logged-out successfully");
+        logger.info("Użytkownik: " + login + " wylogowany z sukcesem");
         session.invalidate();
 
         String redirect;

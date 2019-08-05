@@ -89,7 +89,7 @@
 
             <c:if test="${PageLayerNumber == '1'}">
                 <form class="form-wrapper" method="post" action="/PagesAddServlet">
-                    <h4>Dodaj usługę:</h4>
+                    <h4>Dodaj stronę warstwy pierwszej:</h4>
                     <input type="hidden" name="PageLayerNumber" value="1">
                     <input type="number" class="form-control" name="OrderIDLayer1" placeholder="kolejność" required>
                     <input type="text" class="form-control" name="pageName" placeholder="nazwa strony" required>
@@ -104,7 +104,7 @@
 
             <c:if test="${LayerXAdd == '2'}">
                 <form class="form-wrapper" method="post" action="/PriceListAddServlet">
-                    <h4>Dodaj usługę:</h4>
+                    <h4>Dodaj stronę warstwy drugiej::</h4>
                     <input type="hidden" name="LayerNumber" value="Layer2">
                     <input type="hidden" name="idl1" value="${idl1}">
                     <input type="text" class="form-control" name="Description" placeholder="Warstwa1Opis" value="${idl1Description}"

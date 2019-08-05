@@ -1,10 +1,7 @@
 package pl.poradniausmiech.servlets.contactServlets;
 
-import pl.poradniausmiech.Utils.Dates;
 import pl.poradniausmiech.dao.ContactDao;
-import pl.poradniausmiech.dao.EmployeesDao;
 import pl.poradniausmiech.domain.Contact;
-import pl.poradniausmiech.domain.Employee;
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -14,9 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Time;
-import java.sql.Timestamp;
-import java.util.Date;
 import java.util.logging.Logger;
 
 @WebServlet("/ContactDeleteServlet")
@@ -36,10 +30,10 @@ class ContactDeleteServlet extends HttpServlet {
 
         if (contact.getActive()) {
             contactDao.markContactAsInactiveInDb(Integer.parseInt(id));
-            logger.info("Kontakt: " + contact.getStreet() + " " + contact.getPostcode() + " " + contact.getCity() +" oznaczony jako nieaktywny w bazie danych");
+            logger.info("Kontakt ID: " + contact.getId() + " | Ulica: " + contact.getStreet() + " | Kod pocztowy " + contact.getPostcode() + " | Miasto: " + contact.getCity() + " oznaczony jako nieaktywny w bazie danych");
         } else {
             contactDao.markContactAsActiveInDb(Integer.parseInt(id));
-            logger.info("Kontakt: " + contact.getStreet() + " " + contact.getPostcode() + " " + contact.getCity() +" oznaczony jako nieaktywny w bazie danych");
+            logger.info("Kontakt ID: " + contact.getId() + " | Ulica: " + contact.getStreet() + " | Kod pocztowy " + contact.getPostcode() + " | Miasto: " + contact.getCity() + " oznaczony jako aktywny w bazie danych");
         }
 
         RequestDispatcher rd = req.getRequestDispatcher("ListAllContactsAdminServlet");
