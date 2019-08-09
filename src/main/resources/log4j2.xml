@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="TravelToTheMoon">
+    <Properties>
+        <Property name="basePath">d:\\michal\\java\\git\\Poradnia-Usmiech-WebApp\\src\\main\\resources\\logs\\</Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="%highlight{%d{yyyy-MM-dd HH:mm:ss} | %-5level | %logger{1.} | [%line] | %msg%n%throwable}{FATAL=black,ERROR=red,WARN=yellow,INFO=black,DEBUG=green,TRACE=cyan}"
+                    disableAnsi="false"/>
+        </Console>
+        <File name="MonitoringFile" fileName="${basePath}/app.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} | %-5level | %logger | [%line] | %msg%n%throwable"/>
+        </File>
+        <File name="FuelFile" fileName="${basePath}/fuel_consumption.log">
+            <MarkerFilter marker="FUEL TANK" onMatch="ACCEPT"/>
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} | %-5level | %logger | [%line] | %msg%n%throwable"/>
+        </File>
+        <RollingFile name="MonitoringFuel" fileName="logs/monitoring.log"
+                     filePattern="${basePath}/monitoring-%i.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} | %-5level | %logger | [%line] | %msg%n%throwable"/>
+
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10 KB"/>
+            </Policies>
+
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="all">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="MonitoringFile"/>
+            <AppenderRef ref="FuelFile"/>
+            <AppenderRef ref="MonitoringFuel"/>
+        </Root>
+    </Loggers>
+</Configuration>

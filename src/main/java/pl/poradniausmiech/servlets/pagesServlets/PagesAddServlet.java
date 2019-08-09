@@ -12,15 +12,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Timestamp;
-import java.util.Date;
 import java.util.List;
-import java.util.logging.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @WebServlet("/PagesAddServlet")
 public class PagesAddServlet extends HttpServlet {
 
-    final Logger logger = Logger.getLogger(getClass().getName());
+    private static final Logger logger = LogManager.getLogger(PagesAddServlet.class);
+
     private Integer PageLayerNumber;
     @Inject
     PagesDao pagesDao;

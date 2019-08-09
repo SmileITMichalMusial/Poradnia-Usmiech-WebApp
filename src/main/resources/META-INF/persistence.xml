@@ -15,6 +15,7 @@
         <class>pl.poradniausmiech.domain.pricelist.PriceListLayer2</class>
         <class>pl.poradniausmiech.domain.pages.PagesLayer1</class>
         <class>pl.poradniausmiech.domain.pages.PagesLayer2</class>
+        <class>pl.poradniausmiech.domain.Logs</class>
 
 
         <properties>

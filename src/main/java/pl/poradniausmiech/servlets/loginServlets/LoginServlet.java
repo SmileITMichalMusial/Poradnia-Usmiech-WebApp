@@ -1,6 +1,5 @@
 package pl.poradniausmiech.servlets.loginServlets;
 
-
 import pl.poradniausmiech.dao.UsersDao;
 import pl.poradniausmiech.domain.User;
 
@@ -13,15 +12,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import static java.util.stream.Collectors.toList;
 
 @WebServlet("/LoginServlet")
 class LoginServlet extends HttpServlet {
 
-    final Logger logger = Logger.getLogger(getClass().getName());
+    private static final Logger logger = LogManager.getLogger(LoginServlet.class);
+
 
     @Inject
     UsersDao usersDao;
@@ -60,8 +59,12 @@ class LoginServlet extends HttpServlet {
                 req.getSession().setAttribute("id", loggedUser.getId());
                 req.getSession().setAttribute("userType", loggedUser.getUserType());
                 logger.info("Użytkownik: " + login + " zalogowany z sukcesem");
-                logger.log(Level.INFO, "Użytkownik: " + login + " zalogowany z sukcesem");
-                logger.log(Level.WARNING, "Zalogowany admin");
+                logger.warn("Zalogowany admin");
+                logger.debug("Sample debug message");
+                logger.info("Sample info message");
+                logger.error("Sample error message");
+                logger.fatal("Sample fatal message");
+                logger.info("Użytkownik: " + login + " zalogowany z sukcesem");
                 redirect = "../jsp/01_admin_pages/10_admin_menu.jsp";
                 RequestDispatcher rd = req.getRequestDispatcher(redirect);
                 rd.forward(req, resp);

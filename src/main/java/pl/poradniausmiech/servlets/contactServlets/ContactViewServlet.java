@@ -1,9 +1,7 @@
 package pl.poradniausmiech.servlets.contactServlets;
 
 import pl.poradniausmiech.dao.ContactDao;
-import pl.poradniausmiech.dao.EmployeesDao;
 import pl.poradniausmiech.domain.Contact;
-import pl.poradniausmiech.domain.Employee;
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -13,12 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.logging.Logger;
 
 @WebServlet("/ContactViewServlet")
 public class ContactViewServlet extends HttpServlet {
 
-    final Logger logger = Logger.getLogger(getClass().getName());
     @Inject
     ContactDao contactDao;
 
