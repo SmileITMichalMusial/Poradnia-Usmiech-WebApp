@@ -4,5 +4,5 @@
 shape
 230 x 100 border 255 0 255
 100 x 60
-a
+aa
 
