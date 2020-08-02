@@ -16,12 +16,14 @@ import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
-import java.util.logging.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @WebServlet("/PriceListAddServlet")
 class PriceListAddServlet extends HttpServlet {
 
-    final Logger logger = Logger.getLogger(getClass().getName());
+    private static final Logger logger = LogManager.getLogger(PriceListAddServlet.class);
+
     private String LayerXAdd;
     @Inject
     PriceListDao priceListDao;

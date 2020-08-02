@@ -18,14 +18,14 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import java.io.File;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @WebServlet("/EmployeeEditServlet")
 @MultipartConfig
 class EmployeeEditServlet extends HttpServlet {
 
-    final Logger logger = Logger.getLogger(getClass().getName());
+    private static final Logger logger = LogManager.getLogger(EmployeeEditServlet.class);
 
     @Inject
     EmployeesDao employeesDao;
@@ -94,7 +94,7 @@ class EmployeeEditServlet extends HttpServlet {
             file = imageUpload.uploadImageFile(filePart);
             employee.setPhotoURL(file.getName());
         } catch (UserImageNotFoundException userImageNotFound) {
-            logger.log(Level.SEVERE, userImageNotFound.getMessage());
+            logger.fatal(userImageNotFound.getMessage());
         }
 
         employeesDao.modifyEmployeeDb(employee);

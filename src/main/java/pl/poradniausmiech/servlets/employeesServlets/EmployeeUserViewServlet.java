@@ -16,7 +16,6 @@ import java.util.logging.Logger;
 @WebServlet("/EmployeeUserViewServlet")
 public class EmployeeUserViewServlet extends HttpServlet {
 
-    final Logger logger = Logger.getLogger(getClass().getName());
     @Inject
     EmployeesDao employeesDao;
 

@@ -1,0 +1,70 @@
+00:03:50.589 [default task-2] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [71] - U퓓tkownik: a zalogowany z sukcesem
+00:03:50.605 [default task-2] |                    | WARN  pl.poradniausmiech.servlets.loginServlets.LoginServlet [72] - Zalogowany admin
+00:03:50.605 [default task-2] |                    | DEBUG pl.poradniausmiech.servlets.loginServlets.LoginServlet [73] - Sample debug message
+00:03:50.605 [default task-2] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [74] - Sample info message
+00:03:50.605 [default task-2] |                    | ERROR pl.poradniausmiech.servlets.loginServlets.LoginServlet [75] - Sample error message
+00:03:50.605 [default task-2] |                    | FATAL pl.poradniausmiech.servlets.loginServlets.LoginServlet [76] - Sample fatal message
+00:03:50.605 [default task-2] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [77] - U퓓tkownik: a zalogowany z sukcesem
+00:11:11.918 [default task-2] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [71] - U퓓tkownik: a zalogowany z sukcesem
+00:11:11.918 [default task-2] |                    | WARN  pl.poradniausmiech.servlets.loginServlets.LoginServlet [72] - Zalogowany admin
+00:11:11.918 [default task-2] |                    | DEBUG pl.poradniausmiech.servlets.loginServlets.LoginServlet [73] - Sample debug message
+00:11:11.918 [default task-2] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [74] - Sample info message
+00:11:11.918 [default task-2] |                    | ERROR pl.poradniausmiech.servlets.loginServlets.LoginServlet [75] - Sample error message
+00:11:11.918 [default task-2] |                    | FATAL pl.poradniausmiech.servlets.loginServlets.LoginServlet [76] - Sample fatal message
+00:11:11.918 [default task-2] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [77] - U퓓tkownik: a zalogowany z sukcesem
+00:18:31.017 [default task-6] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [71] - U퓓tkownik: a zalogowany z sukcesem
+00:18:31.033 [default task-6] |                    | WARN  pl.poradniausmiech.servlets.loginServlets.LoginServlet [72] - Zalogowany admin
+00:18:31.033 [default task-6] |                    | DEBUG pl.poradniausmiech.servlets.loginServlets.LoginServlet [73] - Sample debug message
+00:18:31.033 [default task-6] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [74] - Sample info message
+00:18:31.033 [default task-6] |                    | ERROR pl.poradniausmiech.servlets.loginServlets.LoginServlet [75] - Sample error message
+00:18:31.033 [default task-6] |                    | FATAL pl.poradniausmiech.servlets.loginServlets.LoginServlet [76] - Sample fatal message
+00:18:31.033 [default task-6] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [77] - U퓓tkownik: a zalogowany z sukcesem
+00:20:00.231 [default task-4] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [71] - U퓓tkownik: a zalogowany z sukcesem
+00:20:00.247 [default task-4] |                    | WARN  pl.poradniausmiech.servlets.loginServlets.LoginServlet [72] - Zalogowany admin
+00:20:00.247 [default task-4] |                    | DEBUG pl.poradniausmiech.servlets.loginServlets.LoginServlet [73] - Sample debug message
+00:20:00.247 [default task-4] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [74] - Sample info message
+00:20:00.247 [default task-4] |                    | ERROR pl.poradniausmiech.servlets.loginServlets.LoginServlet [75] - Sample error message
+00:20:00.247 [default task-4] |                    | FATAL pl.poradniausmiech.servlets.loginServlets.LoginServlet [76] - Sample fatal message
+00:20:00.247 [default task-4] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [77] - U퓓tkownik: a zalogowany z sukcesem
+00:25:20.737 [default task-2] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [71] - U퓓tkownik: a zalogowany z sukcesem
+00:25:20.757 [default task-2] |                    | WARN  pl.poradniausmiech.servlets.loginServlets.LoginServlet [72] - Zalogowany admin
+00:25:20.757 [default task-2] |                    | DEBUG pl.poradniausmiech.servlets.loginServlets.LoginServlet [73] - Sample debug message
+00:25:20.757 [default task-2] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [74] - Sample info message
+00:25:20.757 [default task-2] |                    | ERROR pl.poradniausmiech.servlets.loginServlets.LoginServlet [75] - Sample error message
+00:25:20.757 [default task-2] |                    | FATAL pl.poradniausmiech.servlets.loginServlets.LoginServlet [76] - Sample fatal message
+00:25:20.757 [default task-2] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [77] - U퓓tkownik: a zalogowany z sukcesem
+00:30:31.507 [default task-2] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [71] - U퓓tkownik: a zalogowany z sukcesem
+00:30:31.507 [default task-2] |                    | WARN  pl.poradniausmiech.servlets.loginServlets.LoginServlet [72] - Zalogowany admin
+00:30:31.507 [default task-2] |                    | DEBUG pl.poradniausmiech.servlets.loginServlets.LoginServlet [73] - Sample debug message
+00:30:31.507 [default task-2] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [74] - Sample info message
+00:30:31.507 [default task-2] |                    | ERROR pl.poradniausmiech.servlets.loginServlets.LoginServlet [75] - Sample error message
+00:30:31.507 [default task-2] |                    | FATAL pl.poradniausmiech.servlets.loginServlets.LoginServlet [76] - Sample fatal message
+00:30:31.507 [default task-2] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [77] - U퓓tkownik: a zalogowany z sukcesem
+00:31:32.248 [default task-4] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [71] - U퓓tkownik: a zalogowany z sukcesem
+00:31:32.264 [default task-4] |                    | WARN  pl.poradniausmiech.servlets.loginServlets.LoginServlet [72] - Zalogowany admin
+00:31:32.264 [default task-4] |                    | DEBUG pl.poradniausmiech.servlets.loginServlets.LoginServlet [73] - Sample debug message
+00:31:32.264 [default task-4] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [74] - Sample info message
+00:31:32.279 [default task-4] |                    | ERROR pl.poradniausmiech.servlets.loginServlets.LoginServlet [75] - Sample error message
+00:31:32.279 [default task-4] |                    | FATAL pl.poradniausmiech.servlets.loginServlets.LoginServlet [76] - Sample fatal message
+00:31:32.279 [default task-4] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [77] - U퓓tkownik: a zalogowany z sukcesem
+00:33:37.630 [default task-2] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [71] - U퓓tkownik: a zalogowany z sukcesem
+00:33:37.630 [default task-2] |                    | WARN  pl.poradniausmiech.servlets.loginServlets.LoginServlet [72] - Zalogowany admin
+00:33:37.630 [default task-2] |                    | DEBUG pl.poradniausmiech.servlets.loginServlets.LoginServlet [73] - Sample debug message
+00:33:37.630 [default task-2] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [74] - Sample info message
+00:33:37.630 [default task-2] |                    | ERROR pl.poradniausmiech.servlets.loginServlets.LoginServlet [75] - Sample error message
+00:33:37.630 [default task-2] |                    | FATAL pl.poradniausmiech.servlets.loginServlets.LoginServlet [76] - Sample fatal message
+00:33:37.630 [default task-2] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [77] - U퓓tkownik: a zalogowany z sukcesem
+00:35:45.763 [default task-1] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [71] - U퓓tkownik: a zalogowany z sukcesem
+00:35:45.795 [default task-1] |                    | WARN  pl.poradniausmiech.servlets.loginServlets.LoginServlet [72] - Zalogowany admin
+00:35:45.795 [default task-1] |                    | DEBUG pl.poradniausmiech.servlets.loginServlets.LoginServlet [73] - Sample debug message
+00:35:45.795 [default task-1] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [74] - Sample info message
+00:35:45.795 [default task-1] |                    | ERROR pl.poradniausmiech.servlets.loginServlets.LoginServlet [75] - Sample error message
+00:35:45.810 [default task-1] |                    | FATAL pl.poradniausmiech.servlets.loginServlets.LoginServlet [76] - Sample fatal message
+00:35:45.810 [default task-1] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [77] - U퓓tkownik: a zalogowany z sukcesem
+00:56:25.256 [default task-3] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [61] - U퓓tkownik: a zalogowany z sukcesem
+00:56:25.272 [default task-3] |                    | WARN  pl.poradniausmiech.servlets.loginServlets.LoginServlet [62] - Zalogowany admin
+00:56:25.272 [default task-3] |                    | DEBUG pl.poradniausmiech.servlets.loginServlets.LoginServlet [63] - Sample debug message
+00:56:25.272 [default task-3] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [64] - Sample info message
+00:56:25.272 [default task-3] |                    | ERROR pl.poradniausmiech.servlets.loginServlets.LoginServlet [65] - Sample error message
+00:56:25.272 [default task-3] |                    | FATAL pl.poradniausmiech.servlets.loginServlets.LoginServlet [66] - Sample fatal message
+00:56:25.272 [default task-3] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [67] - U퓓tkownik: a zalogowany z sukcesem

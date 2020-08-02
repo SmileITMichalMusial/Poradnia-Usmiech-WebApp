@@ -14,13 +14,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.logging.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @WebServlet("/UserEditServlet")
 class UserEditServlet extends HttpServlet
 {
-    
-    final Logger logger = Logger.getLogger(getClass().getName());
+
+    private static final Logger logger = LogManager.getLogger(UserEditServlet.class);
     
     @Inject
     UsersDao usersDao;

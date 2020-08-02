@@ -1,6 +1,5 @@
 package pl.poradniausmiech.servlets.loginServlets;
 
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,13 +8,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.logging.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @WebServlet("/LogoutServlet")
 class LogoutServlet extends HttpServlet {
 
-    final Logger logger = Logger.getLogger(getClass().getName());
-
+    private static final Logger logger = LogManager.getLogger(LogoutServlet.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

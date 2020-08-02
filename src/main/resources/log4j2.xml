@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="Poradnia Usmiech logger">
+    <Properties>
+        <Property name="basePath">d:\\michal\\java\\git\\Poradnia-Usmiech-WebApp\\src\\main\\resources\\logs\\
+        </Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="%highlight{%d{yyyy-MM-dd HH:mm:ss} | %-5level | %logger{1.} | [%line] | %msg%n%throwable}{FATAL=black,ERROR=red,WARN=yellow,INFO=black,DEBUG=green,TRACE=cyan}"
+                    disableAnsi="false"/>
+        </Console>
+
+        <File name="MonitoringFile" fileName="${basePath}/app.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} | %-5level | %logger | [%line] | %msg%n%throwable"/>
+        </File>
+
+        <File name="FuelFile" fileName="${basePath}/fuel_consumption.log">
+            <MarkerFilter marker="FUEL TANK" onMatch="ACCEPT"/>
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} | %-5level | %logger | [%line] | %msg%n%throwable"/>
+        </File>
+
+        <RollingFile name="MonitoringFuel" fileName="logs/monitoring.log"
+                     filePattern="${basePath}/monitoring-%i.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} | %-5level | %logger | [%line] | %msg%n%throwable"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10 KB"/>
+            </Policies>
+        </RollingFile>
+
+
+        <DBAppender class="org.apache.log4j.jdbc.JDBCAppender"
+                    URL="jdbc:mysql://sql.agnieszkadwa.nazwa.pl:3306/agnieszkadwa_poradniausmiech?serverTimezone=UTC"
+                    driver="com.mysql.cj.jdbc.Driver"
+                    user="agnieszkadwa_poradniausmiech"
+                    password="Liroyek1!"
+                    sql="INSERT INTO logs(user_id, dateCreated,logger,level,message) VALUES('%t', '%d{yyyy-MM-dd HH:mm:ss}','%-50c{3}','%p','%m')">
+        </DBAppender>
+
+        <JDBC name="MySQLDatabase" tableName="logs">
+            <ConnectionFactory
+                    class="com.boraji.tutorial.log4j2.ConnectionFactory" method="getConnection" />
+            <Column name="LOG_ID" pattern="%u" />
+            <Column name="ENTRY_DATE" isEventTimestamp="true" />
+            <Column name="LOGGER" pattern="%logger" />
+            <Column name="LOG_LEVEL" pattern="%level" />
+            <Column name="MESSAGE" pattern="%m" />
+            <Column name="EXCEPTION" pattern="%throwable " />
+        </JDBC>
+
+    </Appenders>
+
+
+    <appender name="DBAppender" class="org.apache.log4j.jdbc.JDBCAppender">
+        <param name="URL"
+               value="jdbc:mysql://sql.agnieszkadwa.nazwa.pl:3306/agnieszkadwa_poradniausmiech?serverTimezone=UTC"/>
+        <param name="driver" value="com.mysql.cj.jdbc.Driver"/>
+        <param name="user" value="agnieszkadwa_poradniausmiech"/>
+        <param name="password" value="Liroyek1!"/>
+        <param name="sql"
+               value="INSERT INTO logs(user_id, dateCreated,logger,level,message) VALUES('%t', '%d{yyyy-MM-dd HH:mm:ss}','%-50c{3}','%p','%m')"/>
+    </appender>
+
+    <Loggers>
+        <Root level="all">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="MonitoringFile"/>
+            <AppenderRef ref="FuelFile"/>
+            <AppenderRef ref="MonitoringFuel"/>
+            <AppenderRef fer="DBAppender" />
+        </Root>
+    </Loggers>
+</Configuration>
