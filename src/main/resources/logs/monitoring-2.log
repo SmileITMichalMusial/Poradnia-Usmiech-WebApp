@@ -1,17 +1,3 @@
-00:35:45.763 [default task-1] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [71] - U¿ytkownik: a zalogowany z sukcesem
-00:35:45.795 [default task-1] |                    | WARN  pl.poradniausmiech.servlets.loginServlets.LoginServlet [72] - Zalogowany admin
-00:35:45.795 [default task-1] |                    | DEBUG pl.poradniausmiech.servlets.loginServlets.LoginServlet [73] - Sample debug message
-00:35:45.795 [default task-1] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [74] - Sample info message
-00:35:45.795 [default task-1] |                    | ERROR pl.poradniausmiech.servlets.loginServlets.LoginServlet [75] - Sample error message
-00:35:45.810 [default task-1] |                    | FATAL pl.poradniausmiech.servlets.loginServlets.LoginServlet [76] - Sample fatal message
-00:35:45.810 [default task-1] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [77] - U¿ytkownik: a zalogowany z sukcesem
-00:56:25.256 [default task-3] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [61] - U¿ytkownik: a zalogowany z sukcesem
-00:56:25.272 [default task-3] |                    | WARN  pl.poradniausmiech.servlets.loginServlets.LoginServlet [62] - Zalogowany admin
-00:56:25.272 [default task-3] |                    | DEBUG pl.poradniausmiech.servlets.loginServlets.LoginServlet [63] - Sample debug message
-00:56:25.272 [default task-3] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [64] - Sample info message
-00:56:25.272 [default task-3] |                    | ERROR pl.poradniausmiech.servlets.loginServlets.LoginServlet [65] - Sample error message
-00:56:25.272 [default task-3] |                    | FATAL pl.poradniausmiech.servlets.loginServlets.LoginServlet [66] - Sample fatal message
-00:56:25.272 [default task-3] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [67] - U¿ytkownik: a zalogowany z sukcesem
 01:07:58.660 [default task-2] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [61] - U¿ytkownik: a zalogowany z sukcesem
 01:07:58.707 [default task-2] |                    | WARN  pl.poradniausmiech.servlets.loginServlets.LoginServlet [62] - Zalogowany admin
 01:07:58.707 [default task-2] |                    | DEBUG pl.poradniausmiech.servlets.loginServlets.LoginServlet [63] - Sample debug message
@@ -49,13 +35,13 @@ a | Nowy email: a@a | Nowy telefon: 1 | Nowa kolejnoœæ: 1 | Nowy numer konta:
 01:22:32.569 [default task-2] |                    | INFO  pl.poradniausmiech.servlets.pagesServlets.PagesEditServlet [164] - Strona warstwy pierwszej: Id strony: 2 | Nazwa strony: O nas 1 | Adres strony: O nas 1 oznaczona jako aktywna w bazie danych
 01:22:44.754 [default task-2] |                    | INFO  pl.poradniausmiech.servlets.pagesServlets.PagesEditServlet [52] - Zaktualizowano stronê warstwy pierwszej: Id strony: 2 | Kolejnoœæ: 2 | Nazwa strony: O nas | Adres strony: 01_o_nas.jsp
 01:26:13.623 [default task-2] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LogoutServlet [26] - U¿ytkownik: a wylogowany z sukcesem
-2019-08-10 01:27:12.829 [default task-1] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [61] - U¿ytkownik: a zalogowany z sukcesem
-2019-08-10 01:27:12.844 [default task-1] |                    | WARN  pl.poradniausmiech.servlets.loginServlets.LoginServlet [62] - Zalogowany admin
-2019-08-10 01:27:12.844 [default task-1] |                    | DEBUG pl.poradniausmiech.servlets.loginServlets.LoginServlet [63] - Sample debug message
-2019-08-10 01:27:12.844 [default task-1] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [64] - Sample info message
-2019-08-10 01:27:12.844 [default task-1] |                    | ERROR pl.poradniausmiech.servlets.loginServlets.LoginServlet [65] - Sample error message
-2019-08-10 01:27:12.844 [default task-1] |                    | FATAL pl.poradniausmiech.servlets.loginServlets.LoginServlet [66] - Sample fatal message
-2019-08-10 01:27:12.844 [default task-1] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [67] - U¿ytkownik: a zalogowany z sukcesem
+01:27:12.829 [default task-1] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [61] - U¿ytkownik: a zalogowany z sukcesem
+01:27:12.844 [default task-1] |                    | WARN  pl.poradniausmiech.servlets.loginServlets.LoginServlet [62] - Zalogowany admin
+01:27:12.844 [default task-1] |                    | DEBUG pl.poradniausmiech.servlets.loginServlets.LoginServlet [63] - Sample debug message
+01:27:12.844 [default task-1] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [64] - Sample info message
+01:27:12.844 [default task-1] |                    | ERROR pl.poradniausmiech.servlets.loginServlets.LoginServlet [65] - Sample error message
+01:27:12.844 [default task-1] |                    | FATAL pl.poradniausmiech.servlets.loginServlets.LoginServlet [66] - Sample fatal message
+01:27:12.844 [default task-1] |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [67] - U¿ytkownik: a zalogowany z sukcesem
 2019-08-10 01:28:54.016 |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LogoutServlet [26] - U¿ytkownik: null wylogowany z sukcesem
 2019-08-10 01:28:58.291 |                    | INFO  pl.poradniausmiech.servlets.loginServlets.LoginServlet [61] - U¿ytkownik: a zalogowany z sukcesem
 2019-08-10 01:28:58.291 |                    | WARN  pl.poradniausmiech.servlets.loginServlets.LoginServlet [62] - Zalogowany admin
@@ -85,35 +71,3 @@ a | Nowy email: a@a | Nowy telefon: 1 | Nowa kolejnoœæ: 1 | Nowy numer konta:
 2019-08-19 14:24:42 | WARN  | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [62] | Zalogowany admin
 2019-08-19 14:24:42 | DEBUG | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [63] | Sample debug message
 2019-08-19 14:24:42 | INFO  | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [64] | Sample info message
-2019-08-19 14:24:42 | ERROR | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [65] | Sample error message
-2019-08-19 14:24:42 | FATAL | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [66] | Sample fatal message
-2019-08-19 14:24:42 | INFO  | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [67] | U¿ytkownik: a zalogowany z sukcesem
-2019-08-19 14:25:00 | INFO  | pl.poradniausmiech.servlets.loginServlets.LogoutServlet | [26] | U¿ytkownik: a wylogowany z sukcesem
-2019-08-19 15:54:53 | INFO  | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [61] | U¿ytkownik: a zalogowany z sukcesem
-2019-08-19 15:54:53 | WARN  | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [62] | Zalogowany admin
-2019-08-19 15:54:53 | DEBUG | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [63] | Sample debug message
-2019-08-19 15:54:53 | INFO  | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [64] | Sample info message
-2019-08-19 15:54:53 | ERROR | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [65] | Sample error message
-2019-08-19 15:54:53 | FATAL | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [66] | Sample fatal message
-2019-08-19 15:54:53 | INFO  | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [67] | U¿ytkownik: a zalogowany z sukcesem
-2019-08-19 15:56:59 | INFO  | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [61] | U¿ytkownik: a zalogowany z sukcesem
-2019-08-19 15:56:59 | WARN  | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [62] | Zalogowany admin
-2019-08-19 15:56:59 | DEBUG | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [63] | Sample debug message
-2019-08-19 15:56:59 | INFO  | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [64] | Sample info message
-2019-08-19 15:56:59 | ERROR | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [65] | Sample error message
-2019-08-19 15:56:59 | FATAL | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [66] | Sample fatal message
-2019-08-19 15:56:59 | INFO  | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [67] | U¿ytkownik: a zalogowany z sukcesem
-2019-08-19 16:02:55 | INFO  | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [61] | U¿ytkownik: a zalogowany z sukcesem
-2019-08-19 16:02:55 | WARN  | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [62] | Zalogowany admin
-2019-08-19 16:02:55 | DEBUG | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [63] | Sample debug message
-2019-08-19 16:02:55 | INFO  | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [64] | Sample info message
-2019-08-19 16:02:55 | ERROR | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [65] | Sample error message
-2019-08-19 16:02:55 | FATAL | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [66] | Sample fatal message
-2019-08-19 16:02:55 | INFO  | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [67] | U¿ytkownik: a zalogowany z sukcesem
-2019-08-19 16:04:51 | INFO  | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [61] | U¿ytkownik: a zalogowany z sukcesem
-2019-08-19 16:04:51 | WARN  | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [62] | Zalogowany admin
-2019-08-19 16:04:51 | DEBUG | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [63] | Sample debug message
-2019-08-19 16:04:51 | INFO  | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [64] | Sample info message
-2019-08-19 16:04:51 | ERROR | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [65] | Sample error message
-2019-08-19 16:04:51 | FATAL | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [66] | Sample fatal message
-2019-08-19 16:04:51 | INFO  | pl.poradniausmiech.servlets.loginServlets.LoginServlet | [67] | U¿ytkownik: a zalogowany z sukcesem

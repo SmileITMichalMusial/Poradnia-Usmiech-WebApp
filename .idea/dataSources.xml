@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="agnieszkadwa_poradniausmiech@sql.agnieszkadwa.nazwa.pl" uuid="64918f00-dd1f-45c9-850f-066cfaca759b">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://sql.agnieszkadwa.nazwa.pl:3306/agnieszkadwa_poradniausmiech</jdbc-url>
+      <driver-properties>
+        <property name="autoReconnect" value="true" />
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
+      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="primary/Hibernate" uuid="862c6357-0bed-426b-abe6-7fbc02e1a7c8">
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <configured-by-url>true</configured-by-url>
+      <remarks>Hibernate
+
+D:/michal/java/git/Poradnia-Usmiech-WebApp/src/main/resources/META-INF/persistence.xml</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://sql.agnieszkadwa.nazwa.pl:3306/agnieszkadwa_poradniausmiech?serverTimezone=UTC</jdbc-url>
+    </data-source>
+  </component>
+</project>
